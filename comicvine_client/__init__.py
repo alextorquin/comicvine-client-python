@@ -17,6 +17,7 @@ from __future__ import absolute_import
 __version__ = "1.0.0"
 
 # import apis into sdk package
+from comicvine_client.api.character_api import CharacterApi
 from comicvine_client.api.issue_api import IssueApi
 from comicvine_client.api.person_api import PersonApi
 from comicvine_client.api.search_api import SearchApi

@@ -77,16 +77,16 @@ configuration = comicvine_client.Configuration(
 # Enter a context with an instance of the API client
 with comicvine_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = comicvine_client.IssueApi(api_client)
+    api_instance = comicvine_client.CharacterApi(api_client)
     format = 'xml' # str | The data format of the response takes either xml, json, or jsonp. (optional) (default to 'xml')
 field_list = 'id,birth,description' # str | List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\" (optional)
 
     try:
-        # Get a particular issue
-        api_response = api_instance.get_issue(format=format, field_list=field_list)
+        # Get a particular character
+        api_response = api_instance.get_character(format=format, field_list=field_list)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IssueApi->get_issue: %s\n" % e)
+        print("Exception when calling CharacterApi->get_character: %s\n" % e)
     
 ```
 
@@ -96,6 +96,7 @@ All URIs are relative to *https://comicvine.gamespot.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CharacterApi* | [**get_character**](docs/CharacterApi.md#get_character) | **GET** /character | Get a particular character
 *IssueApi* | [**get_issue**](docs/IssueApi.md#get_issue) | **GET** /issue/{id} | Get a particular issue
 *PersonApi* | [**get_person**](docs/PersonApi.md#get_person) | **GET** /person/{id} | Get a particular person
 *SearchApi* | [**search**](docs/SearchApi.md#search) | **GET** /search | Search to ComicVine database
