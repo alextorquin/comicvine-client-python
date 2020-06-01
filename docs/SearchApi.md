@@ -46,7 +46,7 @@ configuration = comicvine_client.Configuration(
 with comicvine_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicvine_client.SearchApi(api_client)
-    format = xml # str | The data format of the response takes either xml, json, or jsonp. (optional) (default to xml)
+    format = 'xml' # str | The data format of the response takes either xml, json, or jsonp. (optional) (default to 'xml')
 query = 'Yoko Tsuno' # str | The search string. (optional)
 field_list = 'id,birth,description' # str | List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\" (optional)
 limit = 100 # int | The number of results to display per page. This value defaults to 100 and can not exceed this number. (optional) (default to 100)
@@ -65,7 +65,7 @@ resources = 'character,volume' # str | List of resources to filter results. This
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| The data format of the response takes either xml, json, or jsonp. | [optional] [default to xml]
+ **format** | **str**| The data format of the response takes either xml, json, or jsonp. | [optional] [default to &#39;xml&#39;]
  **query** | **str**| The search string. | [optional] 
  **field_list** | **str**| List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \&quot;,\&quot; | [optional] 
  **limit** | **int**| The number of results to display per page. This value defaults to 100 and can not exceed this number. | [optional] [default to 100]

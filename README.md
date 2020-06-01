@@ -78,7 +78,7 @@ configuration = comicvine_client.Configuration(
 with comicvine_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicvine_client.IssueApi(api_client)
-    format = xml # str | The data format of the response takes either xml, json, or jsonp. (optional) (default to xml)
+    format = 'xml' # str | The data format of the response takes either xml, json, or jsonp. (optional) (default to 'xml')
 field_list = 'id,birth,description' # str | List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\" (optional)
 
     try:

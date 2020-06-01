@@ -37,12 +37,12 @@ class TestPerson(unittest.TestCase):
         if include_optional :
             return Person(
                 id = 63316, 
-                name = "Yoko Tsuno", 
-                aliases = "Joko Zuno", 
-                api_detail_url = "https://comicvine.gamespot.com/api/volume/4050-87668/", 
-                site_detail_url = "https://comicvine.gamespot.com/yoko-tsuno/4005-63316/", 
-                date_added = "2016-01-26 17:52:32", 
-                date_last_updated = "2016-01-26 17:53:02", 
+                name = 'Yoko Tsuno', 
+                aliases = 'Joko Zuno', 
+                api_detail_url = 'https://comicvine.gamespot.com/api/volume/4050-87668/', 
+                site_detail_url = 'https://comicvine.gamespot.com/yoko-tsuno/4005-63316/', 
+                date_added = '2016-01-26 17:52:32', 
+                date_last_updated = '2016-01-26 17:53:02', 
                 birth = None, 
                 count_of_issue_appearances = None, 
                 country = None, 

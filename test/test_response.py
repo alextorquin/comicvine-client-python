@@ -37,10 +37,10 @@ class TestResponse(unittest.TestCase):
         if include_optional :
             return Response(
                 status_code = 102, 
-                error = "Error in URL Format", 
+                error = 'Error in URL Format', 
                 number_of_total_results = 0, 
                 number_of_page_results = 0, 
-                results = null
+                results = {$ref=../examples/results.yml}
             )
         else :
             return Response(
