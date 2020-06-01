@@ -33,5 +33,4 @@ from comicvine_client.exceptions import ApiKeyError
 from comicvine_client.exceptions import ApiAttributeError
 from comicvine_client.exceptions import ApiException
 # import models into sdk package
-from comicvine_client.models.inline_response200 import InlineResponse200
 

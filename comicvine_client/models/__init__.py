@@ -14,4 +14,3 @@
 from __future__ import absolute_import
 
 # import models into model package
-from comicvine_client.models.inline_response200 import InlineResponse200

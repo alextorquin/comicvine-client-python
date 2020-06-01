@@ -97,7 +97,7 @@ All URIs are relative to *https://comicvine.gamespot.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CharacterApi* | [**get_character**](docs/CharacterApi.md#get_character) | **GET** /character | Get a particular character
+*CharacterApi* | [**get_character**](docs/CharacterApi.md#get_character) | **GET** /character/{id} | Get a particular character
 *IssueApi* | [**get_issue**](docs/IssueApi.md#get_issue) | **GET** /issue/{id} | Get a particular issue
 *PersonApi* | [**get_person**](docs/PersonApi.md#get_person) | **GET** /person/{id} | Get a particular person
 *SearchApi* | [**search**](docs/SearchApi.md#search) | **GET** /search | Search to ComicVine database
@@ -106,7 +106,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [InlineResponse200](docs/InlineResponse200.md)
 
 
 ## Documentation For Authorization

@@ -4,11 +4,11 @@ All URIs are relative to *https://comicvine.gamespot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_character**](CharacterApi.md#get_character) | **GET** /character | Get a particular character
+[**get_character**](CharacterApi.md#get_character) | **GET** /character/{id} | Get a particular character
 
 
 # **get_character**
-> InlineResponse200 get_character(id, format=format, field_list=field_list)
+> object get_character(id, format=format, field_list=field_list)
 
 Get a particular character
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+**object**
 
 ### Authorization
 

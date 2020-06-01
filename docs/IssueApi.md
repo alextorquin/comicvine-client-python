@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_issue**
-> InlineResponse200 get_issue(id, format=format, field_list=field_list)
+> object get_issue(id, format=format, field_list=field_list)
 
 Get a particular issue
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+**object**
 
 ### Authorization
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_volume**
-> InlineResponse200 get_volume(id, format=format, field_list=field_list)
+> object get_volume(id, format=format, field_list=field_list)
 
 Get a particular volume
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+**object**
 
 ### Authorization
 

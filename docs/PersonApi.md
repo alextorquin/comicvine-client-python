@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_person**
-> InlineResponse200 get_person(id, format=format, field_list=field_list)
+> object get_person(id, format=format, field_list=field_list)
 
 Get a particular person
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+**object**
 
 ### Authorization
 
