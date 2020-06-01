@@ -24,7 +24,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="fix: don't redefined inherited variables in schema
+    release_note="feat: added request examples
 "
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
