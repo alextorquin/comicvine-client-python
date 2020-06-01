@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_person**
-> Response get_person(format=format, field_list=field_list)
+> InlineResponse200 get_person(id, format=format, field_list=field_list)
 
 Get a particular person
 
@@ -46,12 +46,13 @@ configuration = comicvine_client.Configuration(
 with comicvine_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicvine_client.PersonApi(api_client)
-    format = 'xml' # str | The data format of the response takes either xml, json, or jsonp. (optional) (default to 'xml')
+    id = '4050-87668' # str | Unique ID of the entity.
+format = 'xml' # str | The data format of the response takes either xml, json, or jsonp. (optional) (default to 'xml')
 field_list = 'id,birth,description' # str | List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\" (optional)
 
     try:
         # Get a particular person
-        api_response = api_instance.get_person(format=format, field_list=field_list)
+        api_response = api_instance.get_person(id, format=format, field_list=field_list)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling PersonApi->get_person: %s\n" % e)
@@ -61,12 +62,13 @@ field_list = 'id,birth,description' # str | List of field names to include in th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **str**| Unique ID of the entity. | 
  **format** | **str**| The data format of the response takes either xml, json, or jsonp. | [optional] [default to &#39;xml&#39;]
  **field_list** | **str**| List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \&quot;,\&quot; | [optional] 
 
 ### Return type
 
-[**Response**](Response.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 

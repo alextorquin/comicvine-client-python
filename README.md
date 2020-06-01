@@ -78,12 +78,13 @@ configuration = comicvine_client.Configuration(
 with comicvine_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicvine_client.CharacterApi(api_client)
-    format = 'xml' # str | The data format of the response takes either xml, json, or jsonp. (optional) (default to 'xml')
+    id = '4050-87668' # str | Unique ID of the entity.
+format = 'xml' # str | The data format of the response takes either xml, json, or jsonp. (optional) (default to 'xml')
 field_list = 'id,birth,description' # str | List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\" (optional)
 
     try:
         # Get a particular character
-        api_response = api_instance.get_character(format=format, field_list=field_list)
+        api_response = api_instance.get_character(id, format=format, field_list=field_list)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CharacterApi->get_character: %s\n" % e)
@@ -105,14 +106,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [Issue](docs/Issue.md)
- - [IssueAllOf](docs/IssueAllOf.md)
- - [IssueAllOf1](docs/IssueAllOf1.md)
- - [Person](docs/Person.md)
- - [PersonAllOf](docs/PersonAllOf.md)
- - [Response](docs/Response.md)
- - [Volume](docs/Volume.md)
- - [VolumeAllOf](docs/VolumeAllOf.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
 
 
 ## Documentation For Authorization

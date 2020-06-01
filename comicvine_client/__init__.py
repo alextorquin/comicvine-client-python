@@ -33,12 +33,5 @@ from comicvine_client.exceptions import ApiKeyError
 from comicvine_client.exceptions import ApiAttributeError
 from comicvine_client.exceptions import ApiException
 # import models into sdk package
-from comicvine_client.models.issue import Issue
-from comicvine_client.models.issue_all_of import IssueAllOf
-from comicvine_client.models.issue_all_of1 import IssueAllOf1
-from comicvine_client.models.person import Person
-from comicvine_client.models.person_all_of import PersonAllOf
-from comicvine_client.models.response import Response
-from comicvine_client.models.volume import Volume
-from comicvine_client.models.volume_all_of import VolumeAllOf
+from comicvine_client.models.inline_response200 import InlineResponse200
 

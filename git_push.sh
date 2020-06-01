@@ -24,7 +24,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="ci: chrome user agent for api client
+    release_note="ci: dereference bundled spec
 "
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
