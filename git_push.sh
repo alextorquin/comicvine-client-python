@@ -24,7 +24,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="ci: validate spec with swagger-cli and openapi-generator
+    release_note="ci: bundle spec during validation
 "
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
