@@ -29,33 +29,24 @@ if [ "$release_note" = "" ]; then
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
-# Initialize the local directory as a Git repository
-git init
+repo_loc=../../target/
 
-git stash
+if [ "$GIT_TOKEN" = "" ]; then
+    echo "[INFO] \$GIT_TOKEN (environment variable) is not set. Using the git credential in your environment."
+    git clone https://${git_host}/${git_user_id}/${git_repo_id}.git ${repo_loc}
+else
+    git clone https://${git_user_id}:${GIT_TOKEN}@${git_host}/${git_user_id}/${git_repo_id}.git ${repo_loc}
+fi
 
-git pull origin master
+cp -r ./* ${repo_loc}
 
-git stash apply
+cd ${repo_loc}
 
 # Adds the files in the local repository and stages them for commit.
 git add .
 
 # Commits the tracked changes and prepares them to be pushed to a remote repository.
 git commit -m "$release_note"
-
-# Sets the new remote
-git_remote=$(git remote)
-if [ "$git_remote" = "" ]; then # git remote not defined
-
-    if [ "$GIT_TOKEN" = "" ]; then
-        echo "[INFO] \$GIT_TOKEN (environment variable) is not set. Using the git credential in your environment."
-        git remote add origin https://${git_host}/${git_user_id}/${git_repo_id}.git
-    else
-        git remote add origin https://${git_user_id}:${GIT_TOKEN}@${git_host}/${git_user_id}/${git_repo_id}.git
-    fi
-
-fi
 
 # Pushes (Forces) the changes in the local repository up to the remote repository
 echo "Git pushing to https://${git_host}/${git_user_id}/${git_repo_id}.git"
