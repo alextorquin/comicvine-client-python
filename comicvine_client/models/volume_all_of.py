@@ -91,36 +91,21 @@ class VolumeAllOf(object):
         self._team_credits = None
         self.discriminator = None
 
-        if aliases is not None:
-            self.aliases = aliases
-        if character_credits is not None:
-            self.character_credits = character_credits
-        if concept_credits is not None:
-            self.concept_credits = concept_credits
-        if count_of_issues is not None:
-            self.count_of_issues = count_of_issues
-        if deck is not None:
-            self.deck = deck
-        if description is not None:
-            self.description = description
-        if first_issue is not None:
-            self.first_issue = first_issue
-        if image is not None:
-            self.image = image
-        if last_issue is not None:
-            self.last_issue = last_issue
-        if location_credits is not None:
-            self.location_credits = location_credits
-        if object_credits is not None:
-            self.object_credits = object_credits
-        if person_credits is not None:
-            self.person_credits = person_credits
-        if publisher is not None:
-            self.publisher = publisher
-        if start_year is not None:
-            self.start_year = start_year
-        if team_credits is not None:
-            self.team_credits = team_credits
+        self.aliases = aliases
+        self.character_credits = character_credits
+        self.concept_credits = concept_credits
+        self.count_of_issues = count_of_issues
+        self.deck = deck
+        self.description = description
+        self.first_issue = first_issue
+        self.image = image
+        self.last_issue = last_issue
+        self.location_credits = location_credits
+        self.object_credits = object_credits
+        self.person_credits = person_credits
+        self.publisher = publisher
+        self.start_year = start_year
+        self.team_credits = team_credits
 
     @property
     def aliases(self):

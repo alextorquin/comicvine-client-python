@@ -36,21 +36,21 @@ class TestPersonAllOf(unittest.TestCase):
         # model = comicvine_client.models.person_all_of.PersonAllOf()  # noqa: E501
         if include_optional :
             return PersonAllOf(
-                birth = None, 
-                count_of_issue_appearances = None, 
-                country = None, 
-                created_characters = None, 
-                death = None, 
-                deck = None, 
-                description = None, 
-                email = None, 
-                gender = None, 
-                hometown = None, 
-                image = None, 
-                issue_credits = None, 
-                story_arc_credits = None, 
-                volume_credits = None, 
-                website = None
+                birth = null, 
+                count_of_issue_appearances = null, 
+                country = null, 
+                created_characters = null, 
+                death = null, 
+                deck = null, 
+                description = null, 
+                email = null, 
+                gender = null, 
+                hometown = null, 
+                image = null, 
+                issue_credits = null, 
+                story_arc_credits = null, 
+                volume_credits = null, 
+                website = null
             )
         else :
             return PersonAllOf(

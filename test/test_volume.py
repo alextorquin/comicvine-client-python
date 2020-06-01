@@ -36,31 +36,24 @@ class TestVolume(unittest.TestCase):
         # model = comicvine_client.models.volume.Volume()  # noqa: E501
         if include_optional :
             return Volume(
-                id = 63316, 
-                name = 'Yoko Tsuno', 
-                aliases = None, 
-                api_detail_url = 'https://comicvine.gamespot.com/api/volume/4050-87668/', 
-                site_detail_url = 'https://comicvine.gamespot.com/yoko-tsuno/4005-63316/', 
-                date_added = '2016-01-26 17:52:32', 
-                date_last_updated = '2016-01-26 17:53:02', 
-                character_credits = None, 
-                concept_credits = None, 
-                count_of_issues = None, 
-                deck = None, 
-                description = None, 
-                first_issue = None, 
-                image = None, 
-                last_issue = None, 
-                location_credits = None, 
-                object_credits = None, 
-                person_credits = None, 
-                publisher = None, 
-                start_year = None, 
-                team_credits = None
+                aliases = null, 
+                character_credits = null, 
+                concept_credits = null, 
+                count_of_issues = null, 
+                deck = null, 
+                description = null, 
+                first_issue = null, 
+                image = null, 
+                last_issue = null, 
+                location_credits = null, 
+                object_credits = null, 
+                person_credits = null, 
+                publisher = null, 
+                start_year = null, 
+                team_credits = null
             )
         else :
             return Volume(
-                id = 63316,
         )
 
     def testVolume(self):

@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import comicvine_client
-from comicvine_client.models.issue import Issue  # noqa: E501
+from comicvine_client.models.issue_all_of1 import IssueAllOf1  # noqa: E501
 from comicvine_client.rest import ApiException
 
-class TestIssue(unittest.TestCase):
-    """Issue unit test stubs"""
+class TestIssueAllOf1(unittest.TestCase):
+    """IssueAllOf1 unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,20 +29,13 @@ class TestIssue(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test Issue
+        """Test IssueAllOf1
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = comicvine_client.models.issue.Issue()  # noqa: E501
+        # model = comicvine_client.models.issue_all_of1.IssueAllOf1()  # noqa: E501
         if include_optional :
-            return Issue(
-                id = 63316, 
-                name = 'Yoko Tsuno', 
-                aliases = 'Joko Zuno', 
-                api_detail_url = 'https://comicvine.gamespot.com/api/volume/4050-87668/', 
-                site_detail_url = 'https://comicvine.gamespot.com/yoko-tsuno/4005-63316/', 
-                date_added = '2016-01-26 17:52:32', 
-                date_last_updated = '2016-01-26 17:53:02', 
+            return IssueAllOf1(
                 character_credits = null, 
                 characters_died_in = null, 
                 concept_credits = null, 
@@ -68,12 +61,11 @@ class TestIssue(unittest.TestCase):
                 volume = null
             )
         else :
-            return Issue(
-                id = 63316,
+            return IssueAllOf1(
         )
 
-    def testIssue(self):
-        """Test Issue"""
+    def testIssueAllOf1(self):
+        """Test IssueAllOf1"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

@@ -24,7 +24,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="ci: bundle spec during validation
+    release_note="ci: do not dereference spec when bundling
 "
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi

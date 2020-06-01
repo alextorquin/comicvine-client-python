@@ -36,32 +36,17 @@ class TestIssueAllOf(unittest.TestCase):
         # model = comicvine_client.models.issue_all_of.IssueAllOf()  # noqa: E501
         if include_optional :
             return IssueAllOf(
-                character_credits = None, 
-                characters_died_in = None, 
-                concept_credits = None, 
-                cover_date = None, 
-                deck = None, 
-                description = None, 
-                disbanded_teams = None, 
-                first_appearance_characters = None, 
-                first_appearance_concepts = None, 
-                first_appearance_locations = None, 
-                first_appearance_objects = None, 
-                first_appearance_storyarcs = None, 
-                first_appearance_teams = None, 
-                image = None, 
-                issue_number = None, 
-                location_credits = None, 
-                object_credits = None, 
-                person_credits = None, 
-                store_date = None, 
-                story_arc_credits = None, 
-                team_credits = None, 
-                teams_disbanded_in = None, 
-                volume = None
+                id = 63316, 
+                name = 'Yoko Tsuno', 
+                aliases = 'Joko Zuno', 
+                api_detail_url = 'https://comicvine.gamespot.com/api/volume/4050-87668/', 
+                site_detail_url = 'https://comicvine.gamespot.com/yoko-tsuno/4005-63316/', 
+                date_added = '2016-01-26 17:52:32', 
+                date_last_updated = '2016-01-26 17:53:02'
             )
         else :
             return IssueAllOf(
+                id = 63316,
         )
 
     def testIssueAllOf(self):

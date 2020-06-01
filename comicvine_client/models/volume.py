@@ -33,13 +33,7 @@ class Volume(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'int',
-        'name': 'str',
         'aliases': 'object',
-        'api_detail_url': 'str',
-        'site_detail_url': 'str',
-        'date_added': 'str',
-        'date_last_updated': 'str',
         'character_credits': 'object',
         'concept_credits': 'object',
         'count_of_issues': 'object',
@@ -57,13 +51,7 @@ class Volume(object):
     }
 
     attribute_map = {
-        'id': 'id',
-        'name': 'name',
         'aliases': 'aliases',
-        'api_detail_url': 'api_detail_url',
-        'site_detail_url': 'site_detail_url',
-        'date_added': 'date_added',
-        'date_last_updated': 'date_last_updated',
         'character_credits': 'character_credits',
         'concept_credits': 'concept_credits',
         'count_of_issues': 'count_of_issues',
@@ -80,19 +68,13 @@ class Volume(object):
         'team_credits': 'team_credits'
     }
 
-    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, site_detail_url=None, date_added=None, date_last_updated=None, character_credits=None, concept_credits=None, count_of_issues=None, deck=None, description=None, first_issue=None, image=None, last_issue=None, location_credits=None, object_credits=None, person_credits=None, publisher=None, start_year=None, team_credits=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, aliases=None, character_credits=None, concept_credits=None, count_of_issues=None, deck=None, description=None, first_issue=None, image=None, last_issue=None, location_credits=None, object_credits=None, person_credits=None, publisher=None, start_year=None, team_credits=None, local_vars_configuration=None):  # noqa: E501
         """Volume - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
-        self._name = None
         self._aliases = None
-        self._api_detail_url = None
-        self._site_detail_url = None
-        self._date_added = None
-        self._date_last_updated = None
         self._character_credits = None
         self._concept_credits = None
         self._count_of_issues = None
@@ -109,95 +91,21 @@ class Volume(object):
         self._team_credits = None
         self.discriminator = None
 
-        self.id = id
-        if name is not None:
-            self.name = name
-        if aliases is not None:
-            self.aliases = aliases
-        if api_detail_url is not None:
-            self.api_detail_url = api_detail_url
-        if site_detail_url is not None:
-            self.site_detail_url = site_detail_url
-        if date_added is not None:
-            self.date_added = date_added
-        if date_last_updated is not None:
-            self.date_last_updated = date_last_updated
-        if character_credits is not None:
-            self.character_credits = character_credits
-        if concept_credits is not None:
-            self.concept_credits = concept_credits
-        if count_of_issues is not None:
-            self.count_of_issues = count_of_issues
-        if deck is not None:
-            self.deck = deck
-        if description is not None:
-            self.description = description
-        if first_issue is not None:
-            self.first_issue = first_issue
-        if image is not None:
-            self.image = image
-        if last_issue is not None:
-            self.last_issue = last_issue
-        if location_credits is not None:
-            self.location_credits = location_credits
-        if object_credits is not None:
-            self.object_credits = object_credits
-        if person_credits is not None:
-            self.person_credits = person_credits
-        if publisher is not None:
-            self.publisher = publisher
-        if start_year is not None:
-            self.start_year = start_year
-        if team_credits is not None:
-            self.team_credits = team_credits
-
-    @property
-    def id(self):
-        """Gets the id of this Volume.  # noqa: E501
-
-        Unique ID for the entity.  # noqa: E501
-
-        :return: The id of this Volume.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this Volume.
-
-        Unique ID for the entity.  # noqa: E501
-
-        :param id: The id of this Volume.  # noqa: E501
-        :type: int
-        """
-        if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
-
-        self._id = id
-
-    @property
-    def name(self):
-        """Gets the name of this Volume.  # noqa: E501
-
-        Name for the entity  # noqa: E501
-
-        :return: The name of this Volume.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this Volume.
-
-        Name for the entity  # noqa: E501
-
-        :param name: The name of this Volume.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
+        self.aliases = aliases
+        self.character_credits = character_credits
+        self.concept_credits = concept_credits
+        self.count_of_issues = count_of_issues
+        self.deck = deck
+        self.description = description
+        self.first_issue = first_issue
+        self.image = image
+        self.last_issue = last_issue
+        self.location_credits = location_credits
+        self.object_credits = object_credits
+        self.person_credits = person_credits
+        self.publisher = publisher
+        self.start_year = start_year
+        self.team_credits = team_credits
 
     @property
     def aliases(self):
@@ -221,98 +129,6 @@ class Volume(object):
         """
 
         self._aliases = aliases
-
-    @property
-    def api_detail_url(self):
-        """Gets the api_detail_url of this Volume.  # noqa: E501
-
-        URL pointing to the entity detail resource.  # noqa: E501
-
-        :return: The api_detail_url of this Volume.  # noqa: E501
-        :rtype: str
-        """
-        return self._api_detail_url
-
-    @api_detail_url.setter
-    def api_detail_url(self, api_detail_url):
-        """Sets the api_detail_url of this Volume.
-
-        URL pointing to the entity detail resource.  # noqa: E501
-
-        :param api_detail_url: The api_detail_url of this Volume.  # noqa: E501
-        :type: str
-        """
-
-        self._api_detail_url = api_detail_url
-
-    @property
-    def site_detail_url(self):
-        """Gets the site_detail_url of this Volume.  # noqa: E501
-
-        URL pointing to the concept on Giant Bomb.  # noqa: E501
-
-        :return: The site_detail_url of this Volume.  # noqa: E501
-        :rtype: str
-        """
-        return self._site_detail_url
-
-    @site_detail_url.setter
-    def site_detail_url(self, site_detail_url):
-        """Sets the site_detail_url of this Volume.
-
-        URL pointing to the concept on Giant Bomb.  # noqa: E501
-
-        :param site_detail_url: The site_detail_url of this Volume.  # noqa: E501
-        :type: str
-        """
-
-        self._site_detail_url = site_detail_url
-
-    @property
-    def date_added(self):
-        """Gets the date_added of this Volume.  # noqa: E501
-
-        Date the entity was added to Comic Vine.  # noqa: E501
-
-        :return: The date_added of this Volume.  # noqa: E501
-        :rtype: str
-        """
-        return self._date_added
-
-    @date_added.setter
-    def date_added(self, date_added):
-        """Sets the date_added of this Volume.
-
-        Date the entity was added to Comic Vine.  # noqa: E501
-
-        :param date_added: The date_added of this Volume.  # noqa: E501
-        :type: str
-        """
-
-        self._date_added = date_added
-
-    @property
-    def date_last_updated(self):
-        """Gets the date_last_updated of this Volume.  # noqa: E501
-
-        Date the entity was last updated on Comic Vine.  # noqa: E501
-
-        :return: The date_last_updated of this Volume.  # noqa: E501
-        :rtype: str
-        """
-        return self._date_last_updated
-
-    @date_last_updated.setter
-    def date_last_updated(self, date_last_updated):
-        """Sets the date_last_updated of this Volume.
-
-        Date the entity was last updated on Comic Vine.  # noqa: E501
-
-        :param date_last_updated: The date_last_updated of this Volume.  # noqa: E501
-        :type: str
-        """
-
-        self._date_last_updated = date_last_updated
 
     @property
     def character_credits(self):

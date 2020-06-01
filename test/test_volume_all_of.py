@@ -36,21 +36,21 @@ class TestVolumeAllOf(unittest.TestCase):
         # model = comicvine_client.models.volume_all_of.VolumeAllOf()  # noqa: E501
         if include_optional :
             return VolumeAllOf(
-                aliases = None, 
-                character_credits = None, 
-                concept_credits = None, 
-                count_of_issues = None, 
-                deck = None, 
-                description = None, 
-                first_issue = None, 
-                image = None, 
-                last_issue = None, 
-                location_credits = None, 
-                object_credits = None, 
-                person_credits = None, 
-                publisher = None, 
-                start_year = None, 
-                team_credits = None
+                aliases = null, 
+                character_credits = null, 
+                concept_credits = null, 
+                count_of_issues = null, 
+                deck = null, 
+                description = null, 
+                first_issue = null, 
+                image = null, 
+                last_issue = null, 
+                location_credits = null, 
+                object_credits = null, 
+                person_credits = null, 
+                publisher = null, 
+                start_year = null, 
+                team_credits = null
             )
         else :
             return VolumeAllOf(

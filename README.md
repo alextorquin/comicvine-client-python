@@ -104,9 +104,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [BaseEntity](docs/BaseEntity.md)
  - [Issue](docs/Issue.md)
  - [IssueAllOf](docs/IssueAllOf.md)
+ - [IssueAllOf1](docs/IssueAllOf1.md)
  - [Person](docs/Person.md)
  - [PersonAllOf](docs/PersonAllOf.md)
  - [Response](docs/Response.md)

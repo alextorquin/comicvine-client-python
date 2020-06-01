@@ -37,7 +37,7 @@ class Response(object):
         'error': 'str',
         'number_of_total_results': 'int',
         'number_of_page_results': 'int',
-        'results': 'AnyOfVolumeIssuePersonarray'
+        'results': 'AnyOfvolumeissuepersonarray'
     }
 
     attribute_map = {
@@ -183,7 +183,7 @@ class Response(object):
         Zero or more items that match the filters specified  # noqa: E501
 
         :return: The results of this Response.  # noqa: E501
-        :rtype: AnyOfVolumeIssuePersonarray
+        :rtype: AnyOfvolumeissuepersonarray
         """
         return self._results
 
@@ -194,7 +194,7 @@ class Response(object):
         Zero or more items that match the filters specified  # noqa: E501
 
         :param results: The results of this Response.  # noqa: E501
-        :type: AnyOfVolumeIssuePersonarray
+        :type: AnyOfvolumeissuepersonarray
         """
 
         self._results = results
