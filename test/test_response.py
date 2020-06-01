@@ -40,7 +40,7 @@ class TestResponse(unittest.TestCase):
                 error = 'Error in URL Format', 
                 number_of_total_results = 0, 
                 number_of_page_results = 0, 
-                results = null
+                results = {"$ref":"#/paths/~1search/get/responses/200/content/application~1xml/example"}
             )
         else :
             return Response(
