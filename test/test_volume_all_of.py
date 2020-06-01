@@ -37,24 +37,18 @@ class TestVolumeAllOf(unittest.TestCase):
         if include_optional :
             return VolumeAllOf(
                 aliases = None, 
-                api_detail_url = None, 
                 character_credits = None, 
                 concept_credits = None, 
                 count_of_issues = None, 
-                date_added = None, 
-                date_last_updated = None, 
                 deck = None, 
                 description = None, 
                 first_issue = None, 
-                id = None, 
                 image = None, 
                 last_issue = None, 
                 location_credits = None, 
-                name = None, 
                 object_credits = None, 
                 person_credits = None, 
                 publisher = None, 
-                site_detail_url = None, 
                 start_year = None, 
                 team_credits = None
             )

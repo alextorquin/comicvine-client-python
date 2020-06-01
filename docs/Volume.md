@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **object** | Unique ID of the volume. | 
-**name** | **object** | Name of the volume. | [optional] 
+**id** | **int** | Unique ID for the entity. | 
+**name** | **str** | Name for the entity | [optional] 
 **aliases** | **object** | List of aliases the volume is known by. A \\n (newline) seperates each alias. | [optional] 
-**api_detail_url** | **object** | URL pointing to the volume detail resource. | [optional] 
-**site_detail_url** | **object** | URL pointing to the volume on Giant Bomb. | [optional] 
-**date_added** | **object** | Date the volume was added to Comic Vine. | [optional] 
-**date_last_updated** | **object** | Date the volume was last updated on Comic Vine. | [optional] 
+**api_detail_url** | **str** | URL pointing to the entity detail resource. | [optional] 
+**site_detail_url** | **str** | URL pointing to the concept on Giant Bomb. | [optional] 
+**date_added** | **str** | Date the entity was added to Comic Vine. | [optional] 
+**date_last_updated** | **str** | Date the entity was last updated on Comic Vine. | [optional] 
 **character_credits** | **object** | A list of characters that appear in this volume. | [optional] 
 **concept_credits** | **object** | A list of concepts that appear in this volume. | [optional] 
 **count_of_issues** | **object** | Number of issues included in this volume. | [optional] 

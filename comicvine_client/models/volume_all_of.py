@@ -34,119 +34,89 @@ class VolumeAllOf(object):
     """
     openapi_types = {
         'aliases': 'object',
-        'api_detail_url': 'object',
         'character_credits': 'object',
         'concept_credits': 'object',
         'count_of_issues': 'object',
-        'date_added': 'object',
-        'date_last_updated': 'object',
         'deck': 'object',
         'description': 'object',
         'first_issue': 'object',
-        'id': 'object',
         'image': 'object',
         'last_issue': 'object',
         'location_credits': 'object',
-        'name': 'object',
         'object_credits': 'object',
         'person_credits': 'object',
         'publisher': 'object',
-        'site_detail_url': 'object',
         'start_year': 'object',
         'team_credits': 'object'
     }
 
     attribute_map = {
         'aliases': 'aliases',
-        'api_detail_url': 'api_detail_url',
         'character_credits': 'character_credits',
         'concept_credits': 'concept_credits',
         'count_of_issues': 'count_of_issues',
-        'date_added': 'date_added',
-        'date_last_updated': 'date_last_updated',
         'deck': 'deck',
         'description': 'description',
         'first_issue': 'first_issue',
-        'id': 'id',
         'image': 'image',
         'last_issue': 'last_issue',
         'location_credits': 'location_credits',
-        'name': 'name',
         'object_credits': 'object_credits',
         'person_credits': 'person_credits',
         'publisher': 'publisher',
-        'site_detail_url': 'site_detail_url',
         'start_year': 'start_year',
         'team_credits': 'team_credits'
     }
 
-    def __init__(self, aliases=None, api_detail_url=None, character_credits=None, concept_credits=None, count_of_issues=None, date_added=None, date_last_updated=None, deck=None, description=None, first_issue=None, id=None, image=None, last_issue=None, location_credits=None, name=None, object_credits=None, person_credits=None, publisher=None, site_detail_url=None, start_year=None, team_credits=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, aliases=None, character_credits=None, concept_credits=None, count_of_issues=None, deck=None, description=None, first_issue=None, image=None, last_issue=None, location_credits=None, object_credits=None, person_credits=None, publisher=None, start_year=None, team_credits=None, local_vars_configuration=None):  # noqa: E501
         """VolumeAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._aliases = None
-        self._api_detail_url = None
         self._character_credits = None
         self._concept_credits = None
         self._count_of_issues = None
-        self._date_added = None
-        self._date_last_updated = None
         self._deck = None
         self._description = None
         self._first_issue = None
-        self._id = None
         self._image = None
         self._last_issue = None
         self._location_credits = None
-        self._name = None
         self._object_credits = None
         self._person_credits = None
         self._publisher = None
-        self._site_detail_url = None
         self._start_year = None
         self._team_credits = None
         self.discriminator = None
 
         if aliases is not None:
             self.aliases = aliases
-        if api_detail_url is not None:
-            self.api_detail_url = api_detail_url
         if character_credits is not None:
             self.character_credits = character_credits
         if concept_credits is not None:
             self.concept_credits = concept_credits
         if count_of_issues is not None:
             self.count_of_issues = count_of_issues
-        if date_added is not None:
-            self.date_added = date_added
-        if date_last_updated is not None:
-            self.date_last_updated = date_last_updated
         if deck is not None:
             self.deck = deck
         if description is not None:
             self.description = description
         if first_issue is not None:
             self.first_issue = first_issue
-        if id is not None:
-            self.id = id
         if image is not None:
             self.image = image
         if last_issue is not None:
             self.last_issue = last_issue
         if location_credits is not None:
             self.location_credits = location_credits
-        if name is not None:
-            self.name = name
         if object_credits is not None:
             self.object_credits = object_credits
         if person_credits is not None:
             self.person_credits = person_credits
         if publisher is not None:
             self.publisher = publisher
-        if site_detail_url is not None:
-            self.site_detail_url = site_detail_url
         if start_year is not None:
             self.start_year = start_year
         if team_credits is not None:
@@ -174,29 +144,6 @@ class VolumeAllOf(object):
         """
 
         self._aliases = aliases
-
-    @property
-    def api_detail_url(self):
-        """Gets the api_detail_url of this VolumeAllOf.  # noqa: E501
-
-        URL pointing to the volume detail resource.  # noqa: E501
-
-        :return: The api_detail_url of this VolumeAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._api_detail_url
-
-    @api_detail_url.setter
-    def api_detail_url(self, api_detail_url):
-        """Sets the api_detail_url of this VolumeAllOf.
-
-        URL pointing to the volume detail resource.  # noqa: E501
-
-        :param api_detail_url: The api_detail_url of this VolumeAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._api_detail_url = api_detail_url
 
     @property
     def character_credits(self):
@@ -268,52 +215,6 @@ class VolumeAllOf(object):
         self._count_of_issues = count_of_issues
 
     @property
-    def date_added(self):
-        """Gets the date_added of this VolumeAllOf.  # noqa: E501
-
-        Date the volume was added to Comic Vine.  # noqa: E501
-
-        :return: The date_added of this VolumeAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._date_added
-
-    @date_added.setter
-    def date_added(self, date_added):
-        """Sets the date_added of this VolumeAllOf.
-
-        Date the volume was added to Comic Vine.  # noqa: E501
-
-        :param date_added: The date_added of this VolumeAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._date_added = date_added
-
-    @property
-    def date_last_updated(self):
-        """Gets the date_last_updated of this VolumeAllOf.  # noqa: E501
-
-        Date the volume was last updated on Comic Vine.  # noqa: E501
-
-        :return: The date_last_updated of this VolumeAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._date_last_updated
-
-    @date_last_updated.setter
-    def date_last_updated(self, date_last_updated):
-        """Sets the date_last_updated of this VolumeAllOf.
-
-        Date the volume was last updated on Comic Vine.  # noqa: E501
-
-        :param date_last_updated: The date_last_updated of this VolumeAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._date_last_updated = date_last_updated
-
-    @property
     def deck(self):
         """Gets the deck of this VolumeAllOf.  # noqa: E501
 
@@ -381,29 +282,6 @@ class VolumeAllOf(object):
         """
 
         self._first_issue = first_issue
-
-    @property
-    def id(self):
-        """Gets the id of this VolumeAllOf.  # noqa: E501
-
-        Unique ID of the volume.  # noqa: E501
-
-        :return: The id of this VolumeAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this VolumeAllOf.
-
-        Unique ID of the volume.  # noqa: E501
-
-        :param id: The id of this VolumeAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._id = id
 
     @property
     def image(self):
@@ -475,29 +353,6 @@ class VolumeAllOf(object):
         self._location_credits = location_credits
 
     @property
-    def name(self):
-        """Gets the name of this VolumeAllOf.  # noqa: E501
-
-        Name of the volume.  # noqa: E501
-
-        :return: The name of this VolumeAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this VolumeAllOf.
-
-        Name of the volume.  # noqa: E501
-
-        :param name: The name of this VolumeAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._name = name
-
-    @property
     def object_credits(self):
         """Gets the object_credits of this VolumeAllOf.  # noqa: E501
 
@@ -565,29 +420,6 @@ class VolumeAllOf(object):
         """
 
         self._publisher = publisher
-
-    @property
-    def site_detail_url(self):
-        """Gets the site_detail_url of this VolumeAllOf.  # noqa: E501
-
-        URL pointing to the volume on Giant Bomb.  # noqa: E501
-
-        :return: The site_detail_url of this VolumeAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._site_detail_url
-
-    @site_detail_url.setter
-    def site_detail_url(self, site_detail_url):
-        """Sets the site_detail_url of this VolumeAllOf.
-
-        URL pointing to the volume on Giant Bomb.  # noqa: E501
-
-        :param site_detail_url: The site_detail_url of this VolumeAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._site_detail_url = site_detail_url
 
     @property
     def start_year(self):

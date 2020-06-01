@@ -36,13 +36,6 @@ class TestIssueAllOf(unittest.TestCase):
         # model = comicvine_client.models.issue_all_of.IssueAllOf()  # noqa: E501
         if include_optional :
             return IssueAllOf(
-                date_added = None, 
-                date_last_updated = None, 
-                id = None, 
-                aliases = None, 
-                api_detail_url = None, 
-                site_detail_url = None, 
-                name = None, 
                 character_credits = None, 
                 characters_died_in = None, 
                 concept_credits = None, 

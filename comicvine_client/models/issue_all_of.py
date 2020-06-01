@@ -33,13 +33,6 @@ class IssueAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'date_added': 'object',
-        'date_last_updated': 'object',
-        'id': 'object',
-        'aliases': 'object',
-        'api_detail_url': 'object',
-        'site_detail_url': 'object',
-        'name': 'object',
         'character_credits': 'object',
         'characters_died_in': 'object',
         'concept_credits': 'object',
@@ -66,13 +59,6 @@ class IssueAllOf(object):
     }
 
     attribute_map = {
-        'date_added': 'date_added',
-        'date_last_updated': 'date_last_updated',
-        'id': 'id',
-        'aliases': 'aliases',
-        'api_detail_url': 'api_detail_url',
-        'site_detail_url': 'site_detail_url',
-        'name': 'name',
         'character_credits': 'character_credits',
         'characters_died_in': 'characters_died_in',
         'concept_credits': 'concept_credits',
@@ -98,19 +84,12 @@ class IssueAllOf(object):
         'volume': 'volume'
     }
 
-    def __init__(self, date_added=None, date_last_updated=None, id=None, aliases=None, api_detail_url=None, site_detail_url=None, name=None, character_credits=None, characters_died_in=None, concept_credits=None, cover_date=None, deck=None, description=None, disbanded_teams=None, first_appearance_characters=None, first_appearance_concepts=None, first_appearance_locations=None, first_appearance_objects=None, first_appearance_storyarcs=None, first_appearance_teams=None, image=None, issue_number=None, location_credits=None, object_credits=None, person_credits=None, store_date=None, story_arc_credits=None, team_credits=None, teams_disbanded_in=None, volume=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, character_credits=None, characters_died_in=None, concept_credits=None, cover_date=None, deck=None, description=None, disbanded_teams=None, first_appearance_characters=None, first_appearance_concepts=None, first_appearance_locations=None, first_appearance_objects=None, first_appearance_storyarcs=None, first_appearance_teams=None, image=None, issue_number=None, location_credits=None, object_credits=None, person_credits=None, store_date=None, story_arc_credits=None, team_credits=None, teams_disbanded_in=None, volume=None, local_vars_configuration=None):  # noqa: E501
         """IssueAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._date_added = None
-        self._date_last_updated = None
-        self._id = None
-        self._aliases = None
-        self._api_detail_url = None
-        self._site_detail_url = None
-        self._name = None
         self._character_credits = None
         self._characters_died_in = None
         self._concept_credits = None
@@ -136,20 +115,6 @@ class IssueAllOf(object):
         self._volume = None
         self.discriminator = None
 
-        if date_added is not None:
-            self.date_added = date_added
-        if date_last_updated is not None:
-            self.date_last_updated = date_last_updated
-        if id is not None:
-            self.id = id
-        if aliases is not None:
-            self.aliases = aliases
-        if api_detail_url is not None:
-            self.api_detail_url = api_detail_url
-        if site_detail_url is not None:
-            self.site_detail_url = site_detail_url
-        if name is not None:
-            self.name = name
         if character_credits is not None:
             self.character_credits = character_credits
         if characters_died_in is not None:
@@ -196,167 +161,6 @@ class IssueAllOf(object):
             self.teams_disbanded_in = teams_disbanded_in
         if volume is not None:
             self.volume = volume
-
-    @property
-    def date_added(self):
-        """Gets the date_added of this IssueAllOf.  # noqa: E501
-
-        Date the issue was added to Comic Vine.  # noqa: E501
-
-        :return: The date_added of this IssueAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._date_added
-
-    @date_added.setter
-    def date_added(self, date_added):
-        """Sets the date_added of this IssueAllOf.
-
-        Date the issue was added to Comic Vine.  # noqa: E501
-
-        :param date_added: The date_added of this IssueAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._date_added = date_added
-
-    @property
-    def date_last_updated(self):
-        """Gets the date_last_updated of this IssueAllOf.  # noqa: E501
-
-        Date the issue was last updated on Comic Vine.  # noqa: E501
-
-        :return: The date_last_updated of this IssueAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._date_last_updated
-
-    @date_last_updated.setter
-    def date_last_updated(self, date_last_updated):
-        """Sets the date_last_updated of this IssueAllOf.
-
-        Date the issue was last updated on Comic Vine.  # noqa: E501
-
-        :param date_last_updated: The date_last_updated of this IssueAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._date_last_updated = date_last_updated
-
-    @property
-    def id(self):
-        """Gets the id of this IssueAllOf.  # noqa: E501
-
-        Unique ID of the issue.  # noqa: E501
-
-        :return: The id of this IssueAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this IssueAllOf.
-
-        Unique ID of the issue.  # noqa: E501
-
-        :param id: The id of this IssueAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._id = id
-
-    @property
-    def aliases(self):
-        """Gets the aliases of this IssueAllOf.  # noqa: E501
-
-        List of aliases the issue is known by. A \\n (newline) seperates each alias.  # noqa: E501
-
-        :return: The aliases of this IssueAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._aliases
-
-    @aliases.setter
-    def aliases(self, aliases):
-        """Sets the aliases of this IssueAllOf.
-
-        List of aliases the issue is known by. A \\n (newline) seperates each alias.  # noqa: E501
-
-        :param aliases: The aliases of this IssueAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._aliases = aliases
-
-    @property
-    def api_detail_url(self):
-        """Gets the api_detail_url of this IssueAllOf.  # noqa: E501
-
-        URL pointing to the issue detail resource.  # noqa: E501
-
-        :return: The api_detail_url of this IssueAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._api_detail_url
-
-    @api_detail_url.setter
-    def api_detail_url(self, api_detail_url):
-        """Sets the api_detail_url of this IssueAllOf.
-
-        URL pointing to the issue detail resource.  # noqa: E501
-
-        :param api_detail_url: The api_detail_url of this IssueAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._api_detail_url = api_detail_url
-
-    @property
-    def site_detail_url(self):
-        """Gets the site_detail_url of this IssueAllOf.  # noqa: E501
-
-        URL pointing to the issue on Giant Bomb.  # noqa: E501
-
-        :return: The site_detail_url of this IssueAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._site_detail_url
-
-    @site_detail_url.setter
-    def site_detail_url(self, site_detail_url):
-        """Sets the site_detail_url of this IssueAllOf.
-
-        URL pointing to the issue on Giant Bomb.  # noqa: E501
-
-        :param site_detail_url: The site_detail_url of this IssueAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._site_detail_url = site_detail_url
-
-    @property
-    def name(self):
-        """Gets the name of this IssueAllOf.  # noqa: E501
-
-        Name of the issue.  # noqa: E501
-
-        :return: The name of this IssueAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this IssueAllOf.
-
-        Name of the issue.  # noqa: E501
-
-        :param name: The name of this IssueAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._name = name
 
     @property
     def character_credits(self):

@@ -33,89 +33,64 @@ class PersonAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'aliases': 'object',
-        'api_detail_url': 'object',
         'birth': 'object',
         'count_of_issue_appearances': 'object',
         'country': 'object',
         'created_characters': 'object',
-        'date_added': 'object',
-        'date_last_updated': 'object',
         'death': 'object',
         'deck': 'object',
         'description': 'object',
         'email': 'object',
         'gender': 'object',
         'hometown': 'object',
-        'id': 'object',
         'image': 'object',
         'issue_credits': 'object',
-        'name': 'object',
-        'site_detail_url': 'object',
         'story_arc_credits': 'object',
         'volume_credits': 'object',
         'website': 'object'
     }
 
     attribute_map = {
-        'aliases': 'aliases',
-        'api_detail_url': 'api_detail_url',
         'birth': 'birth',
         'count_of_issue_appearances': 'count_of_issue_appearances',
         'country': 'country',
         'created_characters': 'created_characters',
-        'date_added': 'date_added',
-        'date_last_updated': 'date_last_updated',
         'death': 'death',
         'deck': 'deck',
         'description': 'description',
         'email': 'email',
         'gender': 'gender',
         'hometown': 'hometown',
-        'id': 'id',
         'image': 'image',
         'issue_credits': 'issue_credits',
-        'name': 'name',
-        'site_detail_url': 'site_detail_url',
         'story_arc_credits': 'story_arc_credits',
         'volume_credits': 'volume_credits',
         'website': 'website'
     }
 
-    def __init__(self, aliases=None, api_detail_url=None, birth=None, count_of_issue_appearances=None, country=None, created_characters=None, date_added=None, date_last_updated=None, death=None, deck=None, description=None, email=None, gender=None, hometown=None, id=None, image=None, issue_credits=None, name=None, site_detail_url=None, story_arc_credits=None, volume_credits=None, website=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, birth=None, count_of_issue_appearances=None, country=None, created_characters=None, death=None, deck=None, description=None, email=None, gender=None, hometown=None, image=None, issue_credits=None, story_arc_credits=None, volume_credits=None, website=None, local_vars_configuration=None):  # noqa: E501
         """PersonAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._aliases = None
-        self._api_detail_url = None
         self._birth = None
         self._count_of_issue_appearances = None
         self._country = None
         self._created_characters = None
-        self._date_added = None
-        self._date_last_updated = None
         self._death = None
         self._deck = None
         self._description = None
         self._email = None
         self._gender = None
         self._hometown = None
-        self._id = None
         self._image = None
         self._issue_credits = None
-        self._name = None
-        self._site_detail_url = None
         self._story_arc_credits = None
         self._volume_credits = None
         self._website = None
         self.discriminator = None
 
-        if aliases is not None:
-            self.aliases = aliases
-        if api_detail_url is not None:
-            self.api_detail_url = api_detail_url
         if birth is not None:
             self.birth = birth
         if count_of_issue_appearances is not None:
@@ -124,10 +99,6 @@ class PersonAllOf(object):
             self.country = country
         if created_characters is not None:
             self.created_characters = created_characters
-        if date_added is not None:
-            self.date_added = date_added
-        if date_last_updated is not None:
-            self.date_last_updated = date_last_updated
         if death is not None:
             self.death = death
         if deck is not None:
@@ -140,68 +111,16 @@ class PersonAllOf(object):
             self.gender = gender
         if hometown is not None:
             self.hometown = hometown
-        if id is not None:
-            self.id = id
         if image is not None:
             self.image = image
         if issue_credits is not None:
             self.issue_credits = issue_credits
-        if name is not None:
-            self.name = name
-        if site_detail_url is not None:
-            self.site_detail_url = site_detail_url
         if story_arc_credits is not None:
             self.story_arc_credits = story_arc_credits
         if volume_credits is not None:
             self.volume_credits = volume_credits
         if website is not None:
             self.website = website
-
-    @property
-    def aliases(self):
-        """Gets the aliases of this PersonAllOf.  # noqa: E501
-
-        List of aliases the person is known by. A \\n (newline) seperates each alias.  # noqa: E501
-
-        :return: The aliases of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._aliases
-
-    @aliases.setter
-    def aliases(self, aliases):
-        """Sets the aliases of this PersonAllOf.
-
-        List of aliases the person is known by. A \\n (newline) seperates each alias.  # noqa: E501
-
-        :param aliases: The aliases of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._aliases = aliases
-
-    @property
-    def api_detail_url(self):
-        """Gets the api_detail_url of this PersonAllOf.  # noqa: E501
-
-        URL pointing to the person detail resource.  # noqa: E501
-
-        :return: The api_detail_url of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._api_detail_url
-
-    @api_detail_url.setter
-    def api_detail_url(self, api_detail_url):
-        """Sets the api_detail_url of this PersonAllOf.
-
-        URL pointing to the person detail resource.  # noqa: E501
-
-        :param api_detail_url: The api_detail_url of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._api_detail_url = api_detail_url
 
     @property
     def birth(self):
@@ -294,52 +213,6 @@ class PersonAllOf(object):
         """
 
         self._created_characters = created_characters
-
-    @property
-    def date_added(self):
-        """Gets the date_added of this PersonAllOf.  # noqa: E501
-
-        Date the person was added to Comic Vine.  # noqa: E501
-
-        :return: The date_added of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._date_added
-
-    @date_added.setter
-    def date_added(self, date_added):
-        """Sets the date_added of this PersonAllOf.
-
-        Date the person was added to Comic Vine.  # noqa: E501
-
-        :param date_added: The date_added of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._date_added = date_added
-
-    @property
-    def date_last_updated(self):
-        """Gets the date_last_updated of this PersonAllOf.  # noqa: E501
-
-        Date the person was last updated on Comic Vine.  # noqa: E501
-
-        :return: The date_last_updated of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._date_last_updated
-
-    @date_last_updated.setter
-    def date_last_updated(self, date_last_updated):
-        """Sets the date_last_updated of this PersonAllOf.
-
-        Date the person was last updated on Comic Vine.  # noqa: E501
-
-        :param date_last_updated: The date_last_updated of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._date_last_updated = date_last_updated
 
     @property
     def death(self):
@@ -480,29 +353,6 @@ class PersonAllOf(object):
         self._hometown = hometown
 
     @property
-    def id(self):
-        """Gets the id of this PersonAllOf.  # noqa: E501
-
-        Unique ID of the person.  # noqa: E501
-
-        :return: The id of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this PersonAllOf.
-
-        Unique ID of the person.  # noqa: E501
-
-        :param id: The id of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._id = id
-
-    @property
     def image(self):
         """Gets the image of this PersonAllOf.  # noqa: E501
 
@@ -547,52 +397,6 @@ class PersonAllOf(object):
         """
 
         self._issue_credits = issue_credits
-
-    @property
-    def name(self):
-        """Gets the name of this PersonAllOf.  # noqa: E501
-
-        Name of the person.  # noqa: E501
-
-        :return: The name of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this PersonAllOf.
-
-        Name of the person.  # noqa: E501
-
-        :param name: The name of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._name = name
-
-    @property
-    def site_detail_url(self):
-        """Gets the site_detail_url of this PersonAllOf.  # noqa: E501
-
-        URL pointing to the person on Giant Bomb.  # noqa: E501
-
-        :return: The site_detail_url of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._site_detail_url
-
-    @site_detail_url.setter
-    def site_detail_url(self, site_detail_url):
-        """Sets the site_detail_url of this PersonAllOf.
-
-        URL pointing to the person on Giant Bomb.  # noqa: E501
-
-        :param site_detail_url: The site_detail_url of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._site_detail_url = site_detail_url
 
     @property
     def story_arc_credits(self):

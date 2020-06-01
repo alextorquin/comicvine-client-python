@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **object** | Unique ID of the person. | 
-**name** | **object** | Name of the person. | [optional] 
-**aliases** | **object** | List of aliases the person is known by. A \\n (newline) seperates each alias. | [optional] 
-**api_detail_url** | **object** | URL pointing to the person detail resource. | [optional] 
-**site_detail_url** | **object** | URL pointing to the person on Giant Bomb. | [optional] 
-**date_added** | **object** | Date the person was added to Comic Vine. | [optional] 
-**date_last_updated** | **object** | Date the person was last updated on Comic Vine. | [optional] 
+**id** | **int** | Unique ID for the entity. | 
+**name** | **str** | Name for the entity | [optional] 
+**aliases** | **str** | List of aliases the entity is known by. A \\n (newline) seperates each alias. | [optional] 
+**api_detail_url** | **str** | URL pointing to the entity detail resource. | [optional] 
+**site_detail_url** | **str** | URL pointing to the concept on Giant Bomb. | [optional] 
+**date_added** | **str** | Date the entity was added to Comic Vine. | [optional] 
+**date_last_updated** | **str** | Date the entity was last updated on Comic Vine. | [optional] 
 **birth** | **object** | A date, if one exists, that the person was born on. Not an origin date. | [optional] 
 **count_of_issue_appearances** | **object** | Number of issues this person appears in. | [optional] 
 **country** | **object** | Country the person resides in. | [optional] 

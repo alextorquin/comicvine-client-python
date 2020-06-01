@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **object** | Unique ID of the issue. | 
-**name** | **object** | Name of the issue. | [optional] 
-**aliases** | **object** | List of aliases the issue is known by. A \\n (newline) seperates each alias. | [optional] 
-**api_detail_url** | **object** | URL pointing to the issue detail resource. | [optional] 
-**site_detail_url** | **object** | URL pointing to the issue on Giant Bomb. | [optional] 
-**date_added** | **object** | Date the issue was added to Comic Vine. | [optional] 
-**date_last_updated** | **object** | Date the issue was last updated on Comic Vine. | [optional] 
+**id** | **int** | Unique ID for the entity. | 
+**name** | **str** | Name for the entity | [optional] 
+**aliases** | **str** | List of aliases the entity is known by. A \\n (newline) seperates each alias. | [optional] 
+**api_detail_url** | **str** | URL pointing to the entity detail resource. | [optional] 
+**site_detail_url** | **str** | URL pointing to the concept on Giant Bomb. | [optional] 
+**date_added** | **str** | Date the entity was added to Comic Vine. | [optional] 
+**date_last_updated** | **str** | Date the entity was last updated on Comic Vine. | [optional] 
 **character_credits** | **object** | A list of characters that appear in this issue. | [optional] 
 **characters_died_in** | **object** | A list of characters that died in this issue. | [optional] 
 **concept_credits** | **object** | A list of concepts that appear in this issue. | [optional] 

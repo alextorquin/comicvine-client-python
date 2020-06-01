@@ -33,13 +33,13 @@ class Issue(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'object',
-        'name': 'object',
-        'aliases': 'object',
-        'api_detail_url': 'object',
-        'site_detail_url': 'object',
-        'date_added': 'object',
-        'date_last_updated': 'object',
+        'id': 'int',
+        'name': 'str',
+        'aliases': 'str',
+        'api_detail_url': 'str',
+        'site_detail_url': 'str',
+        'date_added': 'str',
+        'date_last_updated': 'str',
         'character_credits': 'object',
         'characters_died_in': 'object',
         'concept_credits': 'object',
@@ -200,10 +200,10 @@ class Issue(object):
     def id(self):
         """Gets the id of this Issue.  # noqa: E501
 
-        Unique ID of the issue.  # noqa: E501
+        Unique ID for the entity.  # noqa: E501
 
         :return: The id of this Issue.  # noqa: E501
-        :rtype: object
+        :rtype: int
         """
         return self._id
 
@@ -211,10 +211,10 @@ class Issue(object):
     def id(self, id):
         """Sets the id of this Issue.
 
-        Unique ID of the issue.  # noqa: E501
+        Unique ID for the entity.  # noqa: E501
 
         :param id: The id of this Issue.  # noqa: E501
-        :type: object
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -225,10 +225,10 @@ class Issue(object):
     def name(self):
         """Gets the name of this Issue.  # noqa: E501
 
-        Name of the issue.  # noqa: E501
+        Name for the entity  # noqa: E501
 
         :return: The name of this Issue.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._name
 
@@ -236,10 +236,10 @@ class Issue(object):
     def name(self, name):
         """Sets the name of this Issue.
 
-        Name of the issue.  # noqa: E501
+        Name for the entity  # noqa: E501
 
         :param name: The name of this Issue.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._name = name
@@ -248,10 +248,10 @@ class Issue(object):
     def aliases(self):
         """Gets the aliases of this Issue.  # noqa: E501
 
-        List of aliases the issue is known by. A \\n (newline) seperates each alias.  # noqa: E501
+        List of aliases the entity is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :return: The aliases of this Issue.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._aliases
 
@@ -259,10 +259,10 @@ class Issue(object):
     def aliases(self, aliases):
         """Sets the aliases of this Issue.
 
-        List of aliases the issue is known by. A \\n (newline) seperates each alias.  # noqa: E501
+        List of aliases the entity is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :param aliases: The aliases of this Issue.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._aliases = aliases
@@ -271,10 +271,10 @@ class Issue(object):
     def api_detail_url(self):
         """Gets the api_detail_url of this Issue.  # noqa: E501
 
-        URL pointing to the issue detail resource.  # noqa: E501
+        URL pointing to the entity detail resource.  # noqa: E501
 
         :return: The api_detail_url of this Issue.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._api_detail_url
 
@@ -282,10 +282,10 @@ class Issue(object):
     def api_detail_url(self, api_detail_url):
         """Sets the api_detail_url of this Issue.
 
-        URL pointing to the issue detail resource.  # noqa: E501
+        URL pointing to the entity detail resource.  # noqa: E501
 
         :param api_detail_url: The api_detail_url of this Issue.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._api_detail_url = api_detail_url
@@ -294,10 +294,10 @@ class Issue(object):
     def site_detail_url(self):
         """Gets the site_detail_url of this Issue.  # noqa: E501
 
-        URL pointing to the issue on Giant Bomb.  # noqa: E501
+        URL pointing to the concept on Giant Bomb.  # noqa: E501
 
         :return: The site_detail_url of this Issue.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._site_detail_url
 
@@ -305,10 +305,10 @@ class Issue(object):
     def site_detail_url(self, site_detail_url):
         """Sets the site_detail_url of this Issue.
 
-        URL pointing to the issue on Giant Bomb.  # noqa: E501
+        URL pointing to the concept on Giant Bomb.  # noqa: E501
 
         :param site_detail_url: The site_detail_url of this Issue.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._site_detail_url = site_detail_url
@@ -317,10 +317,10 @@ class Issue(object):
     def date_added(self):
         """Gets the date_added of this Issue.  # noqa: E501
 
-        Date the issue was added to Comic Vine.  # noqa: E501
+        Date the entity was added to Comic Vine.  # noqa: E501
 
         :return: The date_added of this Issue.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._date_added
 
@@ -328,10 +328,10 @@ class Issue(object):
     def date_added(self, date_added):
         """Sets the date_added of this Issue.
 
-        Date the issue was added to Comic Vine.  # noqa: E501
+        Date the entity was added to Comic Vine.  # noqa: E501
 
         :param date_added: The date_added of this Issue.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._date_added = date_added
@@ -340,10 +340,10 @@ class Issue(object):
     def date_last_updated(self):
         """Gets the date_last_updated of this Issue.  # noqa: E501
 
-        Date the issue was last updated on Comic Vine.  # noqa: E501
+        Date the entity was last updated on Comic Vine.  # noqa: E501
 
         :return: The date_last_updated of this Issue.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._date_last_updated
 
@@ -351,10 +351,10 @@ class Issue(object):
     def date_last_updated(self, date_last_updated):
         """Sets the date_last_updated of this Issue.
 
-        Date the issue was last updated on Comic Vine.  # noqa: E501
+        Date the entity was last updated on Comic Vine.  # noqa: E501
 
         :param date_last_updated: The date_last_updated of this Issue.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._date_last_updated = date_last_updated
