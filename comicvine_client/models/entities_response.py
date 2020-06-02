@@ -37,7 +37,7 @@ class EntitiesResponse(object):
         'error': 'str',
         'number_of_total_results': 'int',
         'number_of_page_results': 'int',
-        'results': 'list[AnyOfVolumeIssuePersonCharacter]'
+        'results': 'list[object]'
     }
 
     attribute_map = {
@@ -183,7 +183,7 @@ class EntitiesResponse(object):
         A list of Entities that match the filters specified  # noqa: E501
 
         :return: The results of this EntitiesResponse.  # noqa: E501
-        :rtype: list[AnyOfVolumeIssuePersonCharacter]
+        :rtype: list[object]
         """
         return self._results
 
@@ -194,7 +194,7 @@ class EntitiesResponse(object):
         A list of Entities that match the filters specified  # noqa: E501
 
         :param results: The results of this EntitiesResponse.  # noqa: E501
-        :type: list[AnyOfVolumeIssuePersonCharacter]
+        :type: list[object]
         """
 
         self._results = results

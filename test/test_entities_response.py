@@ -41,7 +41,7 @@ class TestEntitiesResponse(unittest.TestCase):
                 number_of_total_results = 0, 
                 number_of_page_results = 0, 
                 results = [
-                    null
+                    None
                     ]
             )
         else :

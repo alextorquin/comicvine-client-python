@@ -37,7 +37,7 @@ class TestEntitiesResponseAllOf(unittest.TestCase):
         if include_optional :
             return EntitiesResponseAllOf(
                 results = [
-                    null
+                    None
                     ]
             )
         else :

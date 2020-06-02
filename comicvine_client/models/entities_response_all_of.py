@@ -33,7 +33,7 @@ class EntitiesResponseAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'results': 'list[AnyOfVolumeIssuePersonCharacter]'
+        'results': 'list[object]'
     }
 
     attribute_map = {
@@ -59,7 +59,7 @@ class EntitiesResponseAllOf(object):
         A list of Entities that match the filters specified  # noqa: E501
 
         :return: The results of this EntitiesResponseAllOf.  # noqa: E501
-        :rtype: list[AnyOfVolumeIssuePersonCharacter]
+        :rtype: list[object]
         """
         return self._results
 
@@ -70,7 +70,7 @@ class EntitiesResponseAllOf(object):
         A list of Entities that match the filters specified  # noqa: E501
 
         :param results: The results of this EntitiesResponseAllOf.  # noqa: E501
-        :type: list[AnyOfVolumeIssuePersonCharacter]
+        :type: list[object]
         """
 
         self._results = results

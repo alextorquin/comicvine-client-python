@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **error** | **str** | A text string representing the status_code | [optional] 
 **number_of_total_results** | **int** | The number of total results matching the filter conditions specified | [optional] 
 **number_of_page_results** | **int** | The number of results on this page | [optional] 
-**results** | [**list[AnyOfVolumeIssuePersonCharacter]**](AnyOfVolumeIssuePersonCharacter.md) | A list of Entities that match the filters specified | [optional] 
+**results** | **list[object]** | A list of Entities that match the filters specified | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
