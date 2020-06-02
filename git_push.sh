@@ -24,7 +24,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="feat: remove discriminator in entitiesResponse since it is depcrecated
+    release_note="ci: generate client from unbundled spec
 "
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi

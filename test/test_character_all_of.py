@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import comicvine_client
-from comicvine_client.models.person_all_of import PersonAllOf  # noqa: E501
+from comicvine_client.models.character_all_of import CharacterAllOf  # noqa: E501
 from comicvine_client.rest import ApiException
 
-class TestPersonAllOf(unittest.TestCase):
-    """PersonAllOf unit test stubs"""
+class TestCharacterAllOf(unittest.TestCase):
+    """CharacterAllOf unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,35 +29,43 @@ class TestPersonAllOf(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test PersonAllOf
+        """Test CharacterAllOf
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = comicvine_client.models.person_all_of.PersonAllOf()  # noqa: E501
+        # model = comicvine_client.models.character_all_of.CharacterAllOf()  # noqa: E501
         if include_optional :
-            return PersonAllOf(
+            return CharacterAllOf(
                 birth = None, 
+                character_enemies = None, 
+                character_friends = None, 
                 count_of_issue_appearances = None, 
-                country = None, 
-                created_characters = None, 
-                death = None, 
+                creators = None, 
                 deck = None, 
                 description = None, 
-                email = None, 
+                first_appeared_in_issue = None, 
                 gender = None, 
-                hometown = None, 
                 image = None, 
                 issue_credits = None, 
+                issues_died_in = None, 
+                movies = None, 
+                origin = None, 
+                powers = None, 
+                publisher = None, 
+                real_name = None, 
+                site_detail_url = None, 
                 story_arc_credits = None, 
-                volume_credits = None, 
-                website = None
+                team_enemies = None, 
+                team_friends = None, 
+                teams = None, 
+                volume_credits = None
             )
         else :
-            return PersonAllOf(
+            return CharacterAllOf(
         )
 
-    def testPersonAllOf(self):
-        """Test PersonAllOf"""
+    def testCharacterAllOf(self):
+        """Test CharacterAllOf"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

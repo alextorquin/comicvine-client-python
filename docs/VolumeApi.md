@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_volume**
-> object get_volume(id, format=format, field_list=field_list)
+> EntityResponse get_volume(id, format=format, field_list=field_list)
 
 Get a particular volume
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**EntityResponse**](EntityResponse.md)
 
 ### Authorization
 

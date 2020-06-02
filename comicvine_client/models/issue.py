@@ -149,29 +149,52 @@ class Issue(object):
             self.date_added = date_added
         if date_last_updated is not None:
             self.date_last_updated = date_last_updated
-        self.character_credits = character_credits
-        self.characters_died_in = characters_died_in
-        self.concept_credits = concept_credits
-        self.cover_date = cover_date
-        self.deck = deck
-        self.description = description
-        self.disbanded_teams = disbanded_teams
-        self.first_appearance_characters = first_appearance_characters
-        self.first_appearance_concepts = first_appearance_concepts
-        self.first_appearance_locations = first_appearance_locations
-        self.first_appearance_objects = first_appearance_objects
-        self.first_appearance_storyarcs = first_appearance_storyarcs
-        self.first_appearance_teams = first_appearance_teams
-        self.image = image
-        self.issue_number = issue_number
-        self.location_credits = location_credits
-        self.object_credits = object_credits
-        self.person_credits = person_credits
-        self.store_date = store_date
-        self.story_arc_credits = story_arc_credits
-        self.team_credits = team_credits
-        self.teams_disbanded_in = teams_disbanded_in
-        self.volume = volume
+        if character_credits is not None:
+            self.character_credits = character_credits
+        if characters_died_in is not None:
+            self.characters_died_in = characters_died_in
+        if concept_credits is not None:
+            self.concept_credits = concept_credits
+        if cover_date is not None:
+            self.cover_date = cover_date
+        if deck is not None:
+            self.deck = deck
+        if description is not None:
+            self.description = description
+        if disbanded_teams is not None:
+            self.disbanded_teams = disbanded_teams
+        if first_appearance_characters is not None:
+            self.first_appearance_characters = first_appearance_characters
+        if first_appearance_concepts is not None:
+            self.first_appearance_concepts = first_appearance_concepts
+        if first_appearance_locations is not None:
+            self.first_appearance_locations = first_appearance_locations
+        if first_appearance_objects is not None:
+            self.first_appearance_objects = first_appearance_objects
+        if first_appearance_storyarcs is not None:
+            self.first_appearance_storyarcs = first_appearance_storyarcs
+        if first_appearance_teams is not None:
+            self.first_appearance_teams = first_appearance_teams
+        if image is not None:
+            self.image = image
+        if issue_number is not None:
+            self.issue_number = issue_number
+        if location_credits is not None:
+            self.location_credits = location_credits
+        if object_credits is not None:
+            self.object_credits = object_credits
+        if person_credits is not None:
+            self.person_credits = person_credits
+        if store_date is not None:
+            self.store_date = store_date
+        if story_arc_credits is not None:
+            self.story_arc_credits = story_arc_credits
+        if team_credits is not None:
+            self.team_credits = team_credits
+        if teams_disbanded_in is not None:
+            self.teams_disbanded_in = teams_disbanded_in
+        if volume is not None:
+            self.volume = volume
 
     @property
     def id(self):

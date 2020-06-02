@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_character**
-> object get_character(id, format=format, field_list=field_list)
+> EntityResponse get_character(id, format=format, field_list=field_list)
 
 Get a particular character
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**EntityResponse**](EntityResponse.md)
 
 ### Authorization
 

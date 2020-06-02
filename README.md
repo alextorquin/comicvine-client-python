@@ -106,6 +106,20 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [BaseEntity](docs/BaseEntity.md)
+ - [BaseResponse](docs/BaseResponse.md)
+ - [Character](docs/Character.md)
+ - [CharacterAllOf](docs/CharacterAllOf.md)
+ - [EntitiesResponse](docs/EntitiesResponse.md)
+ - [EntitiesResponseAllOf](docs/EntitiesResponseAllOf.md)
+ - [EntityResponse](docs/EntityResponse.md)
+ - [EntityResponseAllOf](docs/EntityResponseAllOf.md)
+ - [Issue](docs/Issue.md)
+ - [IssueAllOf](docs/IssueAllOf.md)
+ - [Person](docs/Person.md)
+ - [PersonAllOf](docs/PersonAllOf.md)
+ - [Volume](docs/Volume.md)
+ - [VolumeAllOf](docs/VolumeAllOf.md)
 
 
 ## Documentation For Authorization

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_issue**
-> object get_issue(id, format=format, field_list=field_list)
+> EntityResponse get_issue(id, format=format, field_list=field_list)
 
 Get a particular issue
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**EntityResponse**](EntityResponse.md)
 
 ### Authorization
 

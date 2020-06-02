@@ -33,6 +33,13 @@ class Person(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'id': 'int',
+        'name': 'str',
+        'aliases': 'str',
+        'api_detail_url': 'str',
+        'site_detail_url': 'str',
+        'date_added': 'str',
+        'date_last_updated': 'str',
         'birth': 'object',
         'count_of_issue_appearances': 'object',
         'country': 'object',
@@ -51,6 +58,13 @@ class Person(object):
     }
 
     attribute_map = {
+        'id': 'id',
+        'name': 'name',
+        'aliases': 'aliases',
+        'api_detail_url': 'api_detail_url',
+        'site_detail_url': 'site_detail_url',
+        'date_added': 'date_added',
+        'date_last_updated': 'date_last_updated',
         'birth': 'birth',
         'count_of_issue_appearances': 'count_of_issue_appearances',
         'country': 'country',
@@ -68,12 +82,19 @@ class Person(object):
         'website': 'website'
     }
 
-    def __init__(self, birth=None, count_of_issue_appearances=None, country=None, created_characters=None, death=None, deck=None, description=None, email=None, gender=None, hometown=None, image=None, issue_credits=None, story_arc_credits=None, volume_credits=None, website=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, site_detail_url=None, date_added=None, date_last_updated=None, birth=None, count_of_issue_appearances=None, country=None, created_characters=None, death=None, deck=None, description=None, email=None, gender=None, hometown=None, image=None, issue_credits=None, story_arc_credits=None, volume_credits=None, website=None, local_vars_configuration=None):  # noqa: E501
         """Person - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._id = None
+        self._name = None
+        self._aliases = None
+        self._api_detail_url = None
+        self._site_detail_url = None
+        self._date_added = None
+        self._date_last_updated = None
         self._birth = None
         self._count_of_issue_appearances = None
         self._country = None
@@ -91,21 +112,212 @@ class Person(object):
         self._website = None
         self.discriminator = None
 
-        self.birth = birth
-        self.count_of_issue_appearances = count_of_issue_appearances
-        self.country = country
-        self.created_characters = created_characters
-        self.death = death
-        self.deck = deck
-        self.description = description
-        self.email = email
-        self.gender = gender
-        self.hometown = hometown
-        self.image = image
-        self.issue_credits = issue_credits
-        self.story_arc_credits = story_arc_credits
-        self.volume_credits = volume_credits
-        self.website = website
+        self.id = id
+        if name is not None:
+            self.name = name
+        if aliases is not None:
+            self.aliases = aliases
+        if api_detail_url is not None:
+            self.api_detail_url = api_detail_url
+        if site_detail_url is not None:
+            self.site_detail_url = site_detail_url
+        if date_added is not None:
+            self.date_added = date_added
+        if date_last_updated is not None:
+            self.date_last_updated = date_last_updated
+        if birth is not None:
+            self.birth = birth
+        if count_of_issue_appearances is not None:
+            self.count_of_issue_appearances = count_of_issue_appearances
+        if country is not None:
+            self.country = country
+        if created_characters is not None:
+            self.created_characters = created_characters
+        if death is not None:
+            self.death = death
+        if deck is not None:
+            self.deck = deck
+        if description is not None:
+            self.description = description
+        if email is not None:
+            self.email = email
+        if gender is not None:
+            self.gender = gender
+        if hometown is not None:
+            self.hometown = hometown
+        if image is not None:
+            self.image = image
+        if issue_credits is not None:
+            self.issue_credits = issue_credits
+        if story_arc_credits is not None:
+            self.story_arc_credits = story_arc_credits
+        if volume_credits is not None:
+            self.volume_credits = volume_credits
+        if website is not None:
+            self.website = website
+
+    @property
+    def id(self):
+        """Gets the id of this Person.  # noqa: E501
+
+        Unique ID for the entity.  # noqa: E501
+
+        :return: The id of this Person.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Person.
+
+        Unique ID for the entity.  # noqa: E501
+
+        :param id: The id of this Person.  # noqa: E501
+        :type: int
+        """
+        if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this Person.  # noqa: E501
+
+        Name for the entity  # noqa: E501
+
+        :return: The name of this Person.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this Person.
+
+        Name for the entity  # noqa: E501
+
+        :param name: The name of this Person.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def aliases(self):
+        """Gets the aliases of this Person.  # noqa: E501
+
+        List of aliases the entity is known by. A \\n (newline) seperates each alias.  # noqa: E501
+
+        :return: The aliases of this Person.  # noqa: E501
+        :rtype: str
+        """
+        return self._aliases
+
+    @aliases.setter
+    def aliases(self, aliases):
+        """Sets the aliases of this Person.
+
+        List of aliases the entity is known by. A \\n (newline) seperates each alias.  # noqa: E501
+
+        :param aliases: The aliases of this Person.  # noqa: E501
+        :type: str
+        """
+
+        self._aliases = aliases
+
+    @property
+    def api_detail_url(self):
+        """Gets the api_detail_url of this Person.  # noqa: E501
+
+        URL pointing to the entity detail resource.  # noqa: E501
+
+        :return: The api_detail_url of this Person.  # noqa: E501
+        :rtype: str
+        """
+        return self._api_detail_url
+
+    @api_detail_url.setter
+    def api_detail_url(self, api_detail_url):
+        """Sets the api_detail_url of this Person.
+
+        URL pointing to the entity detail resource.  # noqa: E501
+
+        :param api_detail_url: The api_detail_url of this Person.  # noqa: E501
+        :type: str
+        """
+
+        self._api_detail_url = api_detail_url
+
+    @property
+    def site_detail_url(self):
+        """Gets the site_detail_url of this Person.  # noqa: E501
+
+        URL pointing to the concept on Giant Bomb.  # noqa: E501
+
+        :return: The site_detail_url of this Person.  # noqa: E501
+        :rtype: str
+        """
+        return self._site_detail_url
+
+    @site_detail_url.setter
+    def site_detail_url(self, site_detail_url):
+        """Sets the site_detail_url of this Person.
+
+        URL pointing to the concept on Giant Bomb.  # noqa: E501
+
+        :param site_detail_url: The site_detail_url of this Person.  # noqa: E501
+        :type: str
+        """
+
+        self._site_detail_url = site_detail_url
+
+    @property
+    def date_added(self):
+        """Gets the date_added of this Person.  # noqa: E501
+
+        Date the entity was added to Comic Vine.  # noqa: E501
+
+        :return: The date_added of this Person.  # noqa: E501
+        :rtype: str
+        """
+        return self._date_added
+
+    @date_added.setter
+    def date_added(self, date_added):
+        """Sets the date_added of this Person.
+
+        Date the entity was added to Comic Vine.  # noqa: E501
+
+        :param date_added: The date_added of this Person.  # noqa: E501
+        :type: str
+        """
+
+        self._date_added = date_added
+
+    @property
+    def date_last_updated(self):
+        """Gets the date_last_updated of this Person.  # noqa: E501
+
+        Date the entity was last updated on Comic Vine.  # noqa: E501
+
+        :return: The date_last_updated of this Person.  # noqa: E501
+        :rtype: str
+        """
+        return self._date_last_updated
+
+    @date_last_updated.setter
+    def date_last_updated(self, date_last_updated):
+        """Sets the date_last_updated of this Person.
+
+        Date the entity was last updated on Comic Vine.  # noqa: E501
+
+        :param date_last_updated: The date_last_updated of this Person.  # noqa: E501
+        :type: str
+        """
+
+        self._date_last_updated = date_last_updated
 
     @property
     def birth(self):

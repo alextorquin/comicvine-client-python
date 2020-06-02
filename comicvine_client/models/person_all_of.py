@@ -91,21 +91,36 @@ class PersonAllOf(object):
         self._website = None
         self.discriminator = None
 
-        self.birth = birth
-        self.count_of_issue_appearances = count_of_issue_appearances
-        self.country = country
-        self.created_characters = created_characters
-        self.death = death
-        self.deck = deck
-        self.description = description
-        self.email = email
-        self.gender = gender
-        self.hometown = hometown
-        self.image = image
-        self.issue_credits = issue_credits
-        self.story_arc_credits = story_arc_credits
-        self.volume_credits = volume_credits
-        self.website = website
+        if birth is not None:
+            self.birth = birth
+        if count_of_issue_appearances is not None:
+            self.count_of_issue_appearances = count_of_issue_appearances
+        if country is not None:
+            self.country = country
+        if created_characters is not None:
+            self.created_characters = created_characters
+        if death is not None:
+            self.death = death
+        if deck is not None:
+            self.deck = deck
+        if description is not None:
+            self.description = description
+        if email is not None:
+            self.email = email
+        if gender is not None:
+            self.gender = gender
+        if hometown is not None:
+            self.hometown = hometown
+        if image is not None:
+            self.image = image
+        if issue_credits is not None:
+            self.issue_credits = issue_credits
+        if story_arc_credits is not None:
+            self.story_arc_credits = story_arc_credits
+        if volume_credits is not None:
+            self.volume_credits = volume_credits
+        if website is not None:
+            self.website = website
 
     @property
     def birth(self):

@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import comicvine_client
-from comicvine_client.models.volume import Volume  # noqa: E501
+from comicvine_client.models.character import Character  # noqa: E501
 from comicvine_client.rest import ApiException
 
-class TestVolume(unittest.TestCase):
-    """Volume unit test stubs"""
+class TestCharacter(unittest.TestCase):
+    """Character unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,42 +29,50 @@ class TestVolume(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test Volume
+        """Test Character
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = comicvine_client.models.volume.Volume()  # noqa: E501
+        # model = comicvine_client.models.character.Character()  # noqa: E501
         if include_optional :
-            return Volume(
+            return Character(
                 id = 63316, 
                 name = 'Yoko Tsuno', 
-                aliases = None, 
+                aliases = 'Joko Zuno', 
                 api_detail_url = 'https://comicvine.gamespot.com/api/volume/4050-87668/', 
-                site_detail_url = 'https://comicvine.gamespot.com/yoko-tsuno/4005-63316/', 
+                site_detail_url = None, 
                 date_added = '2016-01-26 17:52:32', 
                 date_last_updated = '2016-01-26 17:53:02', 
-                character_credits = None, 
-                concept_credits = None, 
-                count_of_issues = None, 
+                birth = None, 
+                character_enemies = None, 
+                character_friends = None, 
+                count_of_issue_appearances = None, 
+                creators = None, 
                 deck = None, 
                 description = None, 
-                first_issue = None, 
+                first_appeared_in_issue = None, 
+                gender = None, 
                 image = None, 
-                last_issue = None, 
-                location_credits = None, 
-                object_credits = None, 
-                person_credits = None, 
+                issue_credits = None, 
+                issues_died_in = None, 
+                movies = None, 
+                origin = None, 
+                powers = None, 
                 publisher = None, 
-                start_year = None, 
-                team_credits = None
+                real_name = None, 
+                story_arc_credits = None, 
+                team_enemies = None, 
+                team_friends = None, 
+                teams = None, 
+                volume_credits = None
             )
         else :
-            return Volume(
+            return Character(
                 id = 63316,
         )
 
-    def testVolume(self):
-        """Test Volume"""
+    def testCharacter(self):
+        """Test Character"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

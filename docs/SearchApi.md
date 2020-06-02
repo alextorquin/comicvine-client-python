@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **search**
-> object search(format=format, query=query, field_list=field_list, limit=limit, offset=offset, resources=resources)
+> EntitiesResponse search(format=format, query=query, field_list=field_list, limit=limit, offset=offset, resources=resources)
 
 Search to ComicVine database
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**EntitiesResponse**](EntitiesResponse.md)
 
 ### Authorization
 
