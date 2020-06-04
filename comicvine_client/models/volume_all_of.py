@@ -33,15 +33,15 @@ class VolumeAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'characters': 'list[object]',
-        'concepts': 'list[object]',
+        'characters': 'object',
+        'concepts': 'object',
         'count_of_issues': 'int',
         'first_issue': 'object',
         'image': 'object',
         'last_issue': 'object',
-        'locations': 'list[object]',
-        'objects': 'list[object]',
-        'people': 'list[object]',
+        'locations': 'object',
+        'objects': 'object',
+        'people': 'object',
         'publisher': 'object',
         'start_year': 'str'
     }
@@ -109,7 +109,7 @@ class VolumeAllOf(object):
         A list of characters that appear in this volume.  # noqa: E501
 
         :return: The characters of this VolumeAllOf.  # noqa: E501
-        :rtype: list[object]
+        :rtype: object
         """
         return self._characters
 
@@ -120,7 +120,7 @@ class VolumeAllOf(object):
         A list of characters that appear in this volume.  # noqa: E501
 
         :param characters: The characters of this VolumeAllOf.  # noqa: E501
-        :type: list[object]
+        :type: object
         """
 
         self._characters = characters
@@ -132,7 +132,7 @@ class VolumeAllOf(object):
         A list of concepts that appear in this volume.  # noqa: E501
 
         :return: The concepts of this VolumeAllOf.  # noqa: E501
-        :rtype: list[object]
+        :rtype: object
         """
         return self._concepts
 
@@ -143,7 +143,7 @@ class VolumeAllOf(object):
         A list of concepts that appear in this volume.  # noqa: E501
 
         :param concepts: The concepts of this VolumeAllOf.  # noqa: E501
-        :type: list[object]
+        :type: object
         """
 
         self._concepts = concepts
@@ -247,7 +247,7 @@ class VolumeAllOf(object):
         List of locations that appeared in this volume.  # noqa: E501
 
         :return: The locations of this VolumeAllOf.  # noqa: E501
-        :rtype: list[object]
+        :rtype: object
         """
         return self._locations
 
@@ -258,7 +258,7 @@ class VolumeAllOf(object):
         List of locations that appeared in this volume.  # noqa: E501
 
         :param locations: The locations of this VolumeAllOf.  # noqa: E501
-        :type: list[object]
+        :type: object
         """
 
         self._locations = locations
@@ -270,7 +270,7 @@ class VolumeAllOf(object):
         List of objects that appeared in this volume.  # noqa: E501
 
         :return: The objects of this VolumeAllOf.  # noqa: E501
-        :rtype: list[object]
+        :rtype: object
         """
         return self._objects
 
@@ -281,7 +281,7 @@ class VolumeAllOf(object):
         List of objects that appeared in this volume.  # noqa: E501
 
         :param objects: The objects of this VolumeAllOf.  # noqa: E501
-        :type: list[object]
+        :type: object
         """
 
         self._objects = objects
@@ -293,7 +293,7 @@ class VolumeAllOf(object):
         List of people that worked on this volume.  # noqa: E501
 
         :return: The people of this VolumeAllOf.  # noqa: E501
-        :rtype: list[object]
+        :rtype: object
         """
         return self._people
 
@@ -304,7 +304,7 @@ class VolumeAllOf(object):
         List of people that worked on this volume.  # noqa: E501
 
         :param people: The people of this VolumeAllOf.  # noqa: E501
-        :type: list[object]
+        :type: object
         """
 
         self._people = people

@@ -42,15 +42,15 @@ class Volume(object):
         'site_detail_url': 'str',
         'date_added': 'str',
         'date_last_updated': 'str',
-        'characters': 'list[object]',
-        'concepts': 'list[object]',
+        'characters': 'object',
+        'concepts': 'object',
         'count_of_issues': 'int',
         'first_issue': 'object',
         'image': 'object',
         'last_issue': 'object',
-        'locations': 'list[object]',
-        'objects': 'list[object]',
-        'people': 'list[object]',
+        'locations': 'object',
+        'objects': 'object',
+        'people': 'object',
         'publisher': 'object',
         'start_year': 'str'
     }
@@ -362,7 +362,7 @@ class Volume(object):
         A list of characters that appear in this volume.  # noqa: E501
 
         :return: The characters of this Volume.  # noqa: E501
-        :rtype: list[object]
+        :rtype: object
         """
         return self._characters
 
@@ -373,7 +373,7 @@ class Volume(object):
         A list of characters that appear in this volume.  # noqa: E501
 
         :param characters: The characters of this Volume.  # noqa: E501
-        :type: list[object]
+        :type: object
         """
 
         self._characters = characters
@@ -385,7 +385,7 @@ class Volume(object):
         A list of concepts that appear in this volume.  # noqa: E501
 
         :return: The concepts of this Volume.  # noqa: E501
-        :rtype: list[object]
+        :rtype: object
         """
         return self._concepts
 
@@ -396,7 +396,7 @@ class Volume(object):
         A list of concepts that appear in this volume.  # noqa: E501
 
         :param concepts: The concepts of this Volume.  # noqa: E501
-        :type: list[object]
+        :type: object
         """
 
         self._concepts = concepts
@@ -500,7 +500,7 @@ class Volume(object):
         List of locations that appeared in this volume.  # noqa: E501
 
         :return: The locations of this Volume.  # noqa: E501
-        :rtype: list[object]
+        :rtype: object
         """
         return self._locations
 
@@ -511,7 +511,7 @@ class Volume(object):
         List of locations that appeared in this volume.  # noqa: E501
 
         :param locations: The locations of this Volume.  # noqa: E501
-        :type: list[object]
+        :type: object
         """
 
         self._locations = locations
@@ -523,7 +523,7 @@ class Volume(object):
         List of objects that appeared in this volume.  # noqa: E501
 
         :return: The objects of this Volume.  # noqa: E501
-        :rtype: list[object]
+        :rtype: object
         """
         return self._objects
 
@@ -534,7 +534,7 @@ class Volume(object):
         List of objects that appeared in this volume.  # noqa: E501
 
         :param objects: The objects of this Volume.  # noqa: E501
-        :type: list[object]
+        :type: object
         """
 
         self._objects = objects
@@ -546,7 +546,7 @@ class Volume(object):
         List of people that worked on this volume.  # noqa: E501
 
         :return: The people of this Volume.  # noqa: E501
-        :rtype: list[object]
+        :rtype: object
         """
         return self._people
 
@@ -557,7 +557,7 @@ class Volume(object):
         List of people that worked on this volume.  # noqa: E501
 
         :param people: The people of this Volume.  # noqa: E501
-        :type: list[object]
+        :type: object
         """
 
         self._people = people

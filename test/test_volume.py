@@ -45,25 +45,15 @@ class TestVolume(unittest.TestCase):
                 site_detail_url = 'https://comicvine.gamespot.com/yoko-tsuno/4005-63316/', 
                 date_added = '2016-01-26 17:52:32', 
                 date_last_updated = '2016-01-26 17:53:02', 
-                characters = [
-                    None
-                    ], 
-                concepts = [
-                    None
-                    ], 
+                characters = None, 
+                concepts = None, 
                 count_of_issues = 13, 
                 first_issue = None, 
                 image = None, 
                 last_issue = None, 
-                locations = [
-                    None
-                    ], 
-                objects = [
-                    None
-                    ], 
-                people = [
-                    None
-                    ], 
+                locations = None, 
+                objects = None, 
+                people = None, 
                 publisher = None, 
                 start_year = '2007'
             )

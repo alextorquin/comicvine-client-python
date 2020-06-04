@@ -24,7 +24,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="ci: dereference spec
+    release_note="feat: don't use anytype arrays
 "
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
