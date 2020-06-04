@@ -40,8 +40,6 @@ class TestIssueAllOf(unittest.TestCase):
                 characters_died_in = None, 
                 concept_credits = None, 
                 cover_date = None, 
-                deck = None, 
-                description = None, 
                 disbanded_teams = None, 
                 first_appearance_characters = None, 
                 first_appearance_concepts = None, 

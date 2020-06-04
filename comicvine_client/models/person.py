@@ -37,6 +37,8 @@ class Person(object):
         'name': 'str',
         'aliases': 'str',
         'api_detail_url': 'str',
+        'description': 'str',
+        'deck': 'str',
         'site_detail_url': 'str',
         'date_added': 'str',
         'date_last_updated': 'str',
@@ -45,8 +47,6 @@ class Person(object):
         'country': 'object',
         'created_characters': 'object',
         'death': 'object',
-        'deck': 'object',
-        'description': 'object',
         'email': 'object',
         'gender': 'object',
         'hometown': 'object',
@@ -62,6 +62,8 @@ class Person(object):
         'name': 'name',
         'aliases': 'aliases',
         'api_detail_url': 'api_detail_url',
+        'description': 'description',
+        'deck': 'deck',
         'site_detail_url': 'site_detail_url',
         'date_added': 'date_added',
         'date_last_updated': 'date_last_updated',
@@ -70,8 +72,6 @@ class Person(object):
         'country': 'country',
         'created_characters': 'created_characters',
         'death': 'death',
-        'deck': 'deck',
-        'description': 'description',
         'email': 'email',
         'gender': 'gender',
         'hometown': 'hometown',
@@ -82,7 +82,7 @@ class Person(object):
         'website': 'website'
     }
 
-    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, site_detail_url=None, date_added=None, date_last_updated=None, birth=None, count_of_issue_appearances=None, country=None, created_characters=None, death=None, deck=None, description=None, email=None, gender=None, hometown=None, image=None, issue_credits=None, story_arc_credits=None, volume_credits=None, website=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, birth=None, count_of_issue_appearances=None, country=None, created_characters=None, death=None, email=None, gender=None, hometown=None, image=None, issue_credits=None, story_arc_credits=None, volume_credits=None, website=None, local_vars_configuration=None):  # noqa: E501
         """Person - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -92,6 +92,8 @@ class Person(object):
         self._name = None
         self._aliases = None
         self._api_detail_url = None
+        self._description = None
+        self._deck = None
         self._site_detail_url = None
         self._date_added = None
         self._date_last_updated = None
@@ -100,8 +102,6 @@ class Person(object):
         self._country = None
         self._created_characters = None
         self._death = None
-        self._deck = None
-        self._description = None
         self._email = None
         self._gender = None
         self._hometown = None
@@ -119,6 +119,10 @@ class Person(object):
             self.aliases = aliases
         if api_detail_url is not None:
             self.api_detail_url = api_detail_url
+        if description is not None:
+            self.description = description
+        if deck is not None:
+            self.deck = deck
         if site_detail_url is not None:
             self.site_detail_url = site_detail_url
         if date_added is not None:
@@ -135,10 +139,6 @@ class Person(object):
             self.created_characters = created_characters
         if death is not None:
             self.death = death
-        if deck is not None:
-            self.deck = deck
-        if description is not None:
-            self.description = description
         if email is not None:
             self.email = email
         if gender is not None:
@@ -249,6 +249,52 @@ class Person(object):
         """
 
         self._api_detail_url = api_detail_url
+
+    @property
+    def description(self):
+        """Gets the description of this Person.  # noqa: E501
+
+        Description of the entity.  # noqa: E501
+
+        :return: The description of this Person.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Person.
+
+        Description of the entity.  # noqa: E501
+
+        :param description: The description of this Person.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def deck(self):
+        """Gets the deck of this Person.  # noqa: E501
+
+        Brief summary of the Entity.  # noqa: E501
+
+        :return: The deck of this Person.  # noqa: E501
+        :rtype: str
+        """
+        return self._deck
+
+    @deck.setter
+    def deck(self, deck):
+        """Sets the deck of this Person.
+
+        Brief summary of the Entity.  # noqa: E501
+
+        :param deck: The deck of this Person.  # noqa: E501
+        :type: str
+        """
+
+        self._deck = deck
 
     @property
     def site_detail_url(self):
@@ -433,52 +479,6 @@ class Person(object):
         """
 
         self._death = death
-
-    @property
-    def deck(self):
-        """Gets the deck of this Person.  # noqa: E501
-
-        Brief summary of the person.  # noqa: E501
-
-        :return: The deck of this Person.  # noqa: E501
-        :rtype: object
-        """
-        return self._deck
-
-    @deck.setter
-    def deck(self, deck):
-        """Sets the deck of this Person.
-
-        Brief summary of the person.  # noqa: E501
-
-        :param deck: The deck of this Person.  # noqa: E501
-        :type: object
-        """
-
-        self._deck = deck
-
-    @property
-    def description(self):
-        """Gets the description of this Person.  # noqa: E501
-
-        Description of the person.  # noqa: E501
-
-        :return: The description of this Person.  # noqa: E501
-        :rtype: object
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Person.
-
-        Description of the person.  # noqa: E501
-
-        :param description: The description of this Person.  # noqa: E501
-        :type: object
-        """
-
-        self._description = description
 
     @property
     def email(self):

@@ -24,7 +24,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="fix: response.yml filename
+    release_note="feat: move fields to baseEntity
 "
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi

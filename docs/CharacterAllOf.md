@@ -9,8 +9,6 @@ Name | Type | Description | Notes
 **character_friends** | **object** | List of characters that are friends with this character. | [optional] 
 **count_of_issue_appearances** | **object** | Number of issues this character appears in. | [optional] 
 **creators** | **object** | List of the real life people who created this character. | [optional] 
-**deck** | **object** | Brief summary of the character. | [optional] 
-**description** | **object** | Description of the character. | [optional] 
 **first_appeared_in_issue** | **object** | Issue where the character made its first appearance. | [optional] 
 **gender** | **object** | Gender of the character. Available options are: Male, Female, Other | [optional] 
 **image** | **object** | Main image of the character. | [optional] 

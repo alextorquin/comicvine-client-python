@@ -37,6 +37,8 @@ class BaseEntity(object):
         'name': 'str',
         'aliases': 'str',
         'api_detail_url': 'str',
+        'description': 'str',
+        'deck': 'str',
         'site_detail_url': 'str',
         'date_added': 'str',
         'date_last_updated': 'str'
@@ -47,12 +49,14 @@ class BaseEntity(object):
         'name': 'name',
         'aliases': 'aliases',
         'api_detail_url': 'api_detail_url',
+        'description': 'description',
+        'deck': 'deck',
         'site_detail_url': 'site_detail_url',
         'date_added': 'date_added',
         'date_last_updated': 'date_last_updated'
     }
 
-    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, site_detail_url=None, date_added=None, date_last_updated=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, local_vars_configuration=None):  # noqa: E501
         """BaseEntity - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,6 +66,8 @@ class BaseEntity(object):
         self._name = None
         self._aliases = None
         self._api_detail_url = None
+        self._description = None
+        self._deck = None
         self._site_detail_url = None
         self._date_added = None
         self._date_last_updated = None
@@ -74,6 +80,10 @@ class BaseEntity(object):
             self.aliases = aliases
         if api_detail_url is not None:
             self.api_detail_url = api_detail_url
+        if description is not None:
+            self.description = description
+        if deck is not None:
+            self.deck = deck
         if site_detail_url is not None:
             self.site_detail_url = site_detail_url
         if date_added is not None:
@@ -174,6 +184,52 @@ class BaseEntity(object):
         """
 
         self._api_detail_url = api_detail_url
+
+    @property
+    def description(self):
+        """Gets the description of this BaseEntity.  # noqa: E501
+
+        Description of the entity.  # noqa: E501
+
+        :return: The description of this BaseEntity.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BaseEntity.
+
+        Description of the entity.  # noqa: E501
+
+        :param description: The description of this BaseEntity.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def deck(self):
+        """Gets the deck of this BaseEntity.  # noqa: E501
+
+        Brief summary of the Entity.  # noqa: E501
+
+        :return: The deck of this BaseEntity.  # noqa: E501
+        :rtype: str
+        """
+        return self._deck
+
+    @deck.setter
+    def deck(self, deck):
+        """Sets the deck of this BaseEntity.
+
+        Brief summary of the Entity.  # noqa: E501
+
+        :param deck: The deck of this BaseEntity.  # noqa: E501
+        :type: str
+        """
+
+        self._deck = deck
 
     @property
     def site_detail_url(self):

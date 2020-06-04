@@ -37,6 +37,8 @@ class Character(object):
         'name': 'str',
         'aliases': 'str',
         'api_detail_url': 'str',
+        'description': 'str',
+        'deck': 'str',
         'site_detail_url': 'object',
         'date_added': 'str',
         'date_last_updated': 'str',
@@ -45,8 +47,6 @@ class Character(object):
         'character_friends': 'object',
         'count_of_issue_appearances': 'object',
         'creators': 'object',
-        'deck': 'object',
-        'description': 'object',
         'first_appeared_in_issue': 'object',
         'gender': 'object',
         'image': 'object',
@@ -69,6 +69,8 @@ class Character(object):
         'name': 'name',
         'aliases': 'aliases',
         'api_detail_url': 'api_detail_url',
+        'description': 'description',
+        'deck': 'deck',
         'site_detail_url': 'site_detail_url',
         'date_added': 'date_added',
         'date_last_updated': 'date_last_updated',
@@ -77,8 +79,6 @@ class Character(object):
         'character_friends': 'character_friends',
         'count_of_issue_appearances': 'count_of_issue_appearances',
         'creators': 'creators',
-        'deck': 'deck',
-        'description': 'description',
         'first_appeared_in_issue': 'first_appeared_in_issue',
         'gender': 'gender',
         'image': 'image',
@@ -96,7 +96,7 @@ class Character(object):
         'volume_credits': 'volume_credits'
     }
 
-    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, site_detail_url=None, date_added=None, date_last_updated=None, birth=None, character_enemies=None, character_friends=None, count_of_issue_appearances=None, creators=None, deck=None, description=None, first_appeared_in_issue=None, gender=None, image=None, issue_credits=None, issues_died_in=None, movies=None, origin=None, powers=None, publisher=None, real_name=None, story_arc_credits=None, team_enemies=None, team_friends=None, teams=None, volume_credits=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, birth=None, character_enemies=None, character_friends=None, count_of_issue_appearances=None, creators=None, first_appeared_in_issue=None, gender=None, image=None, issue_credits=None, issues_died_in=None, movies=None, origin=None, powers=None, publisher=None, real_name=None, story_arc_credits=None, team_enemies=None, team_friends=None, teams=None, volume_credits=None, local_vars_configuration=None):  # noqa: E501
         """Character - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -106,6 +106,8 @@ class Character(object):
         self._name = None
         self._aliases = None
         self._api_detail_url = None
+        self._description = None
+        self._deck = None
         self._site_detail_url = None
         self._date_added = None
         self._date_last_updated = None
@@ -114,8 +116,6 @@ class Character(object):
         self._character_friends = None
         self._count_of_issue_appearances = None
         self._creators = None
-        self._deck = None
-        self._description = None
         self._first_appeared_in_issue = None
         self._gender = None
         self._image = None
@@ -140,6 +140,10 @@ class Character(object):
             self.aliases = aliases
         if api_detail_url is not None:
             self.api_detail_url = api_detail_url
+        if description is not None:
+            self.description = description
+        if deck is not None:
+            self.deck = deck
         if site_detail_url is not None:
             self.site_detail_url = site_detail_url
         if date_added is not None:
@@ -156,10 +160,6 @@ class Character(object):
             self.count_of_issue_appearances = count_of_issue_appearances
         if creators is not None:
             self.creators = creators
-        if deck is not None:
-            self.deck = deck
-        if description is not None:
-            self.description = description
         if first_appeared_in_issue is not None:
             self.first_appeared_in_issue = first_appeared_in_issue
         if gender is not None:
@@ -284,6 +284,52 @@ class Character(object):
         """
 
         self._api_detail_url = api_detail_url
+
+    @property
+    def description(self):
+        """Gets the description of this Character.  # noqa: E501
+
+        Description of the entity.  # noqa: E501
+
+        :return: The description of this Character.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Character.
+
+        Description of the entity.  # noqa: E501
+
+        :param description: The description of this Character.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def deck(self):
+        """Gets the deck of this Character.  # noqa: E501
+
+        Brief summary of the Entity.  # noqa: E501
+
+        :return: The deck of this Character.  # noqa: E501
+        :rtype: str
+        """
+        return self._deck
+
+    @deck.setter
+    def deck(self, deck):
+        """Sets the deck of this Character.
+
+        Brief summary of the Entity.  # noqa: E501
+
+        :param deck: The deck of this Character.  # noqa: E501
+        :type: str
+        """
+
+        self._deck = deck
 
     @property
     def site_detail_url(self):
@@ -468,52 +514,6 @@ class Character(object):
         """
 
         self._creators = creators
-
-    @property
-    def deck(self):
-        """Gets the deck of this Character.  # noqa: E501
-
-        Brief summary of the character.  # noqa: E501
-
-        :return: The deck of this Character.  # noqa: E501
-        :rtype: object
-        """
-        return self._deck
-
-    @deck.setter
-    def deck(self, deck):
-        """Sets the deck of this Character.
-
-        Brief summary of the character.  # noqa: E501
-
-        :param deck: The deck of this Character.  # noqa: E501
-        :type: object
-        """
-
-        self._deck = deck
-
-    @property
-    def description(self):
-        """Gets the description of this Character.  # noqa: E501
-
-        Description of the character.  # noqa: E501
-
-        :return: The description of this Character.  # noqa: E501
-        :rtype: object
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Character.
-
-        Description of the character.  # noqa: E501
-
-        :param description: The description of this Character.  # noqa: E501
-        :type: object
-        """
-
-        self._description = description
 
     @property
     def first_appeared_in_issue(self):

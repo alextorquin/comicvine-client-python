@@ -37,8 +37,6 @@ class IssueAllOf(object):
         'characters_died_in': 'object',
         'concept_credits': 'object',
         'cover_date': 'object',
-        'deck': 'object',
-        'description': 'object',
         'disbanded_teams': 'object',
         'first_appearance_characters': 'object',
         'first_appearance_concepts': 'object',
@@ -63,8 +61,6 @@ class IssueAllOf(object):
         'characters_died_in': 'characters_died_in',
         'concept_credits': 'concept_credits',
         'cover_date': 'cover_date',
-        'deck': 'deck',
-        'description': 'description',
         'disbanded_teams': 'disbanded_teams',
         'first_appearance_characters': 'first_appearance_characters',
         'first_appearance_concepts': 'first_appearance_concepts',
@@ -84,7 +80,7 @@ class IssueAllOf(object):
         'volume': 'volume'
     }
 
-    def __init__(self, character_credits=None, characters_died_in=None, concept_credits=None, cover_date=None, deck=None, description=None, disbanded_teams=None, first_appearance_characters=None, first_appearance_concepts=None, first_appearance_locations=None, first_appearance_objects=None, first_appearance_storyarcs=None, first_appearance_teams=None, image=None, issue_number=None, location_credits=None, object_credits=None, person_credits=None, store_date=None, story_arc_credits=None, team_credits=None, teams_disbanded_in=None, volume=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, character_credits=None, characters_died_in=None, concept_credits=None, cover_date=None, disbanded_teams=None, first_appearance_characters=None, first_appearance_concepts=None, first_appearance_locations=None, first_appearance_objects=None, first_appearance_storyarcs=None, first_appearance_teams=None, image=None, issue_number=None, location_credits=None, object_credits=None, person_credits=None, store_date=None, story_arc_credits=None, team_credits=None, teams_disbanded_in=None, volume=None, local_vars_configuration=None):  # noqa: E501
         """IssueAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -94,8 +90,6 @@ class IssueAllOf(object):
         self._characters_died_in = None
         self._concept_credits = None
         self._cover_date = None
-        self._deck = None
-        self._description = None
         self._disbanded_teams = None
         self._first_appearance_characters = None
         self._first_appearance_concepts = None
@@ -123,10 +117,6 @@ class IssueAllOf(object):
             self.concept_credits = concept_credits
         if cover_date is not None:
             self.cover_date = cover_date
-        if deck is not None:
-            self.deck = deck
-        if description is not None:
-            self.description = description
         if disbanded_teams is not None:
             self.disbanded_teams = disbanded_teams
         if first_appearance_characters is not None:
@@ -253,52 +243,6 @@ class IssueAllOf(object):
         """
 
         self._cover_date = cover_date
-
-    @property
-    def deck(self):
-        """Gets the deck of this IssueAllOf.  # noqa: E501
-
-        Brief summary of the issue.  # noqa: E501
-
-        :return: The deck of this IssueAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._deck
-
-    @deck.setter
-    def deck(self, deck):
-        """Sets the deck of this IssueAllOf.
-
-        Brief summary of the issue.  # noqa: E501
-
-        :param deck: The deck of this IssueAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._deck = deck
-
-    @property
-    def description(self):
-        """Gets the description of this IssueAllOf.  # noqa: E501
-
-        Description of the issue.  # noqa: E501
-
-        :return: The description of this IssueAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this IssueAllOf.
-
-        Description of the issue.  # noqa: E501
-
-        :param description: The description of this IssueAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._description = description
 
     @property
     def disbanded_teams(self):

@@ -8,8 +8,6 @@ Name | Type | Description | Notes
 **characters_died_in** | **object** | A list of characters that died in this issue. | [optional] 
 **concept_credits** | **object** | A list of concepts that appear in this issue. | [optional] 
 **cover_date** | **object** | The publish date printed on the cover of an issue. | [optional] 
-**deck** | **object** | Brief summary of the issue. | [optional] 
-**description** | **object** | Description of the issue. | [optional] 
 **disbanded_teams** | **object** | A list of teams that disbanded in this issue. | [optional] 
 **first_appearance_characters** | **object** | A list of characters in which this issue is the first appearance of the character. | [optional] 
 **first_appearance_concepts** | **object** | A list of concepts in which this issue is the first appearance of the concept. | [optional] 

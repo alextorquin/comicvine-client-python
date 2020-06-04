@@ -33,12 +33,10 @@ class VolumeAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'aliases': 'object',
-        'character_credits': 'object',
-        'concept_credits': 'object',
-        'count_of_issues': 'object',
-        'deck': 'object',
-        'description': 'object',
+        'aliases': 'str',
+        'characters': 'list[object]',
+        'concepts': 'list[object]',
+        'count_of_issues': 'int',
         'first_issue': 'object',
         'image': 'object',
         'last_issue': 'object',
@@ -46,17 +44,15 @@ class VolumeAllOf(object):
         'object_credits': 'object',
         'person_credits': 'object',
         'publisher': 'object',
-        'start_year': 'object',
+        'start_year': 'str',
         'team_credits': 'object'
     }
 
     attribute_map = {
         'aliases': 'aliases',
-        'character_credits': 'character_credits',
-        'concept_credits': 'concept_credits',
+        'characters': 'characters',
+        'concepts': 'concepts',
         'count_of_issues': 'count_of_issues',
-        'deck': 'deck',
-        'description': 'description',
         'first_issue': 'first_issue',
         'image': 'image',
         'last_issue': 'last_issue',
@@ -68,18 +64,16 @@ class VolumeAllOf(object):
         'team_credits': 'team_credits'
     }
 
-    def __init__(self, aliases=None, character_credits=None, concept_credits=None, count_of_issues=None, deck=None, description=None, first_issue=None, image=None, last_issue=None, location_credits=None, object_credits=None, person_credits=None, publisher=None, start_year=None, team_credits=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, aliases=None, characters=None, concepts=None, count_of_issues=None, first_issue=None, image=None, last_issue=None, location_credits=None, object_credits=None, person_credits=None, publisher=None, start_year=None, team_credits=None, local_vars_configuration=None):  # noqa: E501
         """VolumeAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._aliases = None
-        self._character_credits = None
-        self._concept_credits = None
+        self._characters = None
+        self._concepts = None
         self._count_of_issues = None
-        self._deck = None
-        self._description = None
         self._first_issue = None
         self._image = None
         self._last_issue = None
@@ -93,16 +87,12 @@ class VolumeAllOf(object):
 
         if aliases is not None:
             self.aliases = aliases
-        if character_credits is not None:
-            self.character_credits = character_credits
-        if concept_credits is not None:
-            self.concept_credits = concept_credits
+        if characters is not None:
+            self.characters = characters
+        if concepts is not None:
+            self.concepts = concepts
         if count_of_issues is not None:
             self.count_of_issues = count_of_issues
-        if deck is not None:
-            self.deck = deck
-        if description is not None:
-            self.description = description
         if first_issue is not None:
             self.first_issue = first_issue
         if image is not None:
@@ -129,7 +119,7 @@ class VolumeAllOf(object):
         List of aliases the volume is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :return: The aliases of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._aliases
 
@@ -140,56 +130,56 @@ class VolumeAllOf(object):
         List of aliases the volume is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :param aliases: The aliases of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._aliases = aliases
 
     @property
-    def character_credits(self):
-        """Gets the character_credits of this VolumeAllOf.  # noqa: E501
+    def characters(self):
+        """Gets the characters of this VolumeAllOf.  # noqa: E501
 
         A list of characters that appear in this volume.  # noqa: E501
 
-        :return: The character_credits of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :return: The characters of this VolumeAllOf.  # noqa: E501
+        :rtype: list[object]
         """
-        return self._character_credits
+        return self._characters
 
-    @character_credits.setter
-    def character_credits(self, character_credits):
-        """Sets the character_credits of this VolumeAllOf.
+    @characters.setter
+    def characters(self, characters):
+        """Sets the characters of this VolumeAllOf.
 
         A list of characters that appear in this volume.  # noqa: E501
 
-        :param character_credits: The character_credits of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :param characters: The characters of this VolumeAllOf.  # noqa: E501
+        :type: list[object]
         """
 
-        self._character_credits = character_credits
+        self._characters = characters
 
     @property
-    def concept_credits(self):
-        """Gets the concept_credits of this VolumeAllOf.  # noqa: E501
+    def concepts(self):
+        """Gets the concepts of this VolumeAllOf.  # noqa: E501
 
         A list of concepts that appear in this volume.  # noqa: E501
 
-        :return: The concept_credits of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :return: The concepts of this VolumeAllOf.  # noqa: E501
+        :rtype: list[object]
         """
-        return self._concept_credits
+        return self._concepts
 
-    @concept_credits.setter
-    def concept_credits(self, concept_credits):
-        """Sets the concept_credits of this VolumeAllOf.
+    @concepts.setter
+    def concepts(self, concepts):
+        """Sets the concepts of this VolumeAllOf.
 
         A list of concepts that appear in this volume.  # noqa: E501
 
-        :param concept_credits: The concept_credits of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :param concepts: The concepts of this VolumeAllOf.  # noqa: E501
+        :type: list[object]
         """
 
-        self._concept_credits = concept_credits
+        self._concepts = concepts
 
     @property
     def count_of_issues(self):
@@ -198,7 +188,7 @@ class VolumeAllOf(object):
         Number of issues included in this volume.  # noqa: E501
 
         :return: The count_of_issues of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: int
         """
         return self._count_of_issues
 
@@ -209,56 +199,10 @@ class VolumeAllOf(object):
         Number of issues included in this volume.  # noqa: E501
 
         :param count_of_issues: The count_of_issues of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type: int
         """
 
         self._count_of_issues = count_of_issues
-
-    @property
-    def deck(self):
-        """Gets the deck of this VolumeAllOf.  # noqa: E501
-
-        Brief summary of the volume.  # noqa: E501
-
-        :return: The deck of this VolumeAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._deck
-
-    @deck.setter
-    def deck(self, deck):
-        """Sets the deck of this VolumeAllOf.
-
-        Brief summary of the volume.  # noqa: E501
-
-        :param deck: The deck of this VolumeAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._deck = deck
-
-    @property
-    def description(self):
-        """Gets the description of this VolumeAllOf.  # noqa: E501
-
-        Description of the volume.  # noqa: E501
-
-        :return: The description of this VolumeAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this VolumeAllOf.
-
-        Description of the volume.  # noqa: E501
-
-        :param description: The description of this VolumeAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._description = description
 
     @property
     def first_issue(self):
@@ -428,7 +372,7 @@ class VolumeAllOf(object):
         The first year this volume appeared in comics.  # noqa: E501
 
         :return: The start_year of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._start_year
 
@@ -439,7 +383,7 @@ class VolumeAllOf(object):
         The first year this volume appeared in comics.  # noqa: E501
 
         :param start_year: The start_year of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._start_year = start_year

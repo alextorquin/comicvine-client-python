@@ -41,8 +41,6 @@ class TestCharacterAllOf(unittest.TestCase):
                 character_friends = None, 
                 count_of_issue_appearances = None, 
                 creators = None, 
-                deck = None, 
-                description = None, 
                 first_appeared_in_issue = None, 
                 gender = None, 
                 image = None, 

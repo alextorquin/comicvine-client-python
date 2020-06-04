@@ -9,8 +9,6 @@ Name | Type | Description | Notes
 **country** | **object** | Country the person resides in. | [optional] 
 **created_characters** | **object** | Comic characters this person created. | [optional] 
 **death** | **object** | Date this person died on. | [optional] 
-**deck** | **object** | Brief summary of the person. | [optional] 
-**description** | **object** | Description of the person. | [optional] 
 **email** | **object** | The email of this person. | [optional] 
 **gender** | **object** | Gender of the person. Available options are: Male, Female, Other | [optional] 
 **hometown** | **object** | City or town the person resides in. | [optional] 

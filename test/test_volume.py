@@ -38,16 +38,21 @@ class TestVolume(unittest.TestCase):
             return Volume(
                 id = 63316, 
                 name = 'Yoko Tsuno', 
-                aliases = None, 
+                aliases = 'alias1
+alias2', 
                 api_detail_url = 'https://comicvine.gamespot.com/api/volume/4050-87668/', 
+                description = '<p>A total of 25 albums was published between 1972 and 2010. Creator Roger Leloup has also written a novel detailing the childhood and early years of the character. Seven albums have been translated in English.</p>', 
+                deck = 'With knowledge and honor you can challenge anything.', 
                 site_detail_url = 'https://comicvine.gamespot.com/yoko-tsuno/4005-63316/', 
                 date_added = '2016-01-26 17:52:32', 
                 date_last_updated = '2016-01-26 17:53:02', 
-                character_credits = None, 
-                concept_credits = None, 
-                count_of_issues = None, 
-                deck = None, 
-                description = None, 
+                characters = [
+                    None
+                    ], 
+                concepts = [
+                    None
+                    ], 
+                count_of_issues = 13, 
                 first_issue = None, 
                 image = None, 
                 last_issue = None, 
@@ -55,7 +60,7 @@ class TestVolume(unittest.TestCase):
                 object_credits = None, 
                 person_credits = None, 
                 publisher = None, 
-                start_year = None, 
+                start_year = '2007', 
                 team_credits = None
             )
         else :

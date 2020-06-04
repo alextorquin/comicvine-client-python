@@ -41,8 +41,6 @@ class TestPersonAllOf(unittest.TestCase):
                 country = None, 
                 created_characters = None, 
                 death = None, 
-                deck = None, 
-                description = None, 
                 email = None, 
                 gender = None, 
                 hometown = None, 

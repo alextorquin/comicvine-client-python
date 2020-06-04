@@ -37,6 +37,8 @@ class Issue(object):
         'name': 'str',
         'aliases': 'str',
         'api_detail_url': 'str',
+        'description': 'str',
+        'deck': 'str',
         'site_detail_url': 'str',
         'date_added': 'str',
         'date_last_updated': 'str',
@@ -44,8 +46,6 @@ class Issue(object):
         'characters_died_in': 'object',
         'concept_credits': 'object',
         'cover_date': 'object',
-        'deck': 'object',
-        'description': 'object',
         'disbanded_teams': 'object',
         'first_appearance_characters': 'object',
         'first_appearance_concepts': 'object',
@@ -70,6 +70,8 @@ class Issue(object):
         'name': 'name',
         'aliases': 'aliases',
         'api_detail_url': 'api_detail_url',
+        'description': 'description',
+        'deck': 'deck',
         'site_detail_url': 'site_detail_url',
         'date_added': 'date_added',
         'date_last_updated': 'date_last_updated',
@@ -77,8 +79,6 @@ class Issue(object):
         'characters_died_in': 'characters_died_in',
         'concept_credits': 'concept_credits',
         'cover_date': 'cover_date',
-        'deck': 'deck',
-        'description': 'description',
         'disbanded_teams': 'disbanded_teams',
         'first_appearance_characters': 'first_appearance_characters',
         'first_appearance_concepts': 'first_appearance_concepts',
@@ -98,7 +98,7 @@ class Issue(object):
         'volume': 'volume'
     }
 
-    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, site_detail_url=None, date_added=None, date_last_updated=None, character_credits=None, characters_died_in=None, concept_credits=None, cover_date=None, deck=None, description=None, disbanded_teams=None, first_appearance_characters=None, first_appearance_concepts=None, first_appearance_locations=None, first_appearance_objects=None, first_appearance_storyarcs=None, first_appearance_teams=None, image=None, issue_number=None, location_credits=None, object_credits=None, person_credits=None, store_date=None, story_arc_credits=None, team_credits=None, teams_disbanded_in=None, volume=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, character_credits=None, characters_died_in=None, concept_credits=None, cover_date=None, disbanded_teams=None, first_appearance_characters=None, first_appearance_concepts=None, first_appearance_locations=None, first_appearance_objects=None, first_appearance_storyarcs=None, first_appearance_teams=None, image=None, issue_number=None, location_credits=None, object_credits=None, person_credits=None, store_date=None, story_arc_credits=None, team_credits=None, teams_disbanded_in=None, volume=None, local_vars_configuration=None):  # noqa: E501
         """Issue - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -108,6 +108,8 @@ class Issue(object):
         self._name = None
         self._aliases = None
         self._api_detail_url = None
+        self._description = None
+        self._deck = None
         self._site_detail_url = None
         self._date_added = None
         self._date_last_updated = None
@@ -115,8 +117,6 @@ class Issue(object):
         self._characters_died_in = None
         self._concept_credits = None
         self._cover_date = None
-        self._deck = None
-        self._description = None
         self._disbanded_teams = None
         self._first_appearance_characters = None
         self._first_appearance_concepts = None
@@ -143,6 +143,10 @@ class Issue(object):
             self.aliases = aliases
         if api_detail_url is not None:
             self.api_detail_url = api_detail_url
+        if description is not None:
+            self.description = description
+        if deck is not None:
+            self.deck = deck
         if site_detail_url is not None:
             self.site_detail_url = site_detail_url
         if date_added is not None:
@@ -157,10 +161,6 @@ class Issue(object):
             self.concept_credits = concept_credits
         if cover_date is not None:
             self.cover_date = cover_date
-        if deck is not None:
-            self.deck = deck
-        if description is not None:
-            self.description = description
         if disbanded_teams is not None:
             self.disbanded_teams = disbanded_teams
         if first_appearance_characters is not None:
@@ -289,6 +289,52 @@ class Issue(object):
         """
 
         self._api_detail_url = api_detail_url
+
+    @property
+    def description(self):
+        """Gets the description of this Issue.  # noqa: E501
+
+        Description of the entity.  # noqa: E501
+
+        :return: The description of this Issue.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Issue.
+
+        Description of the entity.  # noqa: E501
+
+        :param description: The description of this Issue.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def deck(self):
+        """Gets the deck of this Issue.  # noqa: E501
+
+        Brief summary of the Entity.  # noqa: E501
+
+        :return: The deck of this Issue.  # noqa: E501
+        :rtype: str
+        """
+        return self._deck
+
+    @deck.setter
+    def deck(self, deck):
+        """Sets the deck of this Issue.
+
+        Brief summary of the Entity.  # noqa: E501
+
+        :param deck: The deck of this Issue.  # noqa: E501
+        :type: str
+        """
+
+        self._deck = deck
 
     @property
     def site_detail_url(self):
@@ -450,52 +496,6 @@ class Issue(object):
         """
 
         self._cover_date = cover_date
-
-    @property
-    def deck(self):
-        """Gets the deck of this Issue.  # noqa: E501
-
-        Brief summary of the issue.  # noqa: E501
-
-        :return: The deck of this Issue.  # noqa: E501
-        :rtype: object
-        """
-        return self._deck
-
-    @deck.setter
-    def deck(self, deck):
-        """Sets the deck of this Issue.
-
-        Brief summary of the issue.  # noqa: E501
-
-        :param deck: The deck of this Issue.  # noqa: E501
-        :type: object
-        """
-
-        self._deck = deck
-
-    @property
-    def description(self):
-        """Gets the description of this Issue.  # noqa: E501
-
-        Description of the issue.  # noqa: E501
-
-        :return: The description of this Issue.  # noqa: E501
-        :rtype: object
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Issue.
-
-        Description of the issue.  # noqa: E501
-
-        :param description: The description of this Issue.  # noqa: E501
-        :type: object
-        """
-
-        self._description = description
 
     @property
     def disbanded_teams(self):

@@ -38,8 +38,6 @@ class PersonAllOf(object):
         'country': 'object',
         'created_characters': 'object',
         'death': 'object',
-        'deck': 'object',
-        'description': 'object',
         'email': 'object',
         'gender': 'object',
         'hometown': 'object',
@@ -56,8 +54,6 @@ class PersonAllOf(object):
         'country': 'country',
         'created_characters': 'created_characters',
         'death': 'death',
-        'deck': 'deck',
-        'description': 'description',
         'email': 'email',
         'gender': 'gender',
         'hometown': 'hometown',
@@ -68,7 +64,7 @@ class PersonAllOf(object):
         'website': 'website'
     }
 
-    def __init__(self, birth=None, count_of_issue_appearances=None, country=None, created_characters=None, death=None, deck=None, description=None, email=None, gender=None, hometown=None, image=None, issue_credits=None, story_arc_credits=None, volume_credits=None, website=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, birth=None, count_of_issue_appearances=None, country=None, created_characters=None, death=None, email=None, gender=None, hometown=None, image=None, issue_credits=None, story_arc_credits=None, volume_credits=None, website=None, local_vars_configuration=None):  # noqa: E501
         """PersonAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -79,8 +75,6 @@ class PersonAllOf(object):
         self._country = None
         self._created_characters = None
         self._death = None
-        self._deck = None
-        self._description = None
         self._email = None
         self._gender = None
         self._hometown = None
@@ -101,10 +95,6 @@ class PersonAllOf(object):
             self.created_characters = created_characters
         if death is not None:
             self.death = death
-        if deck is not None:
-            self.deck = deck
-        if description is not None:
-            self.description = description
         if email is not None:
             self.email = email
         if gender is not None:
@@ -236,52 +226,6 @@ class PersonAllOf(object):
         """
 
         self._death = death
-
-    @property
-    def deck(self):
-        """Gets the deck of this PersonAllOf.  # noqa: E501
-
-        Brief summary of the person.  # noqa: E501
-
-        :return: The deck of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._deck
-
-    @deck.setter
-    def deck(self, deck):
-        """Sets the deck of this PersonAllOf.
-
-        Brief summary of the person.  # noqa: E501
-
-        :param deck: The deck of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._deck = deck
-
-    @property
-    def description(self):
-        """Gets the description of this PersonAllOf.  # noqa: E501
-
-        Description of the person.  # noqa: E501
-
-        :return: The description of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this PersonAllOf.
-
-        Description of the person.  # noqa: E501
-
-        :param description: The description of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._description = description
 
     @property
     def email(self):

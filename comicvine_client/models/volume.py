@@ -35,16 +35,16 @@ class Volume(object):
     openapi_types = {
         'id': 'int',
         'name': 'str',
-        'aliases': 'object',
+        'aliases': 'str',
         'api_detail_url': 'str',
+        'description': 'str',
+        'deck': 'str',
         'site_detail_url': 'str',
         'date_added': 'str',
         'date_last_updated': 'str',
-        'character_credits': 'object',
-        'concept_credits': 'object',
-        'count_of_issues': 'object',
-        'deck': 'object',
-        'description': 'object',
+        'characters': 'list[object]',
+        'concepts': 'list[object]',
+        'count_of_issues': 'int',
         'first_issue': 'object',
         'image': 'object',
         'last_issue': 'object',
@@ -52,7 +52,7 @@ class Volume(object):
         'object_credits': 'object',
         'person_credits': 'object',
         'publisher': 'object',
-        'start_year': 'object',
+        'start_year': 'str',
         'team_credits': 'object'
     }
 
@@ -61,14 +61,14 @@ class Volume(object):
         'name': 'name',
         'aliases': 'aliases',
         'api_detail_url': 'api_detail_url',
+        'description': 'description',
+        'deck': 'deck',
         'site_detail_url': 'site_detail_url',
         'date_added': 'date_added',
         'date_last_updated': 'date_last_updated',
-        'character_credits': 'character_credits',
-        'concept_credits': 'concept_credits',
+        'characters': 'characters',
+        'concepts': 'concepts',
         'count_of_issues': 'count_of_issues',
-        'deck': 'deck',
-        'description': 'description',
         'first_issue': 'first_issue',
         'image': 'image',
         'last_issue': 'last_issue',
@@ -80,7 +80,7 @@ class Volume(object):
         'team_credits': 'team_credits'
     }
 
-    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, site_detail_url=None, date_added=None, date_last_updated=None, character_credits=None, concept_credits=None, count_of_issues=None, deck=None, description=None, first_issue=None, image=None, last_issue=None, location_credits=None, object_credits=None, person_credits=None, publisher=None, start_year=None, team_credits=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, characters=None, concepts=None, count_of_issues=None, first_issue=None, image=None, last_issue=None, location_credits=None, object_credits=None, person_credits=None, publisher=None, start_year=None, team_credits=None, local_vars_configuration=None):  # noqa: E501
         """Volume - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -90,14 +90,14 @@ class Volume(object):
         self._name = None
         self._aliases = None
         self._api_detail_url = None
+        self._description = None
+        self._deck = None
         self._site_detail_url = None
         self._date_added = None
         self._date_last_updated = None
-        self._character_credits = None
-        self._concept_credits = None
+        self._characters = None
+        self._concepts = None
         self._count_of_issues = None
-        self._deck = None
-        self._description = None
         self._first_issue = None
         self._image = None
         self._last_issue = None
@@ -116,22 +116,22 @@ class Volume(object):
             self.aliases = aliases
         if api_detail_url is not None:
             self.api_detail_url = api_detail_url
+        if description is not None:
+            self.description = description
+        if deck is not None:
+            self.deck = deck
         if site_detail_url is not None:
             self.site_detail_url = site_detail_url
         if date_added is not None:
             self.date_added = date_added
         if date_last_updated is not None:
             self.date_last_updated = date_last_updated
-        if character_credits is not None:
-            self.character_credits = character_credits
-        if concept_credits is not None:
-            self.concept_credits = concept_credits
+        if characters is not None:
+            self.characters = characters
+        if concepts is not None:
+            self.concepts = concepts
         if count_of_issues is not None:
             self.count_of_issues = count_of_issues
-        if deck is not None:
-            self.deck = deck
-        if description is not None:
-            self.description = description
         if first_issue is not None:
             self.first_issue = first_issue
         if image is not None:
@@ -206,7 +206,7 @@ class Volume(object):
         List of aliases the volume is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :return: The aliases of this Volume.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._aliases
 
@@ -217,7 +217,7 @@ class Volume(object):
         List of aliases the volume is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :param aliases: The aliases of this Volume.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._aliases = aliases
@@ -244,6 +244,52 @@ class Volume(object):
         """
 
         self._api_detail_url = api_detail_url
+
+    @property
+    def description(self):
+        """Gets the description of this Volume.  # noqa: E501
+
+        Description of the entity.  # noqa: E501
+
+        :return: The description of this Volume.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Volume.
+
+        Description of the entity.  # noqa: E501
+
+        :param description: The description of this Volume.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def deck(self):
+        """Gets the deck of this Volume.  # noqa: E501
+
+        Brief summary of the Entity.  # noqa: E501
+
+        :return: The deck of this Volume.  # noqa: E501
+        :rtype: str
+        """
+        return self._deck
+
+    @deck.setter
+    def deck(self, deck):
+        """Sets the deck of this Volume.
+
+        Brief summary of the Entity.  # noqa: E501
+
+        :param deck: The deck of this Volume.  # noqa: E501
+        :type: str
+        """
+
+        self._deck = deck
 
     @property
     def site_detail_url(self):
@@ -315,50 +361,50 @@ class Volume(object):
         self._date_last_updated = date_last_updated
 
     @property
-    def character_credits(self):
-        """Gets the character_credits of this Volume.  # noqa: E501
+    def characters(self):
+        """Gets the characters of this Volume.  # noqa: E501
 
         A list of characters that appear in this volume.  # noqa: E501
 
-        :return: The character_credits of this Volume.  # noqa: E501
-        :rtype: object
+        :return: The characters of this Volume.  # noqa: E501
+        :rtype: list[object]
         """
-        return self._character_credits
+        return self._characters
 
-    @character_credits.setter
-    def character_credits(self, character_credits):
-        """Sets the character_credits of this Volume.
+    @characters.setter
+    def characters(self, characters):
+        """Sets the characters of this Volume.
 
         A list of characters that appear in this volume.  # noqa: E501
 
-        :param character_credits: The character_credits of this Volume.  # noqa: E501
-        :type: object
+        :param characters: The characters of this Volume.  # noqa: E501
+        :type: list[object]
         """
 
-        self._character_credits = character_credits
+        self._characters = characters
 
     @property
-    def concept_credits(self):
-        """Gets the concept_credits of this Volume.  # noqa: E501
+    def concepts(self):
+        """Gets the concepts of this Volume.  # noqa: E501
 
         A list of concepts that appear in this volume.  # noqa: E501
 
-        :return: The concept_credits of this Volume.  # noqa: E501
-        :rtype: object
+        :return: The concepts of this Volume.  # noqa: E501
+        :rtype: list[object]
         """
-        return self._concept_credits
+        return self._concepts
 
-    @concept_credits.setter
-    def concept_credits(self, concept_credits):
-        """Sets the concept_credits of this Volume.
+    @concepts.setter
+    def concepts(self, concepts):
+        """Sets the concepts of this Volume.
 
         A list of concepts that appear in this volume.  # noqa: E501
 
-        :param concept_credits: The concept_credits of this Volume.  # noqa: E501
-        :type: object
+        :param concepts: The concepts of this Volume.  # noqa: E501
+        :type: list[object]
         """
 
-        self._concept_credits = concept_credits
+        self._concepts = concepts
 
     @property
     def count_of_issues(self):
@@ -367,7 +413,7 @@ class Volume(object):
         Number of issues included in this volume.  # noqa: E501
 
         :return: The count_of_issues of this Volume.  # noqa: E501
-        :rtype: object
+        :rtype: int
         """
         return self._count_of_issues
 
@@ -378,56 +424,10 @@ class Volume(object):
         Number of issues included in this volume.  # noqa: E501
 
         :param count_of_issues: The count_of_issues of this Volume.  # noqa: E501
-        :type: object
+        :type: int
         """
 
         self._count_of_issues = count_of_issues
-
-    @property
-    def deck(self):
-        """Gets the deck of this Volume.  # noqa: E501
-
-        Brief summary of the volume.  # noqa: E501
-
-        :return: The deck of this Volume.  # noqa: E501
-        :rtype: object
-        """
-        return self._deck
-
-    @deck.setter
-    def deck(self, deck):
-        """Sets the deck of this Volume.
-
-        Brief summary of the volume.  # noqa: E501
-
-        :param deck: The deck of this Volume.  # noqa: E501
-        :type: object
-        """
-
-        self._deck = deck
-
-    @property
-    def description(self):
-        """Gets the description of this Volume.  # noqa: E501
-
-        Description of the volume.  # noqa: E501
-
-        :return: The description of this Volume.  # noqa: E501
-        :rtype: object
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Volume.
-
-        Description of the volume.  # noqa: E501
-
-        :param description: The description of this Volume.  # noqa: E501
-        :type: object
-        """
-
-        self._description = description
 
     @property
     def first_issue(self):
@@ -597,7 +597,7 @@ class Volume(object):
         The first year this volume appeared in comics.  # noqa: E501
 
         :return: The start_year of this Volume.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._start_year
 
@@ -608,7 +608,7 @@ class Volume(object):
         The first year this volume appeared in comics.  # noqa: E501
 
         :param start_year: The start_year of this Volume.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._start_year = start_year
