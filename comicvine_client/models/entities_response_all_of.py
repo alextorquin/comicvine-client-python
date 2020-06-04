@@ -70,7 +70,7 @@ class EntitiesResponseAllOf(object):
         A list of Entities that match the filters specified  # noqa: E501
 
         :param results: The results of this EntitiesResponseAllOf.  # noqa: E501
-        :type: list[object]
+        :type results: list[object]
         """
 
         self._results = results

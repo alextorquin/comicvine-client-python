@@ -41,7 +41,8 @@ class BaseEntity(object):
         'deck': 'str',
         'site_detail_url': 'str',
         'date_added': 'str',
-        'date_last_updated': 'str'
+        'date_last_updated': 'str',
+        'image': 'Image'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class BaseEntity(object):
         'deck': 'deck',
         'site_detail_url': 'site_detail_url',
         'date_added': 'date_added',
-        'date_last_updated': 'date_last_updated'
+        'date_last_updated': 'date_last_updated',
+        'image': 'image'
     }
 
-    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, image=None, local_vars_configuration=None):  # noqa: E501
         """BaseEntity - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -71,6 +73,7 @@ class BaseEntity(object):
         self._site_detail_url = None
         self._date_added = None
         self._date_last_updated = None
+        self._image = None
         self.discriminator = None
 
         self.id = id
@@ -90,6 +93,8 @@ class BaseEntity(object):
             self.date_added = date_added
         if date_last_updated is not None:
             self.date_last_updated = date_last_updated
+        if image is not None:
+            self.image = image
 
     @property
     def id(self):
@@ -109,7 +114,7 @@ class BaseEntity(object):
         Unique ID for the entity.  # noqa: E501
 
         :param id: The id of this BaseEntity.  # noqa: E501
-        :type: int
+        :type id: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -134,7 +139,7 @@ class BaseEntity(object):
         Name for the entity  # noqa: E501
 
         :param name: The name of this BaseEntity.  # noqa: E501
-        :type: str
+        :type name: str
         """
 
         self._name = name
@@ -157,7 +162,7 @@ class BaseEntity(object):
         List of aliases the entity is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :param aliases: The aliases of this BaseEntity.  # noqa: E501
-        :type: str
+        :type aliases: str
         """
 
         self._aliases = aliases
@@ -180,7 +185,7 @@ class BaseEntity(object):
         URL pointing to the entity detail resource.  # noqa: E501
 
         :param api_detail_url: The api_detail_url of this BaseEntity.  # noqa: E501
-        :type: str
+        :type api_detail_url: str
         """
 
         self._api_detail_url = api_detail_url
@@ -203,7 +208,7 @@ class BaseEntity(object):
         Description of the entity.  # noqa: E501
 
         :param description: The description of this BaseEntity.  # noqa: E501
-        :type: str
+        :type description: str
         """
 
         self._description = description
@@ -226,7 +231,7 @@ class BaseEntity(object):
         Brief summary of the Entity.  # noqa: E501
 
         :param deck: The deck of this BaseEntity.  # noqa: E501
-        :type: str
+        :type deck: str
         """
 
         self._deck = deck
@@ -249,7 +254,7 @@ class BaseEntity(object):
         URL pointing to the concept on Giant Bomb.  # noqa: E501
 
         :param site_detail_url: The site_detail_url of this BaseEntity.  # noqa: E501
-        :type: str
+        :type site_detail_url: str
         """
 
         self._site_detail_url = site_detail_url
@@ -272,7 +277,7 @@ class BaseEntity(object):
         Date the entity was added to Comic Vine.  # noqa: E501
 
         :param date_added: The date_added of this BaseEntity.  # noqa: E501
-        :type: str
+        :type date_added: str
         """
 
         self._date_added = date_added
@@ -295,10 +300,31 @@ class BaseEntity(object):
         Date the entity was last updated on Comic Vine.  # noqa: E501
 
         :param date_last_updated: The date_last_updated of this BaseEntity.  # noqa: E501
-        :type: str
+        :type date_last_updated: str
         """
 
         self._date_last_updated = date_last_updated
+
+    @property
+    def image(self):
+        """Gets the image of this BaseEntity.  # noqa: E501
+
+
+        :return: The image of this BaseEntity.  # noqa: E501
+        :rtype: Image
+        """
+        return self._image
+
+    @image.setter
+    def image(self, image):
+        """Sets the image of this BaseEntity.
+
+
+        :param image: The image of this BaseEntity.  # noqa: E501
+        :type image: Image
+        """
+
+        self._image = image
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -41,26 +41,36 @@ class SearchApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
+
         >>> thread = api.search(async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool: execute request asynchronously
-        :param str format: The data format of the response takes either xml, json, or jsonp.
-        :param str query: The search string.
-        :param str field_list: List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\"
-        :param int limit: The number of results to display per page. This value defaults to 100 and can not exceed this number.
-        :param int offset: Return results starting with the object at the offset specified.
-        :param str resources: List of resources to filter results. This filter can accept multiple arguments, each delimited with a \",\". Available options are:   character   concept   origin   object   location   issue   story_arc   volume   publisher   person   team   video 
+        :param format: The data format of the response takes either xml, json, or jsonp.
+        :type format: str
+        :param query: The search string.
+        :type query: str
+        :param field_list: List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\"
+        :type field_list: str
+        :param limit: The number of results to display per page. This value defaults to 100 and can not exceed this number.
+        :type limit: int
+        :param offset: Return results starting with the object at the offset specified.
+        :type offset: int
+        :param resources: List of resources to filter results. This filter can accept multiple arguments, each delimited with a \",\". Available options are:   character   concept   origin   object   location   issue   story_arc   volume   publisher   person   team   video 
+        :type resources: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
+        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: EntitiesResponse
+        :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
+        :rtype: EntitiesResponse
         """
         kwargs['_return_http_data_only'] = True
         return self.search_with_http_info(**kwargs)  # noqa: E501
@@ -70,28 +80,39 @@ class SearchApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
+
         >>> thread = api.search_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool: execute request asynchronously
-        :param str format: The data format of the response takes either xml, json, or jsonp.
-        :param str query: The search string.
-        :param str field_list: List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\"
-        :param int limit: The number of results to display per page. This value defaults to 100 and can not exceed this number.
-        :param int offset: Return results starting with the object at the offset specified.
-        :param str resources: List of resources to filter results. This filter can accept multiple arguments, each delimited with a \",\". Available options are:   character   concept   origin   object   location   issue   story_arc   volume   publisher   person   team   video 
+        :param format: The data format of the response takes either xml, json, or jsonp.
+        :type format: str
+        :param query: The search string.
+        :type query: str
+        :param field_list: List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\"
+        :type field_list: str
+        :param limit: The number of results to display per page. This value defaults to 100 and can not exceed this number.
+        :type limit: int
+        :param offset: Return results starting with the object at the offset specified.
+        :type offset: int
+        :param resources: List of resources to filter results. This filter can accept multiple arguments, each delimited with a \",\". Available options are:   character   concept   origin   object   location   issue   story_arc   volume   publisher   person   team   video 
+        :type resources: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
                                        and headers
+        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
+        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(EntitiesResponse, status_code(int), headers(HTTPHeaderDict))
+        :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
+        :rtype: tuple(EntitiesResponse, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()

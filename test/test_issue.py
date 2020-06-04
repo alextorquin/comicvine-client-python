@@ -38,34 +38,90 @@ class TestIssue(unittest.TestCase):
             return Issue(
                 id = 63316, 
                 name = 'Yoko Tsuno', 
-                aliases = 'Joko Zuno', 
+                aliases = 'Anthony Edward Stark
+Tony Stark
+Golden Avenger
+Shellhead
+Armored Avenger
+Tetsujin
+Spare Parts Man
+Iron Knight
+Director Stark
+Cobalt Man
+The Progenitor
+Invincible Iron Man
+Iron Maniac
+Iron Avenger
+Crimson Dynamo
+Merchant of Death', 
                 api_detail_url = 'https://comicvine.gamespot.com/api/volume/4050-87668/', 
                 description = '<p>A total of 25 albums was published between 1972 and 2010. Creator Roger Leloup has also written a novel detailing the childhood and early years of the character. Seven albums have been translated in English.</p>', 
                 deck = 'With knowledge and honor you can challenge anything.', 
                 site_detail_url = 'https://comicvine.gamespot.com/yoko-tsuno/4005-63316/', 
                 date_added = '2016-01-26 17:52:32', 
                 date_last_updated = '2016-01-26 17:53:02', 
-                character_credits = None, 
-                characters_died_in = None, 
-                concept_credits = None, 
-                cover_date = None, 
-                disbanded_teams = None, 
-                first_appearance_characters = None, 
-                first_appearance_concepts = None, 
-                first_appearance_locations = None, 
-                first_appearance_objects = None, 
-                first_appearance_storyarcs = None, 
+                image = comicvine_client.models.image.Image(
+                    icon_url = 'https://comicvine1.cbsistatic.com/uploads/square_avatar/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    medium_url = 'https://comicvine1.cbsistatic.com/uploads/scale_medium/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    screen_url = 'https://comicvine1.cbsistatic.com/uploads/screen_medium/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    screen_large_url = 'https://comicvine1.cbsistatic.com/uploads/screen_kubrick/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    small_url = 'https://comicvine1.cbsistatic.com/uploads/scale_small/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    super_url = 'https://comicvine1.cbsistatic.com/uploads/scale_large/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    thumb_url = 'https://comicvine1.cbsistatic.com/uploads/scale_avatar/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    tiny_url = 'https://comicvine1.cbsistatic.com/uploads/square_mini/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    original_url = 'https://comicvine1.cbsistatic.com/uploads/original/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    image_tags = 'All Images', ), 
+                character_credits = [
+                    null
+                    ], 
+                characters_died_in = [
+                    null
+                    ], 
+                concept_credits = [
+                    None
+                    ], 
+                cover_date = 'Tue Jan 31 00:00:00 GMT 1995', 
+                disbanded_teams = [
+                    None
+                    ], 
+                first_appearance_characters = [
+                    null
+                    ], 
+                first_appearance_concepts = [
+                    None
+                    ], 
+                first_appearance_locations = [
+                    None
+                    ], 
+                first_appearance_objects = [
+                    None
+                    ], 
+                first_appearance_storyarcs = [
+                    None
+                    ], 
                 first_appearance_teams = None, 
-                image = None, 
-                issue_number = None, 
-                location_credits = None, 
-                object_credits = None, 
-                person_credits = None, 
-                store_date = None, 
-                story_arc_credits = None, 
-                team_credits = None, 
-                teams_disbanded_in = None, 
-                volume = None
+                has_staff_review = True, 
+                issue_number = '0', 
+                location_credits = [
+                    None
+                    ], 
+                object_credits = [
+                    None
+                    ], 
+                person_credits = [
+                    null
+                    ], 
+                store_date = 'Tue Jan 31 00:00:00 GMT 1995', 
+                story_arc_credits = [
+                    None
+                    ], 
+                team_credits = [
+                    None
+                    ], 
+                teams_disbanded_in = [
+                    None
+                    ], 
+                volume = null
             )
         else :
             return Issue(

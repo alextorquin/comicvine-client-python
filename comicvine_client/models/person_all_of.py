@@ -33,62 +33,37 @@ class PersonAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'birth': 'object',
-        'count_of_issue_appearances': 'object',
-        'country': 'object',
+        'country': 'str',
         'created_characters': 'object',
-        'death': 'object',
-        'email': 'object',
-        'gender': 'object',
-        'hometown': 'object',
-        'image': 'object',
-        'issue_credits': 'object',
-        'story_arc_credits': 'object',
-        'volume_credits': 'object',
-        'website': 'object'
+        'death': 'date',
+        'email': 'str',
+        'hometown': 'str',
+        'website': 'str'
     }
 
     attribute_map = {
-        'birth': 'birth',
-        'count_of_issue_appearances': 'count_of_issue_appearances',
         'country': 'country',
         'created_characters': 'created_characters',
         'death': 'death',
         'email': 'email',
-        'gender': 'gender',
         'hometown': 'hometown',
-        'image': 'image',
-        'issue_credits': 'issue_credits',
-        'story_arc_credits': 'story_arc_credits',
-        'volume_credits': 'volume_credits',
         'website': 'website'
     }
 
-    def __init__(self, birth=None, count_of_issue_appearances=None, country=None, created_characters=None, death=None, email=None, gender=None, hometown=None, image=None, issue_credits=None, story_arc_credits=None, volume_credits=None, website=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, country=None, created_characters=None, death=None, email=None, hometown=None, website=None, local_vars_configuration=None):  # noqa: E501
         """PersonAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._birth = None
-        self._count_of_issue_appearances = None
         self._country = None
         self._created_characters = None
         self._death = None
         self._email = None
-        self._gender = None
         self._hometown = None
-        self._image = None
-        self._issue_credits = None
-        self._story_arc_credits = None
-        self._volume_credits = None
         self._website = None
         self.discriminator = None
 
-        if birth is not None:
-            self.birth = birth
-        if count_of_issue_appearances is not None:
-            self.count_of_issue_appearances = count_of_issue_appearances
         if country is not None:
             self.country = country
         if created_characters is not None:
@@ -97,66 +72,10 @@ class PersonAllOf(object):
             self.death = death
         if email is not None:
             self.email = email
-        if gender is not None:
-            self.gender = gender
         if hometown is not None:
             self.hometown = hometown
-        if image is not None:
-            self.image = image
-        if issue_credits is not None:
-            self.issue_credits = issue_credits
-        if story_arc_credits is not None:
-            self.story_arc_credits = story_arc_credits
-        if volume_credits is not None:
-            self.volume_credits = volume_credits
         if website is not None:
             self.website = website
-
-    @property
-    def birth(self):
-        """Gets the birth of this PersonAllOf.  # noqa: E501
-
-        A date, if one exists, that the person was born on. Not an origin date.  # noqa: E501
-
-        :return: The birth of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._birth
-
-    @birth.setter
-    def birth(self, birth):
-        """Sets the birth of this PersonAllOf.
-
-        A date, if one exists, that the person was born on. Not an origin date.  # noqa: E501
-
-        :param birth: The birth of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._birth = birth
-
-    @property
-    def count_of_issue_appearances(self):
-        """Gets the count_of_issue_appearances of this PersonAllOf.  # noqa: E501
-
-        Number of issues this person appears in.  # noqa: E501
-
-        :return: The count_of_issue_appearances of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._count_of_issue_appearances
-
-    @count_of_issue_appearances.setter
-    def count_of_issue_appearances(self, count_of_issue_appearances):
-        """Sets the count_of_issue_appearances of this PersonAllOf.
-
-        Number of issues this person appears in.  # noqa: E501
-
-        :param count_of_issue_appearances: The count_of_issue_appearances of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._count_of_issue_appearances = count_of_issue_appearances
 
     @property
     def country(self):
@@ -165,7 +84,7 @@ class PersonAllOf(object):
         Country the person resides in.  # noqa: E501
 
         :return: The country of this PersonAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._country
 
@@ -176,7 +95,7 @@ class PersonAllOf(object):
         Country the person resides in.  # noqa: E501
 
         :param country: The country of this PersonAllOf.  # noqa: E501
-        :type: object
+        :type country: str
         """
 
         self._country = country
@@ -199,7 +118,7 @@ class PersonAllOf(object):
         Comic characters this person created.  # noqa: E501
 
         :param created_characters: The created_characters of this PersonAllOf.  # noqa: E501
-        :type: object
+        :type created_characters: object
         """
 
         self._created_characters = created_characters
@@ -211,7 +130,7 @@ class PersonAllOf(object):
         Date this person died on.  # noqa: E501
 
         :return: The death of this PersonAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: date
         """
         return self._death
 
@@ -222,7 +141,7 @@ class PersonAllOf(object):
         Date this person died on.  # noqa: E501
 
         :param death: The death of this PersonAllOf.  # noqa: E501
-        :type: object
+        :type death: date
         """
 
         self._death = death
@@ -234,7 +153,7 @@ class PersonAllOf(object):
         The email of this person.  # noqa: E501
 
         :return: The email of this PersonAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._email
 
@@ -245,33 +164,10 @@ class PersonAllOf(object):
         The email of this person.  # noqa: E501
 
         :param email: The email of this PersonAllOf.  # noqa: E501
-        :type: object
+        :type email: str
         """
 
         self._email = email
-
-    @property
-    def gender(self):
-        """Gets the gender of this PersonAllOf.  # noqa: E501
-
-        Gender of the person. Available options are: Male, Female, Other  # noqa: E501
-
-        :return: The gender of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._gender
-
-    @gender.setter
-    def gender(self, gender):
-        """Sets the gender of this PersonAllOf.
-
-        Gender of the person. Available options are: Male, Female, Other  # noqa: E501
-
-        :param gender: The gender of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._gender = gender
 
     @property
     def hometown(self):
@@ -280,7 +176,7 @@ class PersonAllOf(object):
         City or town the person resides in.  # noqa: E501
 
         :return: The hometown of this PersonAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._hometown
 
@@ -291,102 +187,10 @@ class PersonAllOf(object):
         City or town the person resides in.  # noqa: E501
 
         :param hometown: The hometown of this PersonAllOf.  # noqa: E501
-        :type: object
+        :type hometown: str
         """
 
         self._hometown = hometown
-
-    @property
-    def image(self):
-        """Gets the image of this PersonAllOf.  # noqa: E501
-
-        Main image of the person.  # noqa: E501
-
-        :return: The image of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._image
-
-    @image.setter
-    def image(self, image):
-        """Sets the image of this PersonAllOf.
-
-        Main image of the person.  # noqa: E501
-
-        :param image: The image of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._image = image
-
-    @property
-    def issue_credits(self):
-        """Gets the issue_credits of this PersonAllOf.  # noqa: E501
-
-        List of issues this person appears in.  # noqa: E501
-
-        :return: The issue_credits of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._issue_credits
-
-    @issue_credits.setter
-    def issue_credits(self, issue_credits):
-        """Sets the issue_credits of this PersonAllOf.
-
-        List of issues this person appears in.  # noqa: E501
-
-        :param issue_credits: The issue_credits of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._issue_credits = issue_credits
-
-    @property
-    def story_arc_credits(self):
-        """Gets the story_arc_credits of this PersonAllOf.  # noqa: E501
-
-        List of story arcs this person appears in.  # noqa: E501
-
-        :return: The story_arc_credits of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._story_arc_credits
-
-    @story_arc_credits.setter
-    def story_arc_credits(self, story_arc_credits):
-        """Sets the story_arc_credits of this PersonAllOf.
-
-        List of story arcs this person appears in.  # noqa: E501
-
-        :param story_arc_credits: The story_arc_credits of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._story_arc_credits = story_arc_credits
-
-    @property
-    def volume_credits(self):
-        """Gets the volume_credits of this PersonAllOf.  # noqa: E501
-
-        List of comic volumes this person appears in.  # noqa: E501
-
-        :return: The volume_credits of this PersonAllOf.  # noqa: E501
-        :rtype: object
-        """
-        return self._volume_credits
-
-    @volume_credits.setter
-    def volume_credits(self, volume_credits):
-        """Sets the volume_credits of this PersonAllOf.
-
-        List of comic volumes this person appears in.  # noqa: E501
-
-        :param volume_credits: The volume_credits of this PersonAllOf.  # noqa: E501
-        :type: object
-        """
-
-        self._volume_credits = volume_credits
 
     @property
     def website(self):
@@ -395,7 +199,7 @@ class PersonAllOf(object):
         URL to the person website.  # noqa: E501
 
         :return: The website of this PersonAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._website
 
@@ -406,7 +210,7 @@ class PersonAllOf(object):
         URL to the person website.  # noqa: E501
 
         :param website: The website of this PersonAllOf.  # noqa: E501
-        :type: object
+        :type website: str
         """
 
         self._website = website

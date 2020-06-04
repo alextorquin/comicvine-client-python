@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import comicvine_client
-from comicvine_client.models.volume import Volume  # noqa: E501
+from comicvine_client.models.base_person import BasePerson  # noqa: E501
 from comicvine_client.rest import ApiException
 
-class TestVolume(unittest.TestCase):
-    """Volume unit test stubs"""
+class TestBasePerson(unittest.TestCase):
+    """BasePerson unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,13 +29,13 @@ class TestVolume(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test Volume
+        """Test BasePerson
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = comicvine_client.models.volume.Volume()  # noqa: E501
+        # model = comicvine_client.models.base_person.BasePerson()  # noqa: E501
         if include_optional :
-            return Volume(
+            return BasePerson(
                 id = 63316, 
                 name = 'Yoko Tsuno', 
                 aliases = 'Anthony Edward Stark
@@ -71,34 +71,26 @@ Merchant of Death',
                     tiny_url = 'https://comicvine1.cbsistatic.com/uploads/square_mini/5/53387/2638218-2638217-1_nl_v02.jpg', 
                     original_url = 'https://comicvine1.cbsistatic.com/uploads/original/5/53387/2638218-2638217-1_nl_v02.jpg', 
                     image_tags = 'All Images', ), 
-                characters = [
+                birth = 'Feb 19, 1972', 
+                count_of_issue_appearances = 17949, 
+                gender = 3, 
+                story_arc_credits = [
                     None
                     ], 
-                concepts = [
-                    None
+                volume_credits = [
+                    null
                     ], 
-                count_of_issues = 13, 
-                first_issue = null, 
-                last_issue = null, 
-                locations = [
-                    None
-                    ], 
-                objects = [
-                    None
-                    ], 
-                people = [
-                    None
-                    ], 
-                publisher = None, 
-                start_year = '2007'
+                issue_credits = [
+                    null
+                    ]
             )
         else :
-            return Volume(
+            return BasePerson(
                 id = 63316,
         )
 
-    def testVolume(self):
-        """Test Volume"""
+    def testBasePerson(self):
+        """Test BasePerson"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

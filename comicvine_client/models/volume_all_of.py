@@ -33,15 +33,15 @@ class VolumeAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'characters': 'object',
-        'concepts': 'object',
+        'characters': 'list[object]',
+        'concepts': 'list[object]',
         'count_of_issues': 'int',
-        'first_issue': 'object',
-        'image': 'object',
-        'last_issue': 'object',
-        'locations': 'object',
-        'objects': 'object',
-        'people': 'object',
+        'first_issue': 'Issue',
+        'image': 'Image',
+        'last_issue': 'Issue',
+        'locations': 'list[object]',
+        'objects': 'list[object]',
+        'people': 'list[object]',
         'publisher': 'object',
         'start_year': 'str'
     }
@@ -109,7 +109,7 @@ class VolumeAllOf(object):
         A list of characters that appear in this volume.  # noqa: E501
 
         :return: The characters of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._characters
 
@@ -120,7 +120,7 @@ class VolumeAllOf(object):
         A list of characters that appear in this volume.  # noqa: E501
 
         :param characters: The characters of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type characters: list[object]
         """
 
         self._characters = characters
@@ -132,7 +132,7 @@ class VolumeAllOf(object):
         A list of concepts that appear in this volume.  # noqa: E501
 
         :return: The concepts of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._concepts
 
@@ -143,7 +143,7 @@ class VolumeAllOf(object):
         A list of concepts that appear in this volume.  # noqa: E501
 
         :param concepts: The concepts of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type concepts: list[object]
         """
 
         self._concepts = concepts
@@ -166,7 +166,7 @@ class VolumeAllOf(object):
         Number of issues included in this volume.  # noqa: E501
 
         :param count_of_issues: The count_of_issues of this VolumeAllOf.  # noqa: E501
-        :type: int
+        :type count_of_issues: int
         """
 
         self._count_of_issues = count_of_issues
@@ -175,10 +175,9 @@ class VolumeAllOf(object):
     def first_issue(self):
         """Gets the first_issue of this VolumeAllOf.  # noqa: E501
 
-        The first issue in this volume.  # noqa: E501
 
         :return: The first_issue of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: Issue
         """
         return self._first_issue
 
@@ -186,10 +185,9 @@ class VolumeAllOf(object):
     def first_issue(self, first_issue):
         """Sets the first_issue of this VolumeAllOf.
 
-        The first issue in this volume.  # noqa: E501
 
         :param first_issue: The first_issue of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type first_issue: Issue
         """
 
         self._first_issue = first_issue
@@ -198,10 +196,9 @@ class VolumeAllOf(object):
     def image(self):
         """Gets the image of this VolumeAllOf.  # noqa: E501
 
-        Main image of the volume.  # noqa: E501
 
         :return: The image of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: Image
         """
         return self._image
 
@@ -209,10 +206,9 @@ class VolumeAllOf(object):
     def image(self, image):
         """Sets the image of this VolumeAllOf.
 
-        Main image of the volume.  # noqa: E501
 
         :param image: The image of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type image: Image
         """
 
         self._image = image
@@ -221,10 +217,9 @@ class VolumeAllOf(object):
     def last_issue(self):
         """Gets the last_issue of this VolumeAllOf.  # noqa: E501
 
-        The last issue in this volume.  # noqa: E501
 
         :return: The last_issue of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: Issue
         """
         return self._last_issue
 
@@ -232,10 +227,9 @@ class VolumeAllOf(object):
     def last_issue(self, last_issue):
         """Sets the last_issue of this VolumeAllOf.
 
-        The last issue in this volume.  # noqa: E501
 
         :param last_issue: The last_issue of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type last_issue: Issue
         """
 
         self._last_issue = last_issue
@@ -247,7 +241,7 @@ class VolumeAllOf(object):
         List of locations that appeared in this volume.  # noqa: E501
 
         :return: The locations of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._locations
 
@@ -258,7 +252,7 @@ class VolumeAllOf(object):
         List of locations that appeared in this volume.  # noqa: E501
 
         :param locations: The locations of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type locations: list[object]
         """
 
         self._locations = locations
@@ -270,7 +264,7 @@ class VolumeAllOf(object):
         List of objects that appeared in this volume.  # noqa: E501
 
         :return: The objects of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._objects
 
@@ -281,7 +275,7 @@ class VolumeAllOf(object):
         List of objects that appeared in this volume.  # noqa: E501
 
         :param objects: The objects of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type objects: list[object]
         """
 
         self._objects = objects
@@ -293,7 +287,7 @@ class VolumeAllOf(object):
         List of people that worked on this volume.  # noqa: E501
 
         :return: The people of this VolumeAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._people
 
@@ -304,7 +298,7 @@ class VolumeAllOf(object):
         List of people that worked on this volume.  # noqa: E501
 
         :param people: The people of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type people: list[object]
         """
 
         self._people = people
@@ -327,7 +321,7 @@ class VolumeAllOf(object):
         The primary publisher a volume is attached to.  # noqa: E501
 
         :param publisher: The publisher of this VolumeAllOf.  # noqa: E501
-        :type: object
+        :type publisher: object
         """
 
         self._publisher = publisher
@@ -350,7 +344,7 @@ class VolumeAllOf(object):
         The first year this volume appeared in comics.  # noqa: E501
 
         :param start_year: The start_year of this VolumeAllOf.  # noqa: E501
-        :type: str
+        :type start_year: str
         """
 
         self._start_year = start_year

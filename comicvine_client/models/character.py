@@ -39,29 +39,29 @@ class Character(object):
         'api_detail_url': 'str',
         'description': 'str',
         'deck': 'str',
-        'site_detail_url': 'object',
+        'site_detail_url': 'str',
         'date_added': 'str',
         'date_last_updated': 'str',
-        'birth': 'object',
-        'character_enemies': 'object',
-        'character_friends': 'object',
-        'count_of_issue_appearances': 'object',
-        'creators': 'object',
-        'first_appeared_in_issue': 'object',
-        'gender': 'object',
-        'image': 'object',
-        'issue_credits': 'object',
-        'issues_died_in': 'object',
-        'movies': 'object',
+        'image': 'Image',
+        'birth': 'str',
+        'count_of_issue_appearances': 'int',
+        'gender': 'int',
+        'story_arc_credits': 'list[object]',
+        'volume_credits': 'list[Volume]',
+        'issue_credits': 'list[Issue]',
+        'character_enemies': 'list[Character]',
+        'character_friends': 'list[Character]',
+        'creators': 'list[Person]',
+        'first_appeared_in_issue': 'Issue',
+        'issues_died_in': 'list[Issue]',
+        'movies': 'list[object]',
         'origin': 'object',
         'powers': 'object',
         'publisher': 'object',
-        'real_name': 'object',
-        'story_arc_credits': 'object',
-        'team_enemies': 'object',
-        'team_friends': 'object',
-        'teams': 'object',
-        'volume_credits': 'object'
+        'real_name': 'str',
+        'team_enemies': 'list[object]',
+        'team_friends': 'list[object]',
+        'teams': 'list[object]'
     }
 
     attribute_map = {
@@ -74,29 +74,29 @@ class Character(object):
         'site_detail_url': 'site_detail_url',
         'date_added': 'date_added',
         'date_last_updated': 'date_last_updated',
+        'image': 'image',
         'birth': 'birth',
+        'count_of_issue_appearances': 'count_of_issue_appearances',
+        'gender': 'gender',
+        'story_arc_credits': 'story_arc_credits',
+        'volume_credits': 'volume_credits',
+        'issue_credits': 'issue_credits',
         'character_enemies': 'character_enemies',
         'character_friends': 'character_friends',
-        'count_of_issue_appearances': 'count_of_issue_appearances',
         'creators': 'creators',
         'first_appeared_in_issue': 'first_appeared_in_issue',
-        'gender': 'gender',
-        'image': 'image',
-        'issue_credits': 'issue_credits',
         'issues_died_in': 'issues_died_in',
         'movies': 'movies',
         'origin': 'origin',
         'powers': 'powers',
         'publisher': 'publisher',
         'real_name': 'real_name',
-        'story_arc_credits': 'story_arc_credits',
         'team_enemies': 'team_enemies',
         'team_friends': 'team_friends',
-        'teams': 'teams',
-        'volume_credits': 'volume_credits'
+        'teams': 'teams'
     }
 
-    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, birth=None, character_enemies=None, character_friends=None, count_of_issue_appearances=None, creators=None, first_appeared_in_issue=None, gender=None, image=None, issue_credits=None, issues_died_in=None, movies=None, origin=None, powers=None, publisher=None, real_name=None, story_arc_credits=None, team_enemies=None, team_friends=None, teams=None, volume_credits=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, image=None, birth=None, count_of_issue_appearances=None, gender=None, story_arc_credits=None, volume_credits=None, issue_credits=None, character_enemies=None, character_friends=None, creators=None, first_appeared_in_issue=None, issues_died_in=None, movies=None, origin=None, powers=None, publisher=None, real_name=None, team_enemies=None, team_friends=None, teams=None, local_vars_configuration=None):  # noqa: E501
         """Character - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -111,26 +111,26 @@ class Character(object):
         self._site_detail_url = None
         self._date_added = None
         self._date_last_updated = None
+        self._image = None
         self._birth = None
+        self._count_of_issue_appearances = None
+        self._gender = None
+        self._story_arc_credits = None
+        self._volume_credits = None
+        self._issue_credits = None
         self._character_enemies = None
         self._character_friends = None
-        self._count_of_issue_appearances = None
         self._creators = None
         self._first_appeared_in_issue = None
-        self._gender = None
-        self._image = None
-        self._issue_credits = None
         self._issues_died_in = None
         self._movies = None
         self._origin = None
         self._powers = None
         self._publisher = None
         self._real_name = None
-        self._story_arc_credits = None
         self._team_enemies = None
         self._team_friends = None
         self._teams = None
-        self._volume_credits = None
         self.discriminator = None
 
         self.id = id
@@ -150,24 +150,28 @@ class Character(object):
             self.date_added = date_added
         if date_last_updated is not None:
             self.date_last_updated = date_last_updated
+        if image is not None:
+            self.image = image
         if birth is not None:
             self.birth = birth
+        if count_of_issue_appearances is not None:
+            self.count_of_issue_appearances = count_of_issue_appearances
+        if gender is not None:
+            self.gender = gender
+        if story_arc_credits is not None:
+            self.story_arc_credits = story_arc_credits
+        if volume_credits is not None:
+            self.volume_credits = volume_credits
+        if issue_credits is not None:
+            self.issue_credits = issue_credits
         if character_enemies is not None:
             self.character_enemies = character_enemies
         if character_friends is not None:
             self.character_friends = character_friends
-        if count_of_issue_appearances is not None:
-            self.count_of_issue_appearances = count_of_issue_appearances
         if creators is not None:
             self.creators = creators
         if first_appeared_in_issue is not None:
             self.first_appeared_in_issue = first_appeared_in_issue
-        if gender is not None:
-            self.gender = gender
-        if image is not None:
-            self.image = image
-        if issue_credits is not None:
-            self.issue_credits = issue_credits
         if issues_died_in is not None:
             self.issues_died_in = issues_died_in
         if movies is not None:
@@ -180,16 +184,12 @@ class Character(object):
             self.publisher = publisher
         if real_name is not None:
             self.real_name = real_name
-        if story_arc_credits is not None:
-            self.story_arc_credits = story_arc_credits
         if team_enemies is not None:
             self.team_enemies = team_enemies
         if team_friends is not None:
             self.team_friends = team_friends
         if teams is not None:
             self.teams = teams
-        if volume_credits is not None:
-            self.volume_credits = volume_credits
 
     @property
     def id(self):
@@ -209,7 +209,7 @@ class Character(object):
         Unique ID for the entity.  # noqa: E501
 
         :param id: The id of this Character.  # noqa: E501
-        :type: int
+        :type id: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -234,7 +234,7 @@ class Character(object):
         Name for the entity  # noqa: E501
 
         :param name: The name of this Character.  # noqa: E501
-        :type: str
+        :type name: str
         """
 
         self._name = name
@@ -257,7 +257,7 @@ class Character(object):
         List of aliases the entity is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :param aliases: The aliases of this Character.  # noqa: E501
-        :type: str
+        :type aliases: str
         """
 
         self._aliases = aliases
@@ -280,7 +280,7 @@ class Character(object):
         URL pointing to the entity detail resource.  # noqa: E501
 
         :param api_detail_url: The api_detail_url of this Character.  # noqa: E501
-        :type: str
+        :type api_detail_url: str
         """
 
         self._api_detail_url = api_detail_url
@@ -303,7 +303,7 @@ class Character(object):
         Description of the entity.  # noqa: E501
 
         :param description: The description of this Character.  # noqa: E501
-        :type: str
+        :type description: str
         """
 
         self._description = description
@@ -326,7 +326,7 @@ class Character(object):
         Brief summary of the Entity.  # noqa: E501
 
         :param deck: The deck of this Character.  # noqa: E501
-        :type: str
+        :type deck: str
         """
 
         self._deck = deck
@@ -335,10 +335,10 @@ class Character(object):
     def site_detail_url(self):
         """Gets the site_detail_url of this Character.  # noqa: E501
 
-        URL pointing to the character on Giant Bomb.  # noqa: E501
+        URL pointing to the concept on Giant Bomb.  # noqa: E501
 
         :return: The site_detail_url of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._site_detail_url
 
@@ -346,10 +346,10 @@ class Character(object):
     def site_detail_url(self, site_detail_url):
         """Sets the site_detail_url of this Character.
 
-        URL pointing to the character on Giant Bomb.  # noqa: E501
+        URL pointing to the concept on Giant Bomb.  # noqa: E501
 
         :param site_detail_url: The site_detail_url of this Character.  # noqa: E501
-        :type: object
+        :type site_detail_url: str
         """
 
         self._site_detail_url = site_detail_url
@@ -372,7 +372,7 @@ class Character(object):
         Date the entity was added to Comic Vine.  # noqa: E501
 
         :param date_added: The date_added of this Character.  # noqa: E501
-        :type: str
+        :type date_added: str
         """
 
         self._date_added = date_added
@@ -395,19 +395,40 @@ class Character(object):
         Date the entity was last updated on Comic Vine.  # noqa: E501
 
         :param date_last_updated: The date_last_updated of this Character.  # noqa: E501
-        :type: str
+        :type date_last_updated: str
         """
 
         self._date_last_updated = date_last_updated
 
     @property
+    def image(self):
+        """Gets the image of this Character.  # noqa: E501
+
+
+        :return: The image of this Character.  # noqa: E501
+        :rtype: Image
+        """
+        return self._image
+
+    @image.setter
+    def image(self, image):
+        """Sets the image of this Character.
+
+
+        :param image: The image of this Character.  # noqa: E501
+        :type image: Image
+        """
+
+        self._image = image
+
+    @property
     def birth(self):
         """Gets the birth of this Character.  # noqa: E501
 
-        A date, if one exists, that the character was born on. Not an origin date.  # noqa: E501
+        A date, if one exists, that the person was born on. Not an origin date.  # noqa: E501
 
         :return: The birth of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._birth
 
@@ -415,22 +436,138 @@ class Character(object):
     def birth(self, birth):
         """Sets the birth of this Character.
 
-        A date, if one exists, that the character was born on. Not an origin date.  # noqa: E501
+        A date, if one exists, that the person was born on. Not an origin date.  # noqa: E501
 
         :param birth: The birth of this Character.  # noqa: E501
-        :type: object
+        :type birth: str
         """
 
         self._birth = birth
 
     @property
+    def count_of_issue_appearances(self):
+        """Gets the count_of_issue_appearances of this Character.  # noqa: E501
+
+        Number of issues this person appears in.  # noqa: E501
+
+        :return: The count_of_issue_appearances of this Character.  # noqa: E501
+        :rtype: int
+        """
+        return self._count_of_issue_appearances
+
+    @count_of_issue_appearances.setter
+    def count_of_issue_appearances(self, count_of_issue_appearances):
+        """Sets the count_of_issue_appearances of this Character.
+
+        Number of issues this person appears in.  # noqa: E501
+
+        :param count_of_issue_appearances: The count_of_issue_appearances of this Character.  # noqa: E501
+        :type count_of_issue_appearances: int
+        """
+
+        self._count_of_issue_appearances = count_of_issue_appearances
+
+    @property
+    def gender(self):
+        """Gets the gender of this Character.  # noqa: E501
+
+        Gender of the person. Available options are: Male (1), Female (2), Other (3)  # noqa: E501
+
+        :return: The gender of this Character.  # noqa: E501
+        :rtype: int
+        """
+        return self._gender
+
+    @gender.setter
+    def gender(self, gender):
+        """Sets the gender of this Character.
+
+        Gender of the person. Available options are: Male (1), Female (2), Other (3)  # noqa: E501
+
+        :param gender: The gender of this Character.  # noqa: E501
+        :type gender: int
+        """
+        allowed_values = [1, 2, 3]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and gender not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `gender` ({0}), must be one of {1}"  # noqa: E501
+                .format(gender, allowed_values)
+            )
+
+        self._gender = gender
+
+    @property
+    def story_arc_credits(self):
+        """Gets the story_arc_credits of this Character.  # noqa: E501
+
+        List of story arcs this person appears in.  # noqa: E501
+
+        :return: The story_arc_credits of this Character.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._story_arc_credits
+
+    @story_arc_credits.setter
+    def story_arc_credits(self, story_arc_credits):
+        """Sets the story_arc_credits of this Character.
+
+        List of story arcs this person appears in.  # noqa: E501
+
+        :param story_arc_credits: The story_arc_credits of this Character.  # noqa: E501
+        :type story_arc_credits: list[object]
+        """
+
+        self._story_arc_credits = story_arc_credits
+
+    @property
+    def volume_credits(self):
+        """Gets the volume_credits of this Character.  # noqa: E501
+
+
+        :return: The volume_credits of this Character.  # noqa: E501
+        :rtype: list[Volume]
+        """
+        return self._volume_credits
+
+    @volume_credits.setter
+    def volume_credits(self, volume_credits):
+        """Sets the volume_credits of this Character.
+
+
+        :param volume_credits: The volume_credits of this Character.  # noqa: E501
+        :type volume_credits: list[Volume]
+        """
+
+        self._volume_credits = volume_credits
+
+    @property
+    def issue_credits(self):
+        """Gets the issue_credits of this Character.  # noqa: E501
+
+
+        :return: The issue_credits of this Character.  # noqa: E501
+        :rtype: list[Issue]
+        """
+        return self._issue_credits
+
+    @issue_credits.setter
+    def issue_credits(self, issue_credits):
+        """Sets the issue_credits of this Character.
+
+
+        :param issue_credits: The issue_credits of this Character.  # noqa: E501
+        :type issue_credits: list[Issue]
+        """
+
+        self._issue_credits = issue_credits
+
+    @property
     def character_enemies(self):
         """Gets the character_enemies of this Character.  # noqa: E501
 
-        List of characters that are enemies with this character.  # noqa: E501
 
         :return: The character_enemies of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: list[Character]
         """
         return self._character_enemies
 
@@ -438,10 +575,9 @@ class Character(object):
     def character_enemies(self, character_enemies):
         """Sets the character_enemies of this Character.
 
-        List of characters that are enemies with this character.  # noqa: E501
 
         :param character_enemies: The character_enemies of this Character.  # noqa: E501
-        :type: object
+        :type character_enemies: list[Character]
         """
 
         self._character_enemies = character_enemies
@@ -450,10 +586,9 @@ class Character(object):
     def character_friends(self):
         """Gets the character_friends of this Character.  # noqa: E501
 
-        List of characters that are friends with this character.  # noqa: E501
 
         :return: The character_friends of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: list[Character]
         """
         return self._character_friends
 
@@ -461,45 +596,20 @@ class Character(object):
     def character_friends(self, character_friends):
         """Sets the character_friends of this Character.
 
-        List of characters that are friends with this character.  # noqa: E501
 
         :param character_friends: The character_friends of this Character.  # noqa: E501
-        :type: object
+        :type character_friends: list[Character]
         """
 
         self._character_friends = character_friends
 
     @property
-    def count_of_issue_appearances(self):
-        """Gets the count_of_issue_appearances of this Character.  # noqa: E501
-
-        Number of issues this character appears in.  # noqa: E501
-
-        :return: The count_of_issue_appearances of this Character.  # noqa: E501
-        :rtype: object
-        """
-        return self._count_of_issue_appearances
-
-    @count_of_issue_appearances.setter
-    def count_of_issue_appearances(self, count_of_issue_appearances):
-        """Sets the count_of_issue_appearances of this Character.
-
-        Number of issues this character appears in.  # noqa: E501
-
-        :param count_of_issue_appearances: The count_of_issue_appearances of this Character.  # noqa: E501
-        :type: object
-        """
-
-        self._count_of_issue_appearances = count_of_issue_appearances
-
-    @property
     def creators(self):
         """Gets the creators of this Character.  # noqa: E501
 
-        List of the real life people who created this character.  # noqa: E501
 
         :return: The creators of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: list[Person]
         """
         return self._creators
 
@@ -507,10 +617,9 @@ class Character(object):
     def creators(self, creators):
         """Sets the creators of this Character.
 
-        List of the real life people who created this character.  # noqa: E501
 
         :param creators: The creators of this Character.  # noqa: E501
-        :type: object
+        :type creators: list[Person]
         """
 
         self._creators = creators
@@ -519,10 +628,9 @@ class Character(object):
     def first_appeared_in_issue(self):
         """Gets the first_appeared_in_issue of this Character.  # noqa: E501
 
-        Issue where the character made its first appearance.  # noqa: E501
 
         :return: The first_appeared_in_issue of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: Issue
         """
         return self._first_appeared_in_issue
 
@@ -530,91 +638,20 @@ class Character(object):
     def first_appeared_in_issue(self, first_appeared_in_issue):
         """Sets the first_appeared_in_issue of this Character.
 
-        Issue where the character made its first appearance.  # noqa: E501
 
         :param first_appeared_in_issue: The first_appeared_in_issue of this Character.  # noqa: E501
-        :type: object
+        :type first_appeared_in_issue: Issue
         """
 
         self._first_appeared_in_issue = first_appeared_in_issue
 
     @property
-    def gender(self):
-        """Gets the gender of this Character.  # noqa: E501
-
-        Gender of the character. Available options are: Male, Female, Other  # noqa: E501
-
-        :return: The gender of this Character.  # noqa: E501
-        :rtype: object
-        """
-        return self._gender
-
-    @gender.setter
-    def gender(self, gender):
-        """Sets the gender of this Character.
-
-        Gender of the character. Available options are: Male, Female, Other  # noqa: E501
-
-        :param gender: The gender of this Character.  # noqa: E501
-        :type: object
-        """
-
-        self._gender = gender
-
-    @property
-    def image(self):
-        """Gets the image of this Character.  # noqa: E501
-
-        Main image of the character.  # noqa: E501
-
-        :return: The image of this Character.  # noqa: E501
-        :rtype: object
-        """
-        return self._image
-
-    @image.setter
-    def image(self, image):
-        """Sets the image of this Character.
-
-        Main image of the character.  # noqa: E501
-
-        :param image: The image of this Character.  # noqa: E501
-        :type: object
-        """
-
-        self._image = image
-
-    @property
-    def issue_credits(self):
-        """Gets the issue_credits of this Character.  # noqa: E501
-
-        List of issues this character appears in.  # noqa: E501
-
-        :return: The issue_credits of this Character.  # noqa: E501
-        :rtype: object
-        """
-        return self._issue_credits
-
-    @issue_credits.setter
-    def issue_credits(self, issue_credits):
-        """Sets the issue_credits of this Character.
-
-        List of issues this character appears in.  # noqa: E501
-
-        :param issue_credits: The issue_credits of this Character.  # noqa: E501
-        :type: object
-        """
-
-        self._issue_credits = issue_credits
-
-    @property
     def issues_died_in(self):
         """Gets the issues_died_in of this Character.  # noqa: E501
 
-        List of issues this character died in.  # noqa: E501
 
         :return: The issues_died_in of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: list[Issue]
         """
         return self._issues_died_in
 
@@ -622,10 +659,9 @@ class Character(object):
     def issues_died_in(self, issues_died_in):
         """Sets the issues_died_in of this Character.
 
-        List of issues this character died in.  # noqa: E501
 
         :param issues_died_in: The issues_died_in of this Character.  # noqa: E501
-        :type: object
+        :type issues_died_in: list[Issue]
         """
 
         self._issues_died_in = issues_died_in
@@ -637,7 +673,7 @@ class Character(object):
         Movies the character was in.  # noqa: E501
 
         :return: The movies of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._movies
 
@@ -648,7 +684,7 @@ class Character(object):
         Movies the character was in.  # noqa: E501
 
         :param movies: The movies of this Character.  # noqa: E501
-        :type: object
+        :type movies: list[object]
         """
 
         self._movies = movies
@@ -671,7 +707,7 @@ class Character(object):
         The origin of the character. Human, Alien, Robot ...etc  # noqa: E501
 
         :param origin: The origin of this Character.  # noqa: E501
-        :type: object
+        :type origin: object
         """
 
         self._origin = origin
@@ -694,7 +730,7 @@ class Character(object):
         List of super powers a character has.  # noqa: E501
 
         :param powers: The powers of this Character.  # noqa: E501
-        :type: object
+        :type powers: object
         """
 
         self._powers = powers
@@ -717,7 +753,7 @@ class Character(object):
         The primary publisher a character is attached to.  # noqa: E501
 
         :param publisher: The publisher of this Character.  # noqa: E501
-        :type: object
+        :type publisher: object
         """
 
         self._publisher = publisher
@@ -729,7 +765,7 @@ class Character(object):
         Real name of the character.  # noqa: E501
 
         :return: The real_name of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._real_name
 
@@ -740,33 +776,10 @@ class Character(object):
         Real name of the character.  # noqa: E501
 
         :param real_name: The real_name of this Character.  # noqa: E501
-        :type: object
+        :type real_name: str
         """
 
         self._real_name = real_name
-
-    @property
-    def story_arc_credits(self):
-        """Gets the story_arc_credits of this Character.  # noqa: E501
-
-        List of story arcs this character appears in.  # noqa: E501
-
-        :return: The story_arc_credits of this Character.  # noqa: E501
-        :rtype: object
-        """
-        return self._story_arc_credits
-
-    @story_arc_credits.setter
-    def story_arc_credits(self, story_arc_credits):
-        """Sets the story_arc_credits of this Character.
-
-        List of story arcs this character appears in.  # noqa: E501
-
-        :param story_arc_credits: The story_arc_credits of this Character.  # noqa: E501
-        :type: object
-        """
-
-        self._story_arc_credits = story_arc_credits
 
     @property
     def team_enemies(self):
@@ -775,7 +788,7 @@ class Character(object):
         List of teams that are enemies of this character.  # noqa: E501
 
         :return: The team_enemies of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._team_enemies
 
@@ -786,7 +799,7 @@ class Character(object):
         List of teams that are enemies of this character.  # noqa: E501
 
         :param team_enemies: The team_enemies of this Character.  # noqa: E501
-        :type: object
+        :type team_enemies: list[object]
         """
 
         self._team_enemies = team_enemies
@@ -798,7 +811,7 @@ class Character(object):
         List of teams that are friends with this character.  # noqa: E501
 
         :return: The team_friends of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._team_friends
 
@@ -809,7 +822,7 @@ class Character(object):
         List of teams that are friends with this character.  # noqa: E501
 
         :param team_friends: The team_friends of this Character.  # noqa: E501
-        :type: object
+        :type team_friends: list[object]
         """
 
         self._team_friends = team_friends
@@ -821,7 +834,7 @@ class Character(object):
         List of teams this character is a member of.  # noqa: E501
 
         :return: The teams of this Character.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._teams
 
@@ -832,33 +845,10 @@ class Character(object):
         List of teams this character is a member of.  # noqa: E501
 
         :param teams: The teams of this Character.  # noqa: E501
-        :type: object
+        :type teams: list[object]
         """
 
         self._teams = teams
-
-    @property
-    def volume_credits(self):
-        """Gets the volume_credits of this Character.  # noqa: E501
-
-        List of comic volumes this character appears in.  # noqa: E501
-
-        :return: The volume_credits of this Character.  # noqa: E501
-        :rtype: object
-        """
-        return self._volume_credits
-
-    @volume_credits.setter
-    def volume_credits(self, volume_credits):
-        """Sets the volume_credits of this Character.
-
-        List of comic volumes this character appears in.  # noqa: E501
-
-        :param volume_credits: The volume_credits of this Character.  # noqa: E501
-        :type: object
-        """
-
-        self._volume_credits = volume_credits
 
     def to_dict(self):
         """Returns the model properties as a dict"""

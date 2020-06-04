@@ -38,26 +38,57 @@ class TestPerson(unittest.TestCase):
             return Person(
                 id = 63316, 
                 name = 'Yoko Tsuno', 
-                aliases = 'Joko Zuno', 
+                aliases = 'Anthony Edward Stark
+Tony Stark
+Golden Avenger
+Shellhead
+Armored Avenger
+Tetsujin
+Spare Parts Man
+Iron Knight
+Director Stark
+Cobalt Man
+The Progenitor
+Invincible Iron Man
+Iron Maniac
+Iron Avenger
+Crimson Dynamo
+Merchant of Death', 
                 api_detail_url = 'https://comicvine.gamespot.com/api/volume/4050-87668/', 
                 description = '<p>A total of 25 albums was published between 1972 and 2010. Creator Roger Leloup has also written a novel detailing the childhood and early years of the character. Seven albums have been translated in English.</p>', 
                 deck = 'With knowledge and honor you can challenge anything.', 
                 site_detail_url = 'https://comicvine.gamespot.com/yoko-tsuno/4005-63316/', 
                 date_added = '2016-01-26 17:52:32', 
                 date_last_updated = '2016-01-26 17:53:02', 
-                birth = None, 
-                count_of_issue_appearances = None, 
-                country = None, 
+                image = comicvine_client.models.image.Image(
+                    icon_url = 'https://comicvine1.cbsistatic.com/uploads/square_avatar/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    medium_url = 'https://comicvine1.cbsistatic.com/uploads/scale_medium/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    screen_url = 'https://comicvine1.cbsistatic.com/uploads/screen_medium/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    screen_large_url = 'https://comicvine1.cbsistatic.com/uploads/screen_kubrick/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    small_url = 'https://comicvine1.cbsistatic.com/uploads/scale_small/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    super_url = 'https://comicvine1.cbsistatic.com/uploads/scale_large/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    thumb_url = 'https://comicvine1.cbsistatic.com/uploads/scale_avatar/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    tiny_url = 'https://comicvine1.cbsistatic.com/uploads/square_mini/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    original_url = 'https://comicvine1.cbsistatic.com/uploads/original/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    image_tags = 'All Images', ), 
+                birth = 'Feb 19, 1972', 
+                count_of_issue_appearances = 17949, 
+                gender = 3, 
+                story_arc_credits = [
+                    None
+                    ], 
+                volume_credits = [
+                    null
+                    ], 
+                issue_credits = [
+                    null
+                    ], 
+                country = 'UK', 
                 created_characters = None, 
-                death = None, 
-                email = None, 
-                gender = None, 
-                hometown = None, 
-                image = None, 
-                issue_credits = None, 
-                story_arc_credits = None, 
-                volume_credits = None, 
-                website = None
+                death = 'Fri Jul 21 00:00:00 GMT 2017', 
+                email = 'bruce@example.com', 
+                hometown = 'Vladivostok', 
+                website = 'https://person.example.com/'
             )
         else :
             return Person(

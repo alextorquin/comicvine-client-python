@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **site_detail_url** | **str** | URL pointing to the concept on Giant Bomb. | [optional] 
 **date_added** | **str** | Date the entity was added to Comic Vine. | [optional] 
 **date_last_updated** | **str** | Date the entity was last updated on Comic Vine. | [optional] 
+**image** | [**Image**](Image.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

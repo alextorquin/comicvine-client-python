@@ -36,15 +36,35 @@ class TestVolumeAllOf(unittest.TestCase):
         # model = comicvine_client.models.volume_all_of.VolumeAllOf()  # noqa: E501
         if include_optional :
             return VolumeAllOf(
-                characters = None, 
-                concepts = None, 
+                characters = [
+                    None
+                    ], 
+                concepts = [
+                    None
+                    ], 
                 count_of_issues = 13, 
-                first_issue = None, 
-                image = None, 
-                last_issue = None, 
-                locations = None, 
-                objects = None, 
-                people = None, 
+                first_issue = null, 
+                image = comicvine_client.models.image.Image(
+                    icon_url = 'https://comicvine1.cbsistatic.com/uploads/square_avatar/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    medium_url = 'https://comicvine1.cbsistatic.com/uploads/scale_medium/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    screen_url = 'https://comicvine1.cbsistatic.com/uploads/screen_medium/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    screen_large_url = 'https://comicvine1.cbsistatic.com/uploads/screen_kubrick/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    small_url = 'https://comicvine1.cbsistatic.com/uploads/scale_small/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    super_url = 'https://comicvine1.cbsistatic.com/uploads/scale_large/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    thumb_url = 'https://comicvine1.cbsistatic.com/uploads/scale_avatar/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    tiny_url = 'https://comicvine1.cbsistatic.com/uploads/square_mini/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    original_url = 'https://comicvine1.cbsistatic.com/uploads/original/5/53387/2638218-2638217-1_nl_v02.jpg', 
+                    image_tags = 'All Images', ), 
+                last_issue = null, 
+                locations = [
+                    None
+                    ], 
+                objects = [
+                    None
+                    ], 
+                people = [
+                    None
+                    ], 
                 publisher = None, 
                 start_year = '2007'
             )

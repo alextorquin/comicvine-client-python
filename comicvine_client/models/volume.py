@@ -42,15 +42,15 @@ class Volume(object):
         'site_detail_url': 'str',
         'date_added': 'str',
         'date_last_updated': 'str',
-        'characters': 'object',
-        'concepts': 'object',
+        'image': 'Image',
+        'characters': 'list[object]',
+        'concepts': 'list[object]',
         'count_of_issues': 'int',
-        'first_issue': 'object',
-        'image': 'object',
-        'last_issue': 'object',
-        'locations': 'object',
-        'objects': 'object',
-        'people': 'object',
+        'first_issue': 'Issue',
+        'last_issue': 'Issue',
+        'locations': 'list[object]',
+        'objects': 'list[object]',
+        'people': 'list[object]',
         'publisher': 'object',
         'start_year': 'str'
     }
@@ -65,11 +65,11 @@ class Volume(object):
         'site_detail_url': 'site_detail_url',
         'date_added': 'date_added',
         'date_last_updated': 'date_last_updated',
+        'image': 'image',
         'characters': 'characters',
         'concepts': 'concepts',
         'count_of_issues': 'count_of_issues',
         'first_issue': 'first_issue',
-        'image': 'image',
         'last_issue': 'last_issue',
         'locations': 'locations',
         'objects': 'objects',
@@ -78,7 +78,7 @@ class Volume(object):
         'start_year': 'start_year'
     }
 
-    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, characters=None, concepts=None, count_of_issues=None, first_issue=None, image=None, last_issue=None, locations=None, objects=None, people=None, publisher=None, start_year=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, image=None, characters=None, concepts=None, count_of_issues=None, first_issue=None, last_issue=None, locations=None, objects=None, people=None, publisher=None, start_year=None, local_vars_configuration=None):  # noqa: E501
         """Volume - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -93,11 +93,11 @@ class Volume(object):
         self._site_detail_url = None
         self._date_added = None
         self._date_last_updated = None
+        self._image = None
         self._characters = None
         self._concepts = None
         self._count_of_issues = None
         self._first_issue = None
-        self._image = None
         self._last_issue = None
         self._locations = None
         self._objects = None
@@ -123,6 +123,8 @@ class Volume(object):
             self.date_added = date_added
         if date_last_updated is not None:
             self.date_last_updated = date_last_updated
+        if image is not None:
+            self.image = image
         if characters is not None:
             self.characters = characters
         if concepts is not None:
@@ -131,8 +133,6 @@ class Volume(object):
             self.count_of_issues = count_of_issues
         if first_issue is not None:
             self.first_issue = first_issue
-        if image is not None:
-            self.image = image
         if last_issue is not None:
             self.last_issue = last_issue
         if locations is not None:
@@ -164,7 +164,7 @@ class Volume(object):
         Unique ID for the entity.  # noqa: E501
 
         :param id: The id of this Volume.  # noqa: E501
-        :type: int
+        :type id: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -189,7 +189,7 @@ class Volume(object):
         Name for the entity  # noqa: E501
 
         :param name: The name of this Volume.  # noqa: E501
-        :type: str
+        :type name: str
         """
 
         self._name = name
@@ -212,7 +212,7 @@ class Volume(object):
         List of aliases the entity is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :param aliases: The aliases of this Volume.  # noqa: E501
-        :type: str
+        :type aliases: str
         """
 
         self._aliases = aliases
@@ -235,7 +235,7 @@ class Volume(object):
         URL pointing to the entity detail resource.  # noqa: E501
 
         :param api_detail_url: The api_detail_url of this Volume.  # noqa: E501
-        :type: str
+        :type api_detail_url: str
         """
 
         self._api_detail_url = api_detail_url
@@ -258,7 +258,7 @@ class Volume(object):
         Description of the entity.  # noqa: E501
 
         :param description: The description of this Volume.  # noqa: E501
-        :type: str
+        :type description: str
         """
 
         self._description = description
@@ -281,7 +281,7 @@ class Volume(object):
         Brief summary of the Entity.  # noqa: E501
 
         :param deck: The deck of this Volume.  # noqa: E501
-        :type: str
+        :type deck: str
         """
 
         self._deck = deck
@@ -304,7 +304,7 @@ class Volume(object):
         URL pointing to the concept on Giant Bomb.  # noqa: E501
 
         :param site_detail_url: The site_detail_url of this Volume.  # noqa: E501
-        :type: str
+        :type site_detail_url: str
         """
 
         self._site_detail_url = site_detail_url
@@ -327,7 +327,7 @@ class Volume(object):
         Date the entity was added to Comic Vine.  # noqa: E501
 
         :param date_added: The date_added of this Volume.  # noqa: E501
-        :type: str
+        :type date_added: str
         """
 
         self._date_added = date_added
@@ -350,10 +350,31 @@ class Volume(object):
         Date the entity was last updated on Comic Vine.  # noqa: E501
 
         :param date_last_updated: The date_last_updated of this Volume.  # noqa: E501
-        :type: str
+        :type date_last_updated: str
         """
 
         self._date_last_updated = date_last_updated
+
+    @property
+    def image(self):
+        """Gets the image of this Volume.  # noqa: E501
+
+
+        :return: The image of this Volume.  # noqa: E501
+        :rtype: Image
+        """
+        return self._image
+
+    @image.setter
+    def image(self, image):
+        """Sets the image of this Volume.
+
+
+        :param image: The image of this Volume.  # noqa: E501
+        :type image: Image
+        """
+
+        self._image = image
 
     @property
     def characters(self):
@@ -362,7 +383,7 @@ class Volume(object):
         A list of characters that appear in this volume.  # noqa: E501
 
         :return: The characters of this Volume.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._characters
 
@@ -373,7 +394,7 @@ class Volume(object):
         A list of characters that appear in this volume.  # noqa: E501
 
         :param characters: The characters of this Volume.  # noqa: E501
-        :type: object
+        :type characters: list[object]
         """
 
         self._characters = characters
@@ -385,7 +406,7 @@ class Volume(object):
         A list of concepts that appear in this volume.  # noqa: E501
 
         :return: The concepts of this Volume.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._concepts
 
@@ -396,7 +417,7 @@ class Volume(object):
         A list of concepts that appear in this volume.  # noqa: E501
 
         :param concepts: The concepts of this Volume.  # noqa: E501
-        :type: object
+        :type concepts: list[object]
         """
 
         self._concepts = concepts
@@ -419,7 +440,7 @@ class Volume(object):
         Number of issues included in this volume.  # noqa: E501
 
         :param count_of_issues: The count_of_issues of this Volume.  # noqa: E501
-        :type: int
+        :type count_of_issues: int
         """
 
         self._count_of_issues = count_of_issues
@@ -428,10 +449,9 @@ class Volume(object):
     def first_issue(self):
         """Gets the first_issue of this Volume.  # noqa: E501
 
-        The first issue in this volume.  # noqa: E501
 
         :return: The first_issue of this Volume.  # noqa: E501
-        :rtype: object
+        :rtype: Issue
         """
         return self._first_issue
 
@@ -439,45 +459,20 @@ class Volume(object):
     def first_issue(self, first_issue):
         """Sets the first_issue of this Volume.
 
-        The first issue in this volume.  # noqa: E501
 
         :param first_issue: The first_issue of this Volume.  # noqa: E501
-        :type: object
+        :type first_issue: Issue
         """
 
         self._first_issue = first_issue
 
     @property
-    def image(self):
-        """Gets the image of this Volume.  # noqa: E501
-
-        Main image of the volume.  # noqa: E501
-
-        :return: The image of this Volume.  # noqa: E501
-        :rtype: object
-        """
-        return self._image
-
-    @image.setter
-    def image(self, image):
-        """Sets the image of this Volume.
-
-        Main image of the volume.  # noqa: E501
-
-        :param image: The image of this Volume.  # noqa: E501
-        :type: object
-        """
-
-        self._image = image
-
-    @property
     def last_issue(self):
         """Gets the last_issue of this Volume.  # noqa: E501
 
-        The last issue in this volume.  # noqa: E501
 
         :return: The last_issue of this Volume.  # noqa: E501
-        :rtype: object
+        :rtype: Issue
         """
         return self._last_issue
 
@@ -485,10 +480,9 @@ class Volume(object):
     def last_issue(self, last_issue):
         """Sets the last_issue of this Volume.
 
-        The last issue in this volume.  # noqa: E501
 
         :param last_issue: The last_issue of this Volume.  # noqa: E501
-        :type: object
+        :type last_issue: Issue
         """
 
         self._last_issue = last_issue
@@ -500,7 +494,7 @@ class Volume(object):
         List of locations that appeared in this volume.  # noqa: E501
 
         :return: The locations of this Volume.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._locations
 
@@ -511,7 +505,7 @@ class Volume(object):
         List of locations that appeared in this volume.  # noqa: E501
 
         :param locations: The locations of this Volume.  # noqa: E501
-        :type: object
+        :type locations: list[object]
         """
 
         self._locations = locations
@@ -523,7 +517,7 @@ class Volume(object):
         List of objects that appeared in this volume.  # noqa: E501
 
         :return: The objects of this Volume.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._objects
 
@@ -534,7 +528,7 @@ class Volume(object):
         List of objects that appeared in this volume.  # noqa: E501
 
         :param objects: The objects of this Volume.  # noqa: E501
-        :type: object
+        :type objects: list[object]
         """
 
         self._objects = objects
@@ -546,7 +540,7 @@ class Volume(object):
         List of people that worked on this volume.  # noqa: E501
 
         :return: The people of this Volume.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._people
 
@@ -557,7 +551,7 @@ class Volume(object):
         List of people that worked on this volume.  # noqa: E501
 
         :param people: The people of this Volume.  # noqa: E501
-        :type: object
+        :type people: list[object]
         """
 
         self._people = people
@@ -580,7 +574,7 @@ class Volume(object):
         The primary publisher a volume is attached to.  # noqa: E501
 
         :param publisher: The publisher of this Volume.  # noqa: E501
-        :type: object
+        :type publisher: object
         """
 
         self._publisher = publisher
@@ -603,7 +597,7 @@ class Volume(object):
         The first year this volume appeared in comics.  # noqa: E501
 
         :param start_year: The start_year of this Volume.  # noqa: E501
-        :type: str
+        :type start_year: str
         """
 
         self._start_year = start_year

@@ -36,27 +36,35 @@ class TestCharacterAllOf(unittest.TestCase):
         # model = comicvine_client.models.character_all_of.CharacterAllOf()  # noqa: E501
         if include_optional :
             return CharacterAllOf(
-                birth = None, 
-                character_enemies = None, 
-                character_friends = None, 
-                count_of_issue_appearances = None, 
-                creators = None, 
-                first_appeared_in_issue = None, 
-                gender = None, 
-                image = None, 
-                issue_credits = None, 
-                issues_died_in = None, 
-                movies = None, 
+                character_enemies = [
+                    null
+                    ], 
+                character_friends = [
+                    null
+                    ], 
+                creators = [
+                    null
+                    ], 
+                first_appeared_in_issue = null, 
+                issues_died_in = [
+                    null
+                    ], 
+                movies = [
+                    None
+                    ], 
                 origin = None, 
                 powers = None, 
                 publisher = None, 
-                real_name = None, 
-                site_detail_url = None, 
-                story_arc_credits = None, 
-                team_enemies = None, 
-                team_friends = None, 
-                teams = None, 
-                volume_credits = None
+                real_name = 'Bruce Wayne', 
+                team_enemies = [
+                    None
+                    ], 
+                team_friends = [
+                    None
+                    ], 
+                teams = [
+                    None
+                    ]
             )
         else :
             return CharacterAllOf(

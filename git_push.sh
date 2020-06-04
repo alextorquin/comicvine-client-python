@@ -24,7 +24,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="feat: don't use anytype arrays
+    release_note="fix: un-nested references
 "
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi

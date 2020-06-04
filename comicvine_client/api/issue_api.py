@@ -41,23 +41,30 @@ class IssueApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
+
         >>> thread = api.get_issue(id, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool: execute request asynchronously
-        :param str id: Unique ID of the entity. (required)
-        :param str format: The data format of the response takes either xml, json, or jsonp.
-        :param str field_list: List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\"
+        :param id: Unique ID of the entity. (required)
+        :type id: str
+        :param format: The data format of the response takes either xml, json, or jsonp.
+        :type format: str
+        :param field_list: List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\"
+        :type field_list: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
+        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: EntityResponse
+        :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
+        :rtype: EntityResponse
         """
         kwargs['_return_http_data_only'] = True
         return self.get_issue_with_http_info(id, **kwargs)  # noqa: E501
@@ -67,25 +74,33 @@ class IssueApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
+
         >>> thread = api.get_issue_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool: execute request asynchronously
-        :param str id: Unique ID of the entity. (required)
-        :param str format: The data format of the response takes either xml, json, or jsonp.
-        :param str field_list: List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\"
+        :param id: Unique ID of the entity. (required)
+        :type id: str
+        :param format: The data format of the response takes either xml, json, or jsonp.
+        :type format: str
+        :param field_list: List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a \",\"
+        :type field_list: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
                                        and headers
+        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
+        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(EntityResponse, status_code(int), headers(HTTPHeaderDict))
+        :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
+        :rtype: tuple(EntityResponse, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()

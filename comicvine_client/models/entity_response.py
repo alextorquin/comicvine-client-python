@@ -90,7 +90,7 @@ class EntityResponse(object):
         An integer indicating the result of the request. Acceptable values are:   - 1:OK   - 100:Invalid API Key   - 101:Object Not Found   - 102:Error in URL Format   - 103:'jsonp' format requires a 'json_callback' argument   - 104:Filter Error   - 105:Subscriber only video is for subscribers only   # noqa: E501
 
         :param status_code: The status_code of this EntityResponse.  # noqa: E501
-        :type: int
+        :type status_code: int
         """
         allowed_values = [1, 100, 101, 102, 103, 104, 105]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and status_code not in allowed_values:  # noqa: E501
@@ -119,7 +119,7 @@ class EntityResponse(object):
         A text string representing the status_code  # noqa: E501
 
         :param error: The error of this EntityResponse.  # noqa: E501
-        :type: str
+        :type error: str
         """
 
         self._error = error
@@ -142,7 +142,7 @@ class EntityResponse(object):
         The number of total results matching the filter conditions specified  # noqa: E501
 
         :param number_of_total_results: The number_of_total_results of this EntityResponse.  # noqa: E501
-        :type: int
+        :type number_of_total_results: int
         """
         if (self.local_vars_configuration.client_side_validation and
                 number_of_total_results is not None and number_of_total_results < 0):  # noqa: E501
@@ -168,7 +168,7 @@ class EntityResponse(object):
         The number of results on this page  # noqa: E501
 
         :param number_of_page_results: The number_of_page_results of this EntityResponse.  # noqa: E501
-        :type: int
+        :type number_of_page_results: int
         """
         if (self.local_vars_configuration.client_side_validation and
                 number_of_page_results is not None and number_of_page_results < 0):  # noqa: E501
@@ -194,7 +194,7 @@ class EntityResponse(object):
         An Entity that match the filters specified  # noqa: E501
 
         :param results: The results of this EntityResponse.  # noqa: E501
-        :type: OneOfVolumeIssuePersonCharacter
+        :type results: OneOfVolumeIssuePersonCharacter
         """
 
         self._results = results

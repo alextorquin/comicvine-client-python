@@ -33,27 +33,27 @@ class IssueAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'character_credits': 'object',
-        'characters_died_in': 'object',
-        'concept_credits': 'object',
-        'cover_date': 'object',
-        'disbanded_teams': 'object',
-        'first_appearance_characters': 'object',
-        'first_appearance_concepts': 'object',
-        'first_appearance_locations': 'object',
-        'first_appearance_objects': 'object',
-        'first_appearance_storyarcs': 'object',
+        'character_credits': 'list[Character]',
+        'characters_died_in': 'list[Character]',
+        'concept_credits': 'list[object]',
+        'cover_date': 'date',
+        'disbanded_teams': 'list[object]',
+        'first_appearance_characters': 'list[Character]',
+        'first_appearance_concepts': 'list[object]',
+        'first_appearance_locations': 'list[object]',
+        'first_appearance_objects': 'list[object]',
+        'first_appearance_storyarcs': 'list[object]',
         'first_appearance_teams': 'object',
-        'image': 'object',
-        'issue_number': 'object',
-        'location_credits': 'object',
-        'object_credits': 'object',
-        'person_credits': 'object',
-        'store_date': 'object',
-        'story_arc_credits': 'object',
-        'team_credits': 'object',
-        'teams_disbanded_in': 'object',
-        'volume': 'object'
+        'has_staff_review': 'bool',
+        'issue_number': 'str',
+        'location_credits': 'list[object]',
+        'object_credits': 'list[object]',
+        'person_credits': 'list[Person]',
+        'store_date': 'date',
+        'story_arc_credits': 'list[object]',
+        'team_credits': 'list[object]',
+        'teams_disbanded_in': 'list[object]',
+        'volume': 'Volume'
     }
 
     attribute_map = {
@@ -68,7 +68,7 @@ class IssueAllOf(object):
         'first_appearance_objects': 'first_appearance_objects',
         'first_appearance_storyarcs': 'first_appearance_storyarcs',
         'first_appearance_teams': 'first_appearance_teams',
-        'image': 'image',
+        'has_staff_review': 'has_staff_review',
         'issue_number': 'issue_number',
         'location_credits': 'location_credits',
         'object_credits': 'object_credits',
@@ -80,7 +80,7 @@ class IssueAllOf(object):
         'volume': 'volume'
     }
 
-    def __init__(self, character_credits=None, characters_died_in=None, concept_credits=None, cover_date=None, disbanded_teams=None, first_appearance_characters=None, first_appearance_concepts=None, first_appearance_locations=None, first_appearance_objects=None, first_appearance_storyarcs=None, first_appearance_teams=None, image=None, issue_number=None, location_credits=None, object_credits=None, person_credits=None, store_date=None, story_arc_credits=None, team_credits=None, teams_disbanded_in=None, volume=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, character_credits=None, characters_died_in=None, concept_credits=None, cover_date=None, disbanded_teams=None, first_appearance_characters=None, first_appearance_concepts=None, first_appearance_locations=None, first_appearance_objects=None, first_appearance_storyarcs=None, first_appearance_teams=None, has_staff_review=None, issue_number=None, location_credits=None, object_credits=None, person_credits=None, store_date=None, story_arc_credits=None, team_credits=None, teams_disbanded_in=None, volume=None, local_vars_configuration=None):  # noqa: E501
         """IssueAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -97,7 +97,7 @@ class IssueAllOf(object):
         self._first_appearance_objects = None
         self._first_appearance_storyarcs = None
         self._first_appearance_teams = None
-        self._image = None
+        self._has_staff_review = None
         self._issue_number = None
         self._location_credits = None
         self._object_credits = None
@@ -131,8 +131,8 @@ class IssueAllOf(object):
             self.first_appearance_storyarcs = first_appearance_storyarcs
         if first_appearance_teams is not None:
             self.first_appearance_teams = first_appearance_teams
-        if image is not None:
-            self.image = image
+        if has_staff_review is not None:
+            self.has_staff_review = has_staff_review
         if issue_number is not None:
             self.issue_number = issue_number
         if location_credits is not None:
@@ -156,10 +156,9 @@ class IssueAllOf(object):
     def character_credits(self):
         """Gets the character_credits of this IssueAllOf.  # noqa: E501
 
-        A list of characters that appear in this issue.  # noqa: E501
 
         :return: The character_credits of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[Character]
         """
         return self._character_credits
 
@@ -167,10 +166,9 @@ class IssueAllOf(object):
     def character_credits(self, character_credits):
         """Sets the character_credits of this IssueAllOf.
 
-        A list of characters that appear in this issue.  # noqa: E501
 
         :param character_credits: The character_credits of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type character_credits: list[Character]
         """
 
         self._character_credits = character_credits
@@ -179,10 +177,9 @@ class IssueAllOf(object):
     def characters_died_in(self):
         """Gets the characters_died_in of this IssueAllOf.  # noqa: E501
 
-        A list of characters that died in this issue.  # noqa: E501
 
         :return: The characters_died_in of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[Character]
         """
         return self._characters_died_in
 
@@ -190,10 +187,9 @@ class IssueAllOf(object):
     def characters_died_in(self, characters_died_in):
         """Sets the characters_died_in of this IssueAllOf.
 
-        A list of characters that died in this issue.  # noqa: E501
 
         :param characters_died_in: The characters_died_in of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type characters_died_in: list[Character]
         """
 
         self._characters_died_in = characters_died_in
@@ -205,7 +201,7 @@ class IssueAllOf(object):
         A list of concepts that appear in this issue.  # noqa: E501
 
         :return: The concept_credits of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._concept_credits
 
@@ -216,7 +212,7 @@ class IssueAllOf(object):
         A list of concepts that appear in this issue.  # noqa: E501
 
         :param concept_credits: The concept_credits of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type concept_credits: list[object]
         """
 
         self._concept_credits = concept_credits
@@ -228,7 +224,7 @@ class IssueAllOf(object):
         The publish date printed on the cover of an issue.  # noqa: E501
 
         :return: The cover_date of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: date
         """
         return self._cover_date
 
@@ -239,7 +235,7 @@ class IssueAllOf(object):
         The publish date printed on the cover of an issue.  # noqa: E501
 
         :param cover_date: The cover_date of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type cover_date: date
         """
 
         self._cover_date = cover_date
@@ -251,7 +247,7 @@ class IssueAllOf(object):
         A list of teams that disbanded in this issue.  # noqa: E501
 
         :return: The disbanded_teams of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._disbanded_teams
 
@@ -262,7 +258,7 @@ class IssueAllOf(object):
         A list of teams that disbanded in this issue.  # noqa: E501
 
         :param disbanded_teams: The disbanded_teams of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type disbanded_teams: list[object]
         """
 
         self._disbanded_teams = disbanded_teams
@@ -271,10 +267,9 @@ class IssueAllOf(object):
     def first_appearance_characters(self):
         """Gets the first_appearance_characters of this IssueAllOf.  # noqa: E501
 
-        A list of characters in which this issue is the first appearance of the character.  # noqa: E501
 
         :return: The first_appearance_characters of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[Character]
         """
         return self._first_appearance_characters
 
@@ -282,10 +277,9 @@ class IssueAllOf(object):
     def first_appearance_characters(self, first_appearance_characters):
         """Sets the first_appearance_characters of this IssueAllOf.
 
-        A list of characters in which this issue is the first appearance of the character.  # noqa: E501
 
         :param first_appearance_characters: The first_appearance_characters of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type first_appearance_characters: list[Character]
         """
 
         self._first_appearance_characters = first_appearance_characters
@@ -297,7 +291,7 @@ class IssueAllOf(object):
         A list of concepts in which this issue is the first appearance of the concept.  # noqa: E501
 
         :return: The first_appearance_concepts of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._first_appearance_concepts
 
@@ -308,7 +302,7 @@ class IssueAllOf(object):
         A list of concepts in which this issue is the first appearance of the concept.  # noqa: E501
 
         :param first_appearance_concepts: The first_appearance_concepts of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type first_appearance_concepts: list[object]
         """
 
         self._first_appearance_concepts = first_appearance_concepts
@@ -320,7 +314,7 @@ class IssueAllOf(object):
         A list of locations in which this issue is the first appearance of the location.  # noqa: E501
 
         :return: The first_appearance_locations of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._first_appearance_locations
 
@@ -331,7 +325,7 @@ class IssueAllOf(object):
         A list of locations in which this issue is the first appearance of the location.  # noqa: E501
 
         :param first_appearance_locations: The first_appearance_locations of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type first_appearance_locations: list[object]
         """
 
         self._first_appearance_locations = first_appearance_locations
@@ -343,7 +337,7 @@ class IssueAllOf(object):
         A list of objects in which this issue is the first appearance of the object.  # noqa: E501
 
         :return: The first_appearance_objects of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._first_appearance_objects
 
@@ -354,7 +348,7 @@ class IssueAllOf(object):
         A list of objects in which this issue is the first appearance of the object.  # noqa: E501
 
         :param first_appearance_objects: The first_appearance_objects of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type first_appearance_objects: list[object]
         """
 
         self._first_appearance_objects = first_appearance_objects
@@ -366,7 +360,7 @@ class IssueAllOf(object):
         A list of storyarcs in which this issue is the first appearance of the story arc.  # noqa: E501
 
         :return: The first_appearance_storyarcs of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._first_appearance_storyarcs
 
@@ -377,7 +371,7 @@ class IssueAllOf(object):
         A list of storyarcs in which this issue is the first appearance of the story arc.  # noqa: E501
 
         :param first_appearance_storyarcs: The first_appearance_storyarcs of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type first_appearance_storyarcs: list[object]
         """
 
         self._first_appearance_storyarcs = first_appearance_storyarcs
@@ -400,33 +394,31 @@ class IssueAllOf(object):
         A list of teams in which this issue is the first appearance of the team.  # noqa: E501
 
         :param first_appearance_teams: The first_appearance_teams of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type first_appearance_teams: object
         """
 
         self._first_appearance_teams = first_appearance_teams
 
     @property
-    def image(self):
-        """Gets the image of this IssueAllOf.  # noqa: E501
+    def has_staff_review(self):
+        """Gets the has_staff_review of this IssueAllOf.  # noqa: E501
 
-        Main image of the issue.  # noqa: E501
 
-        :return: The image of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :return: The has_staff_review of this IssueAllOf.  # noqa: E501
+        :rtype: bool
         """
-        return self._image
+        return self._has_staff_review
 
-    @image.setter
-    def image(self, image):
-        """Sets the image of this IssueAllOf.
+    @has_staff_review.setter
+    def has_staff_review(self, has_staff_review):
+        """Sets the has_staff_review of this IssueAllOf.
 
-        Main image of the issue.  # noqa: E501
 
-        :param image: The image of this IssueAllOf.  # noqa: E501
-        :type: object
+        :param has_staff_review: The has_staff_review of this IssueAllOf.  # noqa: E501
+        :type has_staff_review: bool
         """
 
-        self._image = image
+        self._has_staff_review = has_staff_review
 
     @property
     def issue_number(self):
@@ -435,7 +427,7 @@ class IssueAllOf(object):
         The number assigned to the issue within the volume set.  # noqa: E501
 
         :return: The issue_number of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._issue_number
 
@@ -446,7 +438,7 @@ class IssueAllOf(object):
         The number assigned to the issue within the volume set.  # noqa: E501
 
         :param issue_number: The issue_number of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type issue_number: str
         """
 
         self._issue_number = issue_number
@@ -458,7 +450,7 @@ class IssueAllOf(object):
         List of locations that appeared in this issue.  # noqa: E501
 
         :return: The location_credits of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._location_credits
 
@@ -469,7 +461,7 @@ class IssueAllOf(object):
         List of locations that appeared in this issue.  # noqa: E501
 
         :param location_credits: The location_credits of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type location_credits: list[object]
         """
 
         self._location_credits = location_credits
@@ -481,7 +473,7 @@ class IssueAllOf(object):
         List of objects that appeared in this issue.  # noqa: E501
 
         :return: The object_credits of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._object_credits
 
@@ -492,7 +484,7 @@ class IssueAllOf(object):
         List of objects that appeared in this issue.  # noqa: E501
 
         :param object_credits: The object_credits of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type object_credits: list[object]
         """
 
         self._object_credits = object_credits
@@ -501,10 +493,9 @@ class IssueAllOf(object):
     def person_credits(self):
         """Gets the person_credits of this IssueAllOf.  # noqa: E501
 
-        List of people that worked on this issue.  # noqa: E501
 
         :return: The person_credits of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[Person]
         """
         return self._person_credits
 
@@ -512,10 +503,9 @@ class IssueAllOf(object):
     def person_credits(self, person_credits):
         """Sets the person_credits of this IssueAllOf.
 
-        List of people that worked on this issue.  # noqa: E501
 
         :param person_credits: The person_credits of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type person_credits: list[Person]
         """
 
         self._person_credits = person_credits
@@ -527,7 +517,7 @@ class IssueAllOf(object):
         The date the issue was first sold in stores.  # noqa: E501
 
         :return: The store_date of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: date
         """
         return self._store_date
 
@@ -538,7 +528,7 @@ class IssueAllOf(object):
         The date the issue was first sold in stores.  # noqa: E501
 
         :param store_date: The store_date of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type store_date: date
         """
 
         self._store_date = store_date
@@ -550,7 +540,7 @@ class IssueAllOf(object):
         List of story arcs this issue appears in.  # noqa: E501
 
         :return: The story_arc_credits of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._story_arc_credits
 
@@ -561,7 +551,7 @@ class IssueAllOf(object):
         List of story arcs this issue appears in.  # noqa: E501
 
         :param story_arc_credits: The story_arc_credits of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type story_arc_credits: list[object]
         """
 
         self._story_arc_credits = story_arc_credits
@@ -573,7 +563,7 @@ class IssueAllOf(object):
         List of teams that appear in this issue.  # noqa: E501
 
         :return: The team_credits of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._team_credits
 
@@ -584,7 +574,7 @@ class IssueAllOf(object):
         List of teams that appear in this issue.  # noqa: E501
 
         :param team_credits: The team_credits of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type team_credits: list[object]
         """
 
         self._team_credits = team_credits
@@ -596,7 +586,7 @@ class IssueAllOf(object):
         List of teams that disbanded in this issue.  # noqa: E501
 
         :return: The teams_disbanded_in of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._teams_disbanded_in
 
@@ -607,7 +597,7 @@ class IssueAllOf(object):
         List of teams that disbanded in this issue.  # noqa: E501
 
         :param teams_disbanded_in: The teams_disbanded_in of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type teams_disbanded_in: list[object]
         """
 
         self._teams_disbanded_in = teams_disbanded_in
@@ -616,10 +606,9 @@ class IssueAllOf(object):
     def volume(self):
         """Gets the volume of this IssueAllOf.  # noqa: E501
 
-        The volume this issue is a part of.  # noqa: E501
 
         :return: The volume of this IssueAllOf.  # noqa: E501
-        :rtype: object
+        :rtype: Volume
         """
         return self._volume
 
@@ -627,10 +616,9 @@ class IssueAllOf(object):
     def volume(self, volume):
         """Sets the volume of this IssueAllOf.
 
-        The volume this issue is a part of.  # noqa: E501
 
         :param volume: The volume of this IssueAllOf.  # noqa: E501
-        :type: object
+        :type volume: Volume
         """
 
         self._volume = volume

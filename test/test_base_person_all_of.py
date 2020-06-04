@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import comicvine_client
-from comicvine_client.models.person_all_of import PersonAllOf  # noqa: E501
+from comicvine_client.models.base_person_all_of import BasePersonAllOf  # noqa: E501
 from comicvine_client.rest import ApiException
 
-class TestPersonAllOf(unittest.TestCase):
-    """PersonAllOf unit test stubs"""
+class TestBasePersonAllOf(unittest.TestCase):
+    """BasePersonAllOf unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,26 +29,32 @@ class TestPersonAllOf(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test PersonAllOf
+        """Test BasePersonAllOf
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = comicvine_client.models.person_all_of.PersonAllOf()  # noqa: E501
+        # model = comicvine_client.models.base_person_all_of.BasePersonAllOf()  # noqa: E501
         if include_optional :
-            return PersonAllOf(
-                country = 'UK', 
-                created_characters = None, 
-                death = 'Fri Jul 21 00:00:00 GMT 2017', 
-                email = 'bruce@example.com', 
-                hometown = 'Vladivostok', 
-                website = 'https://person.example.com/'
+            return BasePersonAllOf(
+                birth = 'Feb 19, 1972', 
+                count_of_issue_appearances = 17949, 
+                gender = 3, 
+                story_arc_credits = [
+                    None
+                    ], 
+                volume_credits = [
+                    null
+                    ], 
+                issue_credits = [
+                    null
+                    ]
             )
         else :
-            return PersonAllOf(
+            return BasePersonAllOf(
         )
 
-    def testPersonAllOf(self):
-        """Test PersonAllOf"""
+    def testBasePersonAllOf(self):
+        """Test BasePersonAllOf"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

@@ -70,7 +70,7 @@ class EntityResponseAllOf(object):
         An Entity that match the filters specified  # noqa: E501
 
         :param results: The results of this EntityResponseAllOf.  # noqa: E501
-        :type: OneOfVolumeIssuePersonCharacter
+        :type results: OneOfVolumeIssuePersonCharacter
         """
 
         self._results = results

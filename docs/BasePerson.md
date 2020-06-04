@@ -1,4 +1,4 @@
-# Volume
+# BasePerson
 
 ## Properties
 Name | Type | Description | Notes
@@ -13,16 +13,12 @@ Name | Type | Description | Notes
 **date_added** | **str** | Date the entity was added to Comic Vine. | [optional] 
 **date_last_updated** | **str** | Date the entity was last updated on Comic Vine. | [optional] 
 **image** | [**Image**](Image.md) |  | [optional] 
-**characters** | **list[object]** | A list of characters that appear in this volume. | [optional] 
-**concepts** | **list[object]** | A list of concepts that appear in this volume. | [optional] 
-**count_of_issues** | **int** | Number of issues included in this volume. | [optional] 
-**first_issue** | [**Issue**](Issue.md) |  | [optional] 
-**last_issue** | [**Issue**](Issue.md) |  | [optional] 
-**locations** | **list[object]** | List of locations that appeared in this volume. | [optional] 
-**objects** | **list[object]** | List of objects that appeared in this volume. | [optional] 
-**people** | **list[object]** | List of people that worked on this volume. | [optional] 
-**publisher** | **object** | The primary publisher a volume is attached to. | [optional] 
-**start_year** | **str** | The first year this volume appeared in comics. | [optional] 
+**birth** | **str** | A date, if one exists, that the person was born on. Not an origin date. | [optional] 
+**count_of_issue_appearances** | **int** | Number of issues this person appears in. | [optional] 
+**gender** | **int** | Gender of the person. Available options are: Male (1), Female (2), Other (3) | [optional] 
+**story_arc_credits** | **list[object]** | List of story arcs this person appears in. | [optional] 
+**volume_credits** | [**list[Volume]**](Volume.md) |  | [optional] 
+**issue_credits** | [**list[Issue]**](Issue.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -36,27 +36,57 @@ class TestIssueAllOf(unittest.TestCase):
         # model = comicvine_client.models.issue_all_of.IssueAllOf()  # noqa: E501
         if include_optional :
             return IssueAllOf(
-                character_credits = None, 
-                characters_died_in = None, 
-                concept_credits = None, 
-                cover_date = None, 
-                disbanded_teams = None, 
-                first_appearance_characters = None, 
-                first_appearance_concepts = None, 
-                first_appearance_locations = None, 
-                first_appearance_objects = None, 
-                first_appearance_storyarcs = None, 
+                character_credits = [
+                    null
+                    ], 
+                characters_died_in = [
+                    null
+                    ], 
+                concept_credits = [
+                    None
+                    ], 
+                cover_date = 'Tue Jan 31 00:00:00 GMT 1995', 
+                disbanded_teams = [
+                    None
+                    ], 
+                first_appearance_characters = [
+                    null
+                    ], 
+                first_appearance_concepts = [
+                    None
+                    ], 
+                first_appearance_locations = [
+                    None
+                    ], 
+                first_appearance_objects = [
+                    None
+                    ], 
+                first_appearance_storyarcs = [
+                    None
+                    ], 
                 first_appearance_teams = None, 
-                image = None, 
-                issue_number = None, 
-                location_credits = None, 
-                object_credits = None, 
-                person_credits = None, 
-                store_date = None, 
-                story_arc_credits = None, 
-                team_credits = None, 
-                teams_disbanded_in = None, 
-                volume = None
+                has_staff_review = True, 
+                issue_number = '0', 
+                location_credits = [
+                    None
+                    ], 
+                object_credits = [
+                    None
+                    ], 
+                person_credits = [
+                    null
+                    ], 
+                store_date = 'Tue Jan 31 00:00:00 GMT 1995', 
+                story_arc_credits = [
+                    None
+                    ], 
+                team_credits = [
+                    None
+                    ], 
+                teams_disbanded_in = [
+                    None
+                    ], 
+                volume = null
             )
         else :
             return IssueAllOf(

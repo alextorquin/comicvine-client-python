@@ -107,6 +107,8 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [BaseEntity](docs/BaseEntity.md)
+ - [BasePerson](docs/BasePerson.md)
+ - [BasePersonAllOf](docs/BasePersonAllOf.md)
  - [BaseResponse](docs/BaseResponse.md)
  - [Character](docs/Character.md)
  - [CharacterAllOf](docs/CharacterAllOf.md)
@@ -114,6 +116,7 @@ Class | Method | HTTP request | Description
  - [EntitiesResponseAllOf](docs/EntitiesResponseAllOf.md)
  - [EntityResponse](docs/EntityResponse.md)
  - [EntityResponseAllOf](docs/EntityResponseAllOf.md)
+ - [Image](docs/Image.md)
  - [Issue](docs/Issue.md)
  - [IssueAllOf](docs/IssueAllOf.md)
  - [Person](docs/Person.md)
