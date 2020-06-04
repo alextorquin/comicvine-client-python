@@ -48,12 +48,11 @@ class Volume(object):
         'first_issue': 'object',
         'image': 'object',
         'last_issue': 'object',
-        'location_credits': 'object',
-        'object_credits': 'object',
-        'person_credits': 'object',
+        'locations': 'list[object]',
+        'objects': 'list[object]',
+        'people': 'list[object]',
         'publisher': 'object',
-        'start_year': 'str',
-        'team_credits': 'object'
+        'start_year': 'str'
     }
 
     attribute_map = {
@@ -72,15 +71,14 @@ class Volume(object):
         'first_issue': 'first_issue',
         'image': 'image',
         'last_issue': 'last_issue',
-        'location_credits': 'location_credits',
-        'object_credits': 'object_credits',
-        'person_credits': 'person_credits',
+        'locations': 'locations',
+        'objects': 'objects',
+        'people': 'people',
         'publisher': 'publisher',
-        'start_year': 'start_year',
-        'team_credits': 'team_credits'
+        'start_year': 'start_year'
     }
 
-    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, characters=None, concepts=None, count_of_issues=None, first_issue=None, image=None, last_issue=None, location_credits=None, object_credits=None, person_credits=None, publisher=None, start_year=None, team_credits=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, aliases=None, api_detail_url=None, description=None, deck=None, site_detail_url=None, date_added=None, date_last_updated=None, characters=None, concepts=None, count_of_issues=None, first_issue=None, image=None, last_issue=None, locations=None, objects=None, people=None, publisher=None, start_year=None, local_vars_configuration=None):  # noqa: E501
         """Volume - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -101,12 +99,11 @@ class Volume(object):
         self._first_issue = None
         self._image = None
         self._last_issue = None
-        self._location_credits = None
-        self._object_credits = None
-        self._person_credits = None
+        self._locations = None
+        self._objects = None
+        self._people = None
         self._publisher = None
         self._start_year = None
-        self._team_credits = None
         self.discriminator = None
 
         self.id = id
@@ -138,18 +135,16 @@ class Volume(object):
             self.image = image
         if last_issue is not None:
             self.last_issue = last_issue
-        if location_credits is not None:
-            self.location_credits = location_credits
-        if object_credits is not None:
-            self.object_credits = object_credits
-        if person_credits is not None:
-            self.person_credits = person_credits
+        if locations is not None:
+            self.locations = locations
+        if objects is not None:
+            self.objects = objects
+        if people is not None:
+            self.people = people
         if publisher is not None:
             self.publisher = publisher
         if start_year is not None:
             self.start_year = start_year
-        if team_credits is not None:
-            self.team_credits = team_credits
 
     @property
     def id(self):
@@ -203,7 +198,7 @@ class Volume(object):
     def aliases(self):
         """Gets the aliases of this Volume.  # noqa: E501
 
-        List of aliases the volume is known by. A \\n (newline) seperates each alias.  # noqa: E501
+        List of aliases the entity is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :return: The aliases of this Volume.  # noqa: E501
         :rtype: str
@@ -214,7 +209,7 @@ class Volume(object):
     def aliases(self, aliases):
         """Sets the aliases of this Volume.
 
-        List of aliases the volume is known by. A \\n (newline) seperates each alias.  # noqa: E501
+        List of aliases the entity is known by. A \\n (newline) seperates each alias.  # noqa: E501
 
         :param aliases: The aliases of this Volume.  # noqa: E501
         :type: str
@@ -499,73 +494,73 @@ class Volume(object):
         self._last_issue = last_issue
 
     @property
-    def location_credits(self):
-        """Gets the location_credits of this Volume.  # noqa: E501
+    def locations(self):
+        """Gets the locations of this Volume.  # noqa: E501
 
         List of locations that appeared in this volume.  # noqa: E501
 
-        :return: The location_credits of this Volume.  # noqa: E501
-        :rtype: object
+        :return: The locations of this Volume.  # noqa: E501
+        :rtype: list[object]
         """
-        return self._location_credits
+        return self._locations
 
-    @location_credits.setter
-    def location_credits(self, location_credits):
-        """Sets the location_credits of this Volume.
+    @locations.setter
+    def locations(self, locations):
+        """Sets the locations of this Volume.
 
         List of locations that appeared in this volume.  # noqa: E501
 
-        :param location_credits: The location_credits of this Volume.  # noqa: E501
-        :type: object
+        :param locations: The locations of this Volume.  # noqa: E501
+        :type: list[object]
         """
 
-        self._location_credits = location_credits
+        self._locations = locations
 
     @property
-    def object_credits(self):
-        """Gets the object_credits of this Volume.  # noqa: E501
+    def objects(self):
+        """Gets the objects of this Volume.  # noqa: E501
 
         List of objects that appeared in this volume.  # noqa: E501
 
-        :return: The object_credits of this Volume.  # noqa: E501
-        :rtype: object
+        :return: The objects of this Volume.  # noqa: E501
+        :rtype: list[object]
         """
-        return self._object_credits
+        return self._objects
 
-    @object_credits.setter
-    def object_credits(self, object_credits):
-        """Sets the object_credits of this Volume.
+    @objects.setter
+    def objects(self, objects):
+        """Sets the objects of this Volume.
 
         List of objects that appeared in this volume.  # noqa: E501
 
-        :param object_credits: The object_credits of this Volume.  # noqa: E501
-        :type: object
+        :param objects: The objects of this Volume.  # noqa: E501
+        :type: list[object]
         """
 
-        self._object_credits = object_credits
+        self._objects = objects
 
     @property
-    def person_credits(self):
-        """Gets the person_credits of this Volume.  # noqa: E501
+    def people(self):
+        """Gets the people of this Volume.  # noqa: E501
 
         List of people that worked on this volume.  # noqa: E501
 
-        :return: The person_credits of this Volume.  # noqa: E501
-        :rtype: object
+        :return: The people of this Volume.  # noqa: E501
+        :rtype: list[object]
         """
-        return self._person_credits
+        return self._people
 
-    @person_credits.setter
-    def person_credits(self, person_credits):
-        """Sets the person_credits of this Volume.
+    @people.setter
+    def people(self, people):
+        """Sets the people of this Volume.
 
         List of people that worked on this volume.  # noqa: E501
 
-        :param person_credits: The person_credits of this Volume.  # noqa: E501
-        :type: object
+        :param people: The people of this Volume.  # noqa: E501
+        :type: list[object]
         """
 
-        self._person_credits = person_credits
+        self._people = people
 
     @property
     def publisher(self):
@@ -612,29 +607,6 @@ class Volume(object):
         """
 
         self._start_year = start_year
-
-    @property
-    def team_credits(self):
-        """Gets the team_credits of this Volume.  # noqa: E501
-
-        List of teams that appear in this volume.  # noqa: E501
-
-        :return: The team_credits of this Volume.  # noqa: E501
-        :rtype: object
-        """
-        return self._team_credits
-
-    @team_credits.setter
-    def team_credits(self, team_credits):
-        """Sets the team_credits of this Volume.
-
-        List of teams that appear in this volume.  # noqa: E501
-
-        :param team_credits: The team_credits of this Volume.  # noqa: E501
-        :type: object
-        """
-
-        self._team_credits = team_credits
 
     def to_dict(self):
         """Returns the model properties as a dict"""
